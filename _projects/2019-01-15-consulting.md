@@ -3,7 +3,7 @@ title: 'Consulting'
 subtitle: 'We help you'
 date: 2019-01-15 13:00:00
 description: This is a test of if I am getting Jekyll working correctly.
-featured_image: '/images/demo/demo-square.jpg'
+featured_image: '/images/blue-gray.png'
 ---
 
 ![](/images/demo/demo-landscape.jpg)
