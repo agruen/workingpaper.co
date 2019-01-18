@@ -4,7 +4,7 @@ basic_settings:
 
 header_settings:
   logo_image: /images/WPLogo.png
-  logo_width: 100
+  logo_width: 50
 
 menu_settings:
   menu_items:
