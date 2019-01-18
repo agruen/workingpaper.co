@@ -1,9 +1,9 @@
 ---
-title: 'Demo Project'
-subtitle: 'This is a demo'
+title: ‘New Product Development’
+subtitle: ‘Working Paper partners with organizations to develop new digital products’
 date: 2018-06-30 00:00:00
-description: This page is a demo that shows everything you can do inside portfolio and blog posts.
-featured_image: '/images/brown-green.png'
+description: Working Paper partners with organizations to develop new digital products.
+featured_image: '/images/gradients/magenta-purple.png'
 ---
 
 ![](/images/demo/demo-landscape.jpg)
