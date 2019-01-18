@@ -23,7 +23,7 @@ footer_settings:
   footer_tagline: A sleek, modern Jekyll theme for personal websites.
 
 hero_settings:
-  overlay_opacity: 0.8
+  overlay_opacity: 0.0
 
 post_settings:
   grid_spacing: 10
