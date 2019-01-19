@@ -14,6 +14,8 @@ menu_settings:
       url: '/about'
     - title: 'Contact'
       url: '/contact'
+    - title: 'Andrew Gruen'
+      url: '/andrew-gruen'
 
 footer_settings:
   footer_tagline: Research. Driven. Results.
