@@ -7,5 +7,6 @@ featured_image: '/images/gradients/green-blue.png'
 ---
 
 # Communications Consulting
+## We work with growing technology organizations to build their communications and marketing functions
 
-Working Paper is the prefect fit for emerging tech companies because we view ourselves as highly skilled translators.  In addition to speaking your particular flavor of geek, we also 
+Working Paper is the prefect fit for emerging tech companies because we work as highly skilled translators.  In addition to speaking your particular flavor of geek -- be that Node.js or GATK -- we also speak the language of your target audience.
