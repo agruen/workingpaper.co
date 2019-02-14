@@ -1,6 +1,6 @@
 ---
 title: 'Consulting'
-subtitle: 'Communications Strategy'
+subtitle: 'We work with growing technology organizations to build their communications and marketing functions'
 date: 2019-01-15 13:00:00
 description: We work with growing technology organizations to build their communications and marketing functions.
 featured_image: '/images/gradients/green-blue.png'
