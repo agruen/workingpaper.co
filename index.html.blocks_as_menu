@@ -1,0 +1,84 @@
+---
+layout: default
+title: Research. Driven. Results.
+description: Working paper is a boutique managment consultancy that develops research-based strategies for media, advertisers, and universities.
+featured_image: /images/gradients/orange-red.png
+---
+
+<section class="hero">
+
+	<div class="hero__image" style="background-image: url({{ page.featured_image }})">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Research. Driven. Results.</h1>
+		<p>Working Paper is a boutique management consultancy that develops research-based strategies and technology products for media organizations, e-commerce companies, research universities, and advertisers.  Based in Chicago, IL and Cambridge, MA; working around the globe.</p>
+
+		{% include socials.html %}
+
+	</div>
+
+</section>
+
+<section class="listing">
+
+	<div class="wrap">
+
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url(/images/gradients/green-blue.png)"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="/blog">Updates</a></h2>
+					<p class="post__subtitle">A preliminary scientific or technical paper; Sometimes used synonymously as technical report.</p>
+					<p class="post__description">We publish about 30 editions per year... meaning a bi-weekly paper, with a few special editions when we need to share something faster.</p>
+				</div>
+			</div>
+
+		</article>
+
+		
+
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url(/images/gradients/magenta-purple.png)"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="/project/new-product-development">Subscribe</a></h2>
+					<p class="post__subtitle">Email Newsletter</p>
+					<p class="post__description">Get the latest from Working Paper in your inbox.</p>
+				</div>
+			</div>
+
+		</article>
+
+		
+
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url(/images/gradients/yellow-green.png)"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="/andrew-gruen">About Andrew</a></h2>
+					<p class="post__subtitle">Principal</p>
+					<p class="post__description">Learn more about our founder and principal consultant, Andrew Gruen.</p>
+				</div>
+			</div>
+
+		</article>
+
+		
+	</div>
+
+</section>

@@ -15,69 +15,28 @@ featured_image: /images/gradients/orange-red.png
 
 		<h1>Research. Driven. Results.</h1>
 		<p>Working Paper is a boutique management consultancy that develops research-based strategies and technology products for media organizations, e-commerce companies, research universities, and advertisers.  Based in Chicago, IL and Cambridge, MA; working around the globe.</p>
-
-		{% include socials.html %}
-
+		<p align="center"><a class="button button--large" href="/blog">Read our latest thinking:</a></p>
 	</div>
 
 </section>
-
 <section class="listing">
-
 	<div class="wrap">
-
+		{% for post in site.posts limit:1 %}
 		<article class="post">
-
 			<div class="post__image-wrap">
-				<div class="post__image" style="background-image: url(/images/gradients/green-blue.png)"></div>
+				<div class="post__image" style="background-image: url({{ post.featured_image }})"></div>
 			</div>
 
 			<div class="post__content-wrap">
 				<div class="post__content">
-					<h2 class="post__title"><a href="/blog">Updates</a></h2>
-					<p class="post__subtitle">A preliminary scientific or technical paper; Sometimes used synonymously as technical report.</p>
-					<p class="post__description">We publish about 30 editions per year... meaning a bi-weekly paper, with a few special editions when we need to share something faster.</p>
+					<h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+					<p class="post__subtitle">{{ post.subtitle }}</p>
+					<p class="post__description">{{ post.description }}</p>
 				</div>
 			</div>
 
 		</article>
-
-		
-
-		<article class="post">
-
-			<div class="post__image-wrap">
-				<div class="post__image" style="background-image: url(/images/gradients/magenta-purple.png)"></div>
-			</div>
-
-			<div class="post__content-wrap">
-				<div class="post__content">
-					<h2 class="post__title"><a href="/project/new-product-development">Subscribe</a></h2>
-					<p class="post__subtitle">Email Newsletter</p>
-					<p class="post__description">Get the latest from Working Paper in your inbox.</p>
-				</div>
-			</div>
-
-		</article>
-
-		
-
-		<article class="post">
-
-			<div class="post__image-wrap">
-				<div class="post__image" style="background-image: url(/images/gradients/yellow-green.png)"></div>
-			</div>
-
-			<div class="post__content-wrap">
-				<div class="post__content">
-					<h2 class="post__title"><a href="/andrew-gruen">About Andrew</a></h2>
-					<p class="post__subtitle">Principal</p>
-					<p class="post__description">Learn more about our founder and principal consultant, Andrew Gruen.</p>
-				</div>
-			</div>
-
-		</article>
-
+		{% endfor %}
 		
 	</div>
 
