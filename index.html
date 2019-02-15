@@ -26,26 +26,59 @@ featured_image: /images/gradients/orange-red.png
 
 	<div class="wrap">
 
-		{% for project in site.projects reversed %}
-
 		<article class="post">
 
 			<div class="post__image-wrap">
-				<div class="post__image" style="background-image: url({{ project.featured_image }})"></div>
+				<div class="post__image" style="background-image: url(/images/gradients/green-blue.png)"></div>
 			</div>
 
 			<div class="post__content-wrap">
 				<div class="post__content">
-					<h2 class="post__title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
-					<p class="post__subtitle">{{ project.subtitle }}</p>
-					<p class="post__description">{{ project.description }}</p>
+					<h2 class="post__title"><a href="/blog">Updates</a></h2>
+					<p class="post__subtitle">A preliminary scientific or technical paper; Sometimes used synonymously as technical report.</p>
+					<p class="post__description">We publish about 30 editions per year... meaning a bi-weekly paper, with a few special editions when we need to share something faster.</p>
 				</div>
 			</div>
 
 		</article>
 
-		{% endfor %}
+		
 
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url(/images/gradients/magenta-purple.png)"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="/project/new-product-development">Subscribe</a></h2>
+					<p class="post__subtitle">Email Newsletter</p>
+					<p class="post__description">Get the latest from Working Paper in your inbox.</p>
+				</div>
+			</div>
+
+		</article>
+
+		
+
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url(/images/gradients/yellow-green.png)"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="/andrew-gruen">About Andrew</a></h2>
+					<p class="post__subtitle">Principal</p>
+					<p class="post__description">Learn more about our founder and principal consultant, Andrew Gruen.</p>
+				</div>
+			</div>
+
+		</article>
+
+		
 	</div>
 
 </section>
