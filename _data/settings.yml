@@ -155,7 +155,9 @@ font_settings:
 
 advanced_settings:
   ajax_loading: false
-  analytics_code: "<!-- Global site tag (gtag.js) - Google Analytics -->
+  analytics_code: ""
+  custom_styles: ""
+  header_js: "<!-- Global site tag (gtag.js) - Google Analytics -->
                     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38501325-2"></script>
                     <script>
                       window.dataLayer = window.dataLayer || [];
@@ -164,6 +166,4 @@ advanced_settings:
 
                       gtag('config', 'UA-38501325-2');
                     </script>"
-  custom_styles: ""
-  header_js: ""
   footer_js: ""
