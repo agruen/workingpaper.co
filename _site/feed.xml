@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-22T11:47:50-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">workingpaper.co</title><entry><title type="html">We’re Back</title><link href="http://localhost:4000/blog/were-back" rel="alternate" type="text/html" title="We’re Back" /><published>2019-01-28T08:00:00-06:00</published><updated>2019-01-28T08:00:00-06:00</updated><id>http://localhost:4000/blog/were-back</id><content type="html" xml:base="http://localhost:4000/blog/were-back">&lt;p&gt;&lt;em&gt;Programming note: Welcome to the first Working Paper newsletter of 2019!  This year, I’m aiming to deliver about 30 editions… meaning it will become a bi-weekly, with a few special editions when we need to share something faster.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I write the newsletter to achieve two goals:&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;synthesize my thinking on technology and media&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;interact with some of the smartest people we know on these topics.&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;As such, if you find something interesting in the newsletter, do something about it.  Write back to me, ask questions, forward it to a friend, etc.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Now, on to the letter.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;maybe-the-generative-internet-isnt-entirely-gone&quot;&gt;Maybe the generative Internet isn’t entirely gone&lt;/h1&gt;
+&lt;h2 id=&quot;home-automation-and-open-source-iot-are-the-new-build-your-own-pc&quot;&gt;Home automation and open-source IoT are the new ‘build-your-own-pc’&lt;/h2&gt;
+
+&lt;p&gt;The first time I visited the &lt;a href=&quot;https://www.hongkongtripguide.com/wan-chai-computer-centre.html&quot;&gt;Wan Chai Computer Centre&lt;/a&gt; in 2009, I was mesmerized.  Not only could I buy every component I needed to build a top-of-the-line PC — and get it today! without ordering online! — but there were also an incredible number of hardware and software &lt;em&gt;ideas&lt;/em&gt; on display.  Netbooks were on the ascent, and Microsoft was thinking about how to do touch-based computing (having come to realize the excellence of the iPhone).  I spent hours, parted with very little money, and left with one of the first “convertible” format laptops, along with inexpensive components for a desktop PC.&lt;/p&gt;
+
+&lt;p&gt;However, many have wondered if this era of “&lt;a href=&quot;http://futureoftheinternet.org/download&quot;&gt;generativity&lt;/a&gt;” spurred by open PC infrastructure alongside open-source software is long over in the world of App Stores and sealed-in batteries.&lt;/p&gt;
+
+&lt;p&gt;For the past few years, I’ve agreed.  I didn’t build any PCs.  I bought iOS devices, and do 90% of my work on an iPad.  I lamented leaving &lt;a href=&quot;http://www.simlimsquare.com.sg&quot;&gt;Sim Lim Square&lt;/a&gt;, Singapore’s equivalent of Wan Chai, empty handed last year because there was nothing I could use.&lt;/p&gt;
+
+&lt;p&gt;I changed my thinking late last year, when I figured out what to do with the Raspberry Pi I’d left in my drawer since its 2012 inception: run a &lt;a href=&quot;https://pi-hole.net/&quot;&gt;Pi Hole&lt;/a&gt; to block all ads and trackers on my network (including &lt;em&gt;inside&lt;/em&gt; apps).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/pi-hole-dashboard.png&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;The stats dashboard from my Pi Hole this morning&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The ad-blocking DNS server is still great (for the technical audience: I’ve also switched to &lt;a href=&quot;https://www.cloudflare.com/dns/&quot;&gt;Cloudflare&lt;/a&gt; as my upstream DNS with nice speed improvements), but I’ve started two more projects that have been surprisingly useful: home automation and inexpensive backup.&lt;/p&gt;
+
+&lt;p&gt;Today’s tech links deal with the main piece of enabling software for automation, called &lt;a href=&quot;https://homebridge.io/&quot;&gt;Homebridge&lt;/a&gt;.  It’s — shockingly — a bridge between many different connected home devices and Apple’s &lt;a href=&quot;https://www.apple.com/ios/home/&quot;&gt;HomeKit&lt;/a&gt; protocol.  I’ll write (or link to) more on actually setting it up in a future working paper, but the point to make here is more broad:&lt;/p&gt;
+
+&lt;p&gt;We’re back.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/esp8266-bme280.jpg&quot; width=&quot;350&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With open-source software and &lt;a href=&quot;https://www.aliexpress.com/item/DHT-Pro-Shield-for-WeMos-D1-mini-DHT22-Single-bus-digital-temperature-and-humidity-sensor-module/32648082692.html&quot;&gt;crazily inexpensive open-source hardware&lt;/a&gt;, one can pretty easily tinker with and &lt;strong&gt;&lt;em&gt;connect&lt;/em&gt;&lt;/strong&gt; multiple &lt;strong&gt;&lt;em&gt;closed&lt;/em&gt;&lt;/strong&gt; devices.  I’ve connected my NestCam and my hand-made, $5 WiFi temperature and humidity sensors to Apple’s walled garden of a home automation system.  Each input is on equal footing.  And the result is a delightful system for my apartment.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blog/homekit-livingroom.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;It might be a blizzard outside in Chicago today… but not in the living room.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s generativity, but at a different layer of the stack.  I used to mess with the devices; now I mess with the network of devices. (And, if I’m willing — I can dive back into the device-level at any time.)&lt;/p&gt;
+
+&lt;p&gt;Will most people build their own home IoT devices? No.  But most people didn’t build their own PCs.  Those who did invented new ways of doing things.  That was enough.&lt;/p&gt;
+
+&lt;p&gt;Glad to be back, and more in a few days,&lt;/p&gt;
+
+&lt;p&gt;Andrew&lt;/p&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;There were a host of layoffs in the news world this past week at  &lt;a href=&quot;https://www.thecut.com/2019/01/1-000-people-cut-in-huffpost-gannett-buzzfeed-layoffs.html&quot;&gt;BuzzFeed, Huffington Post, and Gannett&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;I think the core of it is that all three of these players still rely heavily on undifferentiated advertising to large audiences.  That market is likely gone forever, abdicated (or rightfully earned, depending on your view) to Google and Facebook.&lt;/li&gt;
+  &lt;li&gt;Unless you’re a &lt;em&gt;huge&lt;/em&gt; brand &lt;em&gt;and&lt;/em&gt; you have both advertising and other revenue, you’re in a tough spot.  Broad-based players like BuzzFeed and the HuffPo lack the brand of CNN, The New York Times, or the Washington Post, and also lack significant alternative revenue streams.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;There’s much more to come on the open-source, low-cost, home IoT topic, but, to get things started, here’s a few links of note:
+    &lt;ul&gt;
+      &lt;li&gt;Hubs (central repositories to connect multiple types of equipment, and in some cases, automate them)
+        &lt;ul&gt;
+          &lt;li&gt;For those exclusively in the iOS ecosystem, the choice is called &lt;a href=&quot;https://homebridge.io/&quot;&gt;Homebridge&lt;/a&gt;.&lt;/li&gt;
+          &lt;li&gt;If you use multiple device types, the path forward is the significantly more powerful (and, unfortunately, complex) &lt;a href=&quot;https://www.home-assistant.io&quot;&gt;HomeAssistant&lt;/a&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Inexpensive hardware (both to run a hub and also to “sense” things around the house)
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/&quot;&gt;Raspberry Pi 3B+&lt;/a&gt; (with, perhaps, a &lt;a href=&quot;https://www.raspberrypi.org/products/raspberry-pi-touch-display/&quot;&gt;touch screen&lt;/a&gt;) – good for running a bunch of things at once, including if you plan to process video and/or using it as a big remote control.&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://www.raspberrypi.org/products/raspberry-pi-zero-w/&quot;&gt;Raspberry Pi Zero W&lt;/a&gt; – an incredibly inexpensive yet capable device: you can run Homebridge on one, and also set it up, with a camera, to be a security camera for well under $50.&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://www.aliexpress.com/wholesale?catId=0&amp;amp;initiative_id=SB_20190128151708&amp;amp;SearchText=Esp8266&quot;&gt;ESP8266-based Microcontrollers&lt;/a&gt; These are a post unto themselves, but: they’re Arduino-like tools.  They host a bunch of &lt;a href=&quot;https://www.w3schools.com/nodejs/nodejs_raspberrypi_gpio_intro.asp&quot;&gt;GPIO&lt;/a&gt; pins attached to a WiFi chipset and an &lt;a href=&quot;http://www.nodemcu.com/index_cn.html&quot;&gt;open-source “OS”&lt;/a&gt; that runs very simple Lua code.  Attach sensors or other things to interact with the real world.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Slightly unexpected as a travel upgrade, but I’m in the process of switching my pharmacy to &lt;a href=&quot;PillPack.com&quot;&gt;PillPack&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Because meds come in per-dose packets, I can grab the right days, toss them into my dop kit, and go.  Nice.&lt;/li&gt;
+  &lt;li&gt;There’s a consumerization of healthcare post in here… for another day.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thisisarq.com/read/farewell-from-arq&quot;&gt;Farewell from Arq&lt;/a&gt;, the thoughtful goodbye note from a Jew-ish newsletter/publication that is a (surely unintentional) counterpoint to the other media layoffs last week.  Danya is in the same spot, and responding in a &lt;em&gt;very&lt;/em&gt; different way.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/roman-ii-from-knife-in-the-water/514843606?i=514843926&quot;&gt;Roman II – Krzysztof Komeda Quartet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Programming note: Welcome to the first Working Paper newsletter of 2019! This year, I’m aiming to deliver about 30 editions… meaning it will become a bi-weekly, with a few special editions when we need to share something faster.</summary></entry><entry><title type="html">Independence Edition</title><link href="http://localhost:4000/blog/independence" rel="alternate" type="text/html" title="Independence Edition" /><published>2018-09-03T07:00:00-05:00</published><updated>2018-09-03T07:00:00-05:00</updated><id>http://localhost:4000/blog/independence</id><content type="html" xml:base="http://localhost:4000/blog/independence">&lt;p&gt;There isn’t supposed to be much news in the last week of August.  This past week was different.&lt;/p&gt;
+
+&lt;p&gt;I intended to continue the discussion of information fiduciaries, but there were too many other interesting links on a different subject: media companies are continuing the trend of independence from tech platforms.&lt;/p&gt;
+
+&lt;p&gt;This week, Timehop builds their own ad server, Quartz starts a paid newsletter, Google’s ad tracking expands, a local newspaper group tries to raise its own capital from the public, and Twitter announces a political ad policy that’s (helpfully) different than Facebook’s.&lt;/p&gt;
+
+&lt;p&gt;One tiny piece of analysis on the last one.  Twitter is doing two interesting things: defining news organizations and recognizing that they have a different place in society than other commercial entities.&lt;/p&gt;
+
+&lt;p&gt;This is a Good Thing.&lt;/p&gt;
+
+&lt;p&gt;Happy Labor Day (to those of you in the U.S.), and, for those Minnesotans amongst us, regards from the &lt;a href=&quot;http://turkeytogo.com/index.html&quot;&gt;Turkey To Go&lt;/a&gt; booth at the &lt;a href=&quot;https://www.mnstatefair.org/&quot;&gt;Great Minnesota Get Together&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Andrew
+&lt;img src=&quot;https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/5b43a7bf-a963-4784-b6c5-722eadc965d7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Twitter exempts news organizations from its new political advertising registration policy.
+    &lt;ul&gt;
+      &lt;li&gt;Ren LaForme at Poynter has a good &lt;a href=&quot;https://www.poynter.org/news/twitters-new-political-ad-policy-exempts-news-media-facebooks-still-doesnt&quot;&gt;overview&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;In doing this, Twitter has defined &lt;a href=&quot;https://media.twitter.com/en_us/articles/generic/issue-ads-policy--what-this-means-for-news-organizations.html&quot;&gt;what qualifies as a news organization&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;This is in direct opposition to Facebook’s policy.&lt;/li&gt;
+      &lt;li&gt;My biggest question: what will Twitter do about single-subject news organizations covering a controversial topic in depth? (Think, for example, of a &lt;a href=&quot;https://www.newsdeeply.com/&quot;&gt;News Deeply&lt;/a&gt; property.)&lt;/li&gt;
+      &lt;li&gt;Anyone going through the process?  &lt;a href=&quot;mailto:ag@workingpaper.co&quot;&gt;Let me know&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Digiday’s Kerry Flynn profile’s Timehop’s decision to &lt;a href=&quot;https://digiday.com/marketing/memory-app-timehop-built-ad-server-go-near-death-profitable/&quot;&gt;run their own ad serving platform&lt;/a&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;This is another facet for a bonafide trend: control&lt;/li&gt;
+      &lt;li&gt;Digital publishers are owning and controlling the two keys to their business: the audience and revenue streams from it&lt;/li&gt;
+      &lt;li&gt;While it’s easy to see how big publishers can get this done, the desires of small players to do this will create an opportunity for someone to help them.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mark Bergen and Jennifer Surane shine a big spotlight on old news in Businessweek: &lt;a href=&quot;https://www.bloomberg.com/news/articles/2018-08-30/google-and-mastercard-cut-a-secret-ad-deal-to-track-retail-sales&quot;&gt;Google buys credit card transaction data&lt;/a&gt; to link digital ads with brick-and-mortar purchases.
+    &lt;ul&gt;
+      &lt;li&gt;Maybe it’s time for a Pi-Hole?&lt;/li&gt;
+      &lt;li&gt;Or Firefox’s new, improved &lt;a href=&quot;https://blog.mozilla.org/futurereleases/2018/08/30/changing-our-approach-to-anti-tracking/&quot;&gt;anti-tracking protection&lt;/a&gt; to be turned on by default.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sonoma West Publishers, a regional newspaper chain, started a &lt;a href=&quot;https://static1.squarespace.com/static/5abe6871297114ab99a553c5/t/5ac82885352f53a44faca2b7/1523067020521/DPO_package_complete.pdf&quot;&gt;direct public offering to raise capital&lt;/a&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;Most interesting is the group’s plan for use of the proceeds.&lt;/li&gt;
+      &lt;li&gt;I was surprised to see the plan calls for only $5,000 of spending on “new reader/community live event(s)”&lt;/li&gt;
+      &lt;li&gt;We know how much these can drive revenue, and reach audiences.&lt;/li&gt;
+      &lt;li&gt;I’m writing a piece on how else that money could be spent.  Know someone at Sonoma West?  Want to help me brainstorm?  &lt;a href=&quot;mailto:ag@workingpaper.co&quot;&gt;Email&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Quartz creates a &lt;a href=&quot;https://www.wsj.com/articles/quartz-launches-paid-cryptocurrency-newsletter-1535465731&quot;&gt;cryptocurrency newsletter&lt;/a&gt;… that is a paid subscription.  Very on trend.
+    &lt;ul&gt;
+      &lt;li&gt;Multiple revenue streams? ✅&lt;/li&gt;
+      &lt;li&gt;Direct link to the audience? ✅&lt;/li&gt;
+      &lt;li&gt;Focused on an audience that a distinct set of advertisers would like to reach? ✅&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apple AirPods are great… and they get disgustingly dirty.&lt;/li&gt;
+  &lt;li&gt;Thanks to Working Paper reader Jonathan Friedlander for the tip: Blu Tack gets the detritus out.&lt;/li&gt;
+  &lt;li&gt;The newly-clean earbuds sound much better, and have more volume.&lt;/li&gt;
+  &lt;li&gt;Getting out the gunk is also remarkably satisfying. 😉&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hitlistapp.com/&quot;&gt;Hitlist&lt;/a&gt; has been turning up great fares from Chicago.&lt;/li&gt;
+  &lt;li&gt;It alerts you when there are well-below-usual fares from your home airport.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sudomod.com/&quot;&gt;Sudomod&lt;/a&gt;. Online community doing really interesting hardware projects.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/secret-place-tor-remix/1335279975?i=1335279993&quot;&gt;Secret Place (Tor Remix) - CloZee&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">There isn’t supposed to be much news in the last week of August.  This past week was different.</summary></entry><entry><title type="html">New Year, More Facebook Troubles</title><link href="http://localhost:4000/blog/new-year-more-facebook-troubles" rel="alternate" type="text/html" title="New Year, More Facebook Troubles" /><published>2018-09-03T07:00:00-05:00</published><updated>2018-09-03T07:00:00-05:00</updated><id>http://localhost:4000/blog/new-year-more-facebook-troubles</id><content type="html" xml:base="http://localhost:4000/blog/new-year-more-facebook-troubles">&lt;p&gt;I can’t stop writing about Facebook.&lt;/p&gt;
+
+&lt;p&gt;Yet again, they’re linked below this week in a good summary from the Nieman Lab. The core issue: “publishing an article is not the same as the article being seen by people interested in it.” Facebook is a master of what Ben Thompson calls &lt;a href=&quot;https://stratechery.com/concept/aggregation-theory/&quot;&gt;“aggregation theory”&lt;/a&gt;, where owning demand is more important than supply in the value chain for digital goods/services. Clearly, Facebook is an outsized winner in this regard: huge swaths of the population (&lt;a href=&quot;https://twitter.com/agolis/status/1039170866851004416?s=12&quot;&gt;but not everyone&lt;/a&gt;) start their news consumption diets there.&lt;/p&gt;
+
+&lt;p&gt;My open question remains: who else, with more of a civic-minded bent to them, could do this kind of aggregation?&lt;/p&gt;
+
+&lt;p&gt;In a conversation, I started to wonder if this would be a role (classic news aggregator) for a digital-era Public Service Broadcaster. Then I got sad again: &lt;a href=&quot;https://twitter.com/emilybell/status/1038777790668124160?s=12&quot;&gt;“Americans could barely buy a coffee with what they spend per year on public media”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For those who are celebrating, L’Shana Tova.&lt;/p&gt;
+
+&lt;p&gt;Andrew&lt;/p&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+&lt;p&gt;Unlike the new Twitter news advertising policy from last week’s note, Facebook is yet again being confronted over &lt;a href=&quot;http://www.niemanlab.org/2018/09/are-you-sure-that-promoted-article-is-still-political-content-facebook/&quot;&gt;the lack of nuance in its own policy&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Naja Nielsen, the chief journalism officer of Orb Media, the non-profit profiled in the above-linked Nieman Lab story, summed this up better than I’ve seen.&lt;/li&gt;
+  &lt;li&gt;“I completely acknowledge that Facebook is a private company. They have the rules they want to have. We as users have to listen to whatever decisions they’re making,” Nielsen said. “But, as we all know, in the age of the internet publishing an article is not the same as the article being seen by people interested in it.”\&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Verizon issues a &lt;a href=&quot;https://www.verizonenterprise.com/resources/reports/rp_DBIR_2018_Report_execsummary_en_xg.pdf&quot;&gt;report&lt;/a&gt; on their security breach investigations.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Financial gain remains at the top of the list for attack motives.&lt;/li&gt;
+  &lt;li&gt;Bad actors have been targeting our media/public sphere via means that we’ve given them (advertising APIs, etc.)… But we need some thinking about what happens if they decide to make an outright attack?&lt;/li&gt;
+  &lt;li&gt;For example: what kind of security procedures do our preeminent business journalists undertake?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
+&lt;p&gt;The Census Bureau Tried to Use Differential Privacy for the 2020 Census. &lt;a href=&quot;https://arxiv.org/pdf/1809.02201.pdf&quot;&gt;It was hard&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The Bureau encountered many issues a start-up might (including a lack of trained staff), but perhaps most interesting to me: the lack of computational resources&lt;/li&gt;
+  &lt;li&gt;They estimated that using differential privacy would require &lt;em&gt;three orders of magnitude&lt;/em&gt; more computational power than what they currently require.&lt;/li&gt;
+  &lt;li&gt;Here is yet another example of how the elasticity of shared computing resources is so valuable (“cloud computing”).&lt;/li&gt;
+  &lt;li&gt;Genomics is leading the way here, both in terms of &lt;a href=&quot;https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002195&quot;&gt;need&lt;/a&gt; and &lt;a href=&quot;https://cbiit.cancer.gov/ncip/crdc-cloud-resources&quot;&gt;policy response&lt;/a&gt;, but we will see this play out across every industry&lt;/li&gt;
+  &lt;li&gt;H/T to my Berkman colleague &lt;a href=&quot;http://cyber.harvard.edu/people/ram-shankar-siva-kumar&quot;&gt;Ram Shankar Siva Kumar&lt;/a&gt; for highlighting the paper.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
+&lt;p&gt;*I know this one sounds crazy. I know. But it isn’t. * One of the keys to making travel easier for me is having a bag that is, essentially, pre-packed. That includes toiletries.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;It’s all about having almost zero cognitive load.&lt;/li&gt;
+  &lt;li&gt;Did you know you can get &lt;a href=&quot;https://duckduckgo.com/?q=2.5+oz+toothpaste&amp;amp;t=h_&amp;amp;ia=products&quot;&gt;bigger-than-test-yet-smaller-than-three-ounce toothpaste tubes&lt;/a&gt;?&lt;/li&gt;
+  &lt;li&gt;I can get a couple of trips out of this – meaning even less that I even need on a pre-travel checklist.&lt;/li&gt;
+  &lt;li&gt;Next week, the same principle applied to one of my most favorite subjects: ⚡️charging ⚡️.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2018/09/05/obituaries/melitta-bentz-overlooked.html&quot;&gt;Overlooked No More: Melitta Bentz, Who Invented the Coffee Filter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/fading-blues/65881604?i=65880513&quot;&gt;Fading Blues - Hird&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">I can’t stop writing about Facebook.</summary></entry><entry><title type="html">Problem Solution Edition</title><link href="http://localhost:4000/blog/problem-solution" rel="alternate" type="text/html" title="Problem Solution Edition" /><published>2018-08-27T07:00:00-05:00</published><updated>2018-08-27T07:00:00-05:00</updated><id>http://localhost:4000/blog/problem-solution</id><content type="html" xml:base="http://localhost:4000/blog/problem-solution">&lt;p&gt;Two pieces caught my attention this week: one sets up the core problem of Facebook in society today. The other sets out a (surprisingly) simple and well-thought-out way to solve it. &lt;em&gt;I wrote about it on &lt;a href=&quot;http://blogs.harvard.edu/workingpaper/2018/08/27/information-fiduciaries/&quot;&gt;Working Paper&lt;/a&gt; in more detail, and started a discussion of what it might mean for news organizations, too.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;While the two authors didn’t intend to speak to one another directly, they are a part of the same conversation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.theatlantic.com/technology/archive/2018/08/the-age-of-privacy-nihilism-is-here/568198/&quot;&gt;Ian Bogost reviews the history of consumer data brokerage&lt;/a&gt;, and how we got to the modern advertising system. He describes the core problem today (accurately, in my view), that:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The real difference between the old and the new ages of data-intelligence-driven consumer marketing, and the invasion of privacy they entail, is that lots of people are finally aware that it is taking place.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In a fit of link-clicking on &lt;a href=&quot;https://www.lawfareblog.com/&quot;&gt;Lawfare&lt;/a&gt; I ended up at a 2016 Atlantic article by &lt;a href=&quot;https://law.yale.edu/jack-m-balkin&quot;&gt;Jack Balkin&lt;/a&gt; and &lt;a href=&quot;https://cyber.harvard.edu/people/jzittrain&quot;&gt;Jonathan Zittrain&lt;/a&gt;, arguing that a simple legal mechanism to regulate tech companies might be the idea of &lt;a href=&quot;https://www.theatlantic.com/technology/archive/2016/10/information-fiduciary/502346/&quot;&gt;“information fiduciaries,”&lt;/a&gt; or companies that are shielded from some liability if they agree to act in our interest.&lt;/p&gt;
+
+&lt;p&gt;Historical context for our problem and an elegant update to a historical idea for the solution.&lt;/p&gt;
+
+&lt;p&gt;Nice.&lt;/p&gt;
+
+&lt;p&gt;Hope you had a great weekend,&lt;/p&gt;
+
+&lt;p&gt;Andrew&lt;/p&gt;
+
+&lt;p&gt;P.S. Media Mail worked — the library arrived.
+&lt;img src=&quot;https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/1ae14c0d-4c00-41c2-b89a-fccd47dd13f5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.azcentral.com/story/opinion/op-ed/2018/08/26/investigative-journalists-keep-robust-free-press/1053443002/&quot;&gt;Universities are producing investigative journalism, not just teaching it&lt;/a&gt;.  That’s a good thing.
+    &lt;ul&gt;
+      &lt;li&gt;As I’ve long argued, we should care much more about the outcomes we get from such reportage than we do about the institutions that create it.&lt;/li&gt;
+      &lt;li&gt;Better still, in this case, the journalism program isn’t siloed.  ASU is pulling from “accountancy, anthropology, history, law, medicine and many other fields,” to teach it’s students.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In other news, &lt;a href=&quot;https://digiday.com/media/buzzfeed-news-quietly-tests-membership-program/&quot;&gt;BuzzFeed is working on a membership program&lt;/a&gt; like The Guardian’s, in conjunction with the &lt;a href=&quot;https://newsinitiative.withgoogle.com/&quot;&gt;Google News Initiative&lt;/a&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;More revenue sources are better than fewer, but I wonder why news organizations aren’t asking tech companies to help in &lt;a href=&quot;http://blogs.harvard.edu/workingpaper/2018/06/03/tech-for-journalism/&quot;&gt;ways they are better suited&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;I’m late to the mesh-networking party… But if you have more than one room to cover with fast, consistent WiFi, you need a mesh network.&lt;/li&gt;
+  &lt;li&gt;It’s the same concept of WiFi repeaters… It just works a LOT better.&lt;/li&gt;
+  &lt;li&gt;I’m still playing with my &lt;a href=&quot;https://www.amplifi.com/&quot;&gt;new router of choice&lt;/a&gt;, but so far, I’ve never had better coverage.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tripit.com/&quot;&gt;TripIt&lt;/a&gt; is simply a must. It organizes all your travel info in one place.  It helped me keep all the moving parts straight during the week-long move/drive/ship/family birthday extravaganza.&lt;/li&gt;
+  &lt;li&gt;Forward your trip confirmation emails to plans@tripit.com; the service creates an in-app itinerary.&lt;/li&gt;
+  &lt;li&gt;You can also share these with family/co-workers/friends.&lt;/li&gt;
+  &lt;li&gt;Automatically syncs to your calendar (and does a better job than Gmail’s automatic calendar events).&lt;/li&gt;
+  &lt;li&gt;Pro tip: because it keeps a history, with TripIt you can also find that &lt;a href=&quot;https://hotelkanra.jp/en/&quot;&gt;hotel you stayed at in Kyoto 8 years ago&lt;/a&gt; with ease…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lawfareblog.com/its-too-late-protect-2018-elections-heres-how-us-can-prepare-2020&quot;&gt;“It’s Too Late to Protect the 2018 Elections.”&lt;/a&gt; Says Facebook’s Former Chief Security Officer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/orinoco-flow/62446480?i=62446464&quot;&gt;Orinoco Flow - Enya&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Two pieces caught my attention this week: one sets up the core problem of Facebook in society today. The other sets out a (surprisingly) simple and well-thought-out way to solve it. I wrote about it on Working Paper in more detail, and started a discussion of what it might mean for news organizations, too.</summary></entry><entry><title type="html">Peak Humidity</title><link href="http://localhost:4000/blog/working-paper-weekly" rel="alternate" type="text/html" title="Peak Humidity" /><published>2018-08-13T10:34:00-05:00</published><updated>2018-08-13T10:34:00-05:00</updated><id>http://localhost:4000/blog/working-paper-weekly</id><content type="html" xml:base="http://localhost:4000/blog/working-paper-weekly">&lt;p&gt;Between the actual weather, and the peak hot air emerging from the American political system this past week, I hope we’ve actually reached Peak Humidity.&lt;/p&gt;
+
+&lt;p&gt;Fall can’t come soon enough.&lt;/p&gt;
+
+&lt;p&gt;Welcome to this edition of the Working Paper, my place to work out what’s happening at the intersection of business, media, technology… with a little bit of travel tidbits thrown in.&lt;/p&gt;
+
+&lt;p&gt;This update feels a little bit like the “it’s obvious” edition: Publishers can only depend on themselves; technology can be good for consumers, but it’s hard to get it working that way; travelers have to react fast and go where the crowds aren’t.  But in saying all that’s obvious… Obviously it’s not.&lt;/p&gt;
+
+&lt;p&gt;Take the latest Facebook scandal, for example.  Five sources at an Australian news organization are claiming that Facebook’s head of news told them that Zuckerberg doesn’t care about publishers.  Whether or not it was said in the meeting is irrelevant: on the whole, publishers don’t matter to Facebook. They won’t have the dollars to spend buying ads that consumer products companies do, and news content is not as engaging as other forms of clickbait.  The sooner publishers treat all platforms as frenemies, the better.&lt;/p&gt;
+
+&lt;p&gt;Very keen to chat with you all about the recent Facebook revelations, and additional implications of the Pi Hole.&lt;/p&gt;
+
+&lt;p&gt;Yours Aye,&lt;/p&gt;
+
+&lt;p&gt;Andrew&lt;/p&gt;
+
+&lt;p&gt;P.S. Next week, there’ll be a short update on &lt;a href=&quot;https://underlay.mit.edu/&quot;&gt;Underlay&lt;/a&gt;, a project some &lt;a href=&quot;http://cyber.harvard.edu/&quot;&gt;Berkfolk&lt;/a&gt; and I are thinking through.&lt;/p&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+&lt;p&gt;A few clever bits this week:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;WhatsApp &lt;a href=&quot;https://techcrunch.com/2018/08/01/whatsapp-business-api/&quot;&gt;creates a new ad format&lt;/a&gt; that connects directly to their business chat functionality.  Seems ideal for subscription-based news organizations that want to engage with their readers.  Who will be the first to use these new WhatsApp Ads to engage an audience?  &lt;a href=&quot;mailto:ag@workingpaper.co&quot;&gt;Let me know&lt;/a&gt; if you see anyone.&lt;/li&gt;
+  &lt;li&gt;This piece on being a &lt;a href=&quot;https://medium.com/global-editors-network/tools-tech-and-the-newsroom-how-the-washington-post-does-it-71fa932de1e&quot;&gt;“newsroom bridge”&lt;/a&gt; between reporters and engineers at the Washington Post is useful to any organization.  Engineers like solving problems, and the better they understand what their colleagues are doing every day, they more they can devise useful solutions.&lt;/li&gt;
+  &lt;li&gt;Another day, another Facebook scandal.  Should it be surprising (or even news) that the company doesn’t think much of publishers?  (Maybe suggesting that they’d be in &lt;a href=&quot;http://www.niemanlab.org/2018/08/facebooks-message-to-media-we-are-not-interested-in-talking-to-you-about-your-traffic-that-is-the-old-world-and-there-is-no-going-back/&quot;&gt;hospice without Facebook&lt;/a&gt; is a little much…)  Really, the question for publishers remains how to use platforms for their own benefit.  All too often, they spend money promoting content, without any access to users.  Never understood this.  Seems like the ideal way to engage with Facebook is to syphon off users into your own ecosystem. (Email newsletters, anyone?)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
+&lt;p&gt;I’ve gone down the &lt;a href=&quot;&quot;&gt;Pi Hole&lt;/a&gt;, and it’s pretty great.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A &lt;a href=&quot;http://www.microcenter.com/product/486575/zero-w&quot;&gt;$5 device&lt;/a&gt; that blocks ads and trackers across your entire network including in apps&lt;/li&gt;
+  &lt;li&gt;No software needed client side&lt;/li&gt;
+  &lt;li&gt;Generates stats for network insight… Do you know how often your smart speaker phones home to report stats? Much more than you think.&lt;/li&gt;
+  &lt;li&gt;Tech savvy using this now — but there’s no reason why this couldn’t be integrated into consumer routers and sold as a feature.  It’s really nice using the Internet without ads and trackers.&lt;/li&gt;
+  &lt;li&gt;As if there were not enough reasons to think through multiple revenue streams for media companies.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
+&lt;p&gt;Planned a quick weekend get-away to Philadelphia last week, but the FAA (and, ok, the weather) had other plans.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hundreds queued up at the airport in BOS&lt;/li&gt;
+  &lt;li&gt;Two hour hold times even for high-status frequent flyers&lt;/li&gt;
+  &lt;li&gt;What to do?  I called &lt;a href=&quot;https://www.aa.com/i18n/customer-service/contact-american/reservations-and-ticket-changes.jsp&quot;&gt;London&lt;/a&gt;.  No wait.  On the next flight out.&lt;/li&gt;
+  &lt;li&gt;Most airlines have a service center elsewhere that speaks English, is open 24 hours… and likely isn’t besieged.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2018/08/10/opinion/sunday/speak-for-yourself.html&quot;&gt;Go Ahead, Speak for Yourself&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/dont-talk/978923158?i=978923163&quot;&gt;Don’t Talk – Melody Gardot&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Between the actual weather, and the peak hot air emerging from the American political system this past week, I hope we’ve actually reached Peak Humidity.</summary></entry><entry><title type="html">Mail (of all sorts) Edition</title><link href="http://localhost:4000/blog/mail-of-all-sorts" rel="alternate" type="text/html" title="Mail (of all sorts) Edition" /><published>2018-08-13T10:34:00-05:00</published><updated>2018-08-13T10:34:00-05:00</updated><id>http://localhost:4000/blog/mail-of-all-sorts</id><content type="html" xml:base="http://localhost:4000/blog/mail-of-all-sorts">&lt;p&gt;This week: an interesting story, an interesting technology, an ask, and the magic of the (snail) mail.&lt;/p&gt;
+
+&lt;p&gt;First up, &lt;a href=&quot;https://www.vanityfair.com/news/2018/08/felix-salmon-axios-continues-its-push-bloomberg&quot;&gt;Axios has hired Felix Salmon and Courtenay Brown&lt;/a&gt;. I read Salmon, in particular, and couldn’t be more excited to see him in a new home. But for our purposes, it gives us a news peg to think about &lt;a href=&quot;https://www.axios.com/&quot;&gt;Axios&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Quick brief for those new to Axios: a group of &lt;a href=&quot;https://www.politico.com/&quot;&gt;Politico&lt;/a&gt;’s key leadership, and some of its key reportorial talent &lt;a href=&quot;https://www.wsj.com/articles/politico-co-founder-jim-vandehei-to-launch-news-venture-for-professionals-1473201458&quot;&gt;left in late 2016 with the goal of launching a subscription newsletter business&lt;/a&gt; for busy professionals. It launched in 2017, with the mantra of “smart brevity” – very short pieces that get right to the point. A core part of the strategy has been to hire reporters who can command audiences via newsletters (think Mike Allen’s Playbook, which put Politico on the map). According to the above-linked Vanity Fair piece, weekly advertising rates for those newsletters can command $75,000 to reach 200,000 subscribers. They’ve raised some $30 million, and are developing additional revenue streams like &lt;a href=&quot;https://www.wsj.com/articles/axios-to-create-limited-run-series-for-hbo-1533718801&quot;&gt;content licencing with HBO&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is particularly interesting in light of last week’s letter. (And, I’ll admit, is a bit meta.) Axios is showing an “obvious” alternative strategy for a modern media organization: smart, non-dependent use of tech platforms.  &lt;em&gt;Axios does its own distribution.&lt;/em&gt; As we’ve been &lt;a href=&quot;https://medium.com/single-subject-news-project/six-lessons-about-email-and-audience-growth-for-nonprofit-news-e05b8ea46a63&quot;&gt;saying at Shorenstein&lt;/a&gt;, newsletters are one of the few ways to reach people that don’t depend on another company that can charge for access to an audience. They also give editorial control that a Facebook post or Google ad don’t.&lt;/p&gt;
+
+&lt;p&gt;This isn’t exactly a new strategy, and marketers have long known the value of &lt;a href=&quot;https://hbr.org/2014/10/making-sense-of-owned-media&quot;&gt;“owned” media&lt;/a&gt;, but it’s a trend I expect to explode over the next year. As the difficulty of working with (or, maybe, for) large tech platforms becomes clearer, people will be increasingly willing to do the hard work of reaching an audience, and owning that connection. In many ways, this is also the same logic that underlies the growth in interest in reader-revenue at news publications as well.&lt;/p&gt;
+
+&lt;p&gt;Now, on to a bit of technology. A few friends of mine from the &lt;a href=&quot;https://cyber.harvard.edu/&quot;&gt;Berkman Klein Center&lt;/a&gt; are working on a new technology, called &lt;a href=&quot;https://underlay.mit.edu/&quot;&gt;Underlay&lt;/a&gt;, designed to help make visible from where a fact is sourced inside a document. We’ve been talking about use cases, and journalism (particularly in the era of “fake news”) is an obvious one.&lt;/p&gt;
+
+&lt;p&gt;Now for the ask: we’re looking for media partners who want to try publishing a big, serious piece with some technology that is developed by the Underlay team. We’re still in the early stages, but news with a &lt;a href=&quot;https://en.m.wikipedia.org/wiki/Ontology_(information_science)&quot;&gt;knowledge graph&lt;/a&gt; attached to it is something I’d like to see exist in the world. So, if you are such a person, or can forward this note to one… do so, and &lt;a href=&quot;mailto:ag@workingpaper.co&quot;&gt;get in touch&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Andrew&lt;/p&gt;
+
+&lt;h4 id=&quot;about-working-paper&quot;&gt;About Working Paper&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.workingpaper.co/&quot;&gt;Working Paper&lt;/a&gt; is a boutique management consultancy run by &lt;a href=&quot;https://www.workingpaper.co/andrew-gruen&quot;&gt;Andrew Gruen&lt;/a&gt;.  We develop research-based strategies for media organizations, research universities, and advertisers. &lt;/p&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.vanityfair.com/news/2018/08/felix-salmon-axios-continues-its-push-bloomberg&quot;&gt;Axios, Felix Salmon and Courtenay Brown&lt;/a&gt; are re-affirming the power of newsletters with authors who have a strong point of view and voice.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Given that I currently am shipping myself 27 boxes, including my entire library (more below), I can’t recommend the &lt;a href=&quot;https://junecloud.com/software/iphone/deliveries.html&quot;&gt;Deliveries App&lt;/a&gt; enough. I’ve been using it for years, and it does a great job of keeping all my, well, deliveries in one place.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/769fcba2-ac4d-48b5-b66b-de3d35ca1f78.jpeg&quot; alt=&quot;&quot; /&gt;
+| Making use of Media Mail |&lt;/p&gt;
+
+&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Not an upgrade &lt;em&gt;per se&lt;/em&gt;, but one that certainly makes travel easier.&lt;/li&gt;
+  &lt;li&gt;I was reminded that most folks don’t know about the United States Postal Service’s &lt;a href=&quot;https://about.usps.com/notices/not121/not121_tech.htm&quot;&gt;Media Mail&lt;/a&gt; or &lt;a href=&quot;https://about.usps.com/postal-bulletin/2007/html/pb22203a/imm_chngs.6.9.html&quot;&gt;M-Bag&lt;/a&gt; services.&lt;/li&gt;
+  &lt;li&gt;I shipped my entire library, from undergrad to today, across the country for less than $200. When in grad school, I used the M-Bag to send myself books overseas – a service that originated after World War II to help re-stock libraries in Europe.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2018/08/17/opinion/college-students.html&quot;&gt;How to Get the Most Out Of College&lt;/a&gt; — I benefited from mentors and my cohort so much.  Thank you.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/blue-boss/1333401744?i=1333401747&quot;&gt;Blue Boss — Sampa the Great&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">This week: an interesting story, an interesting technology, an ask, and the magic of the (snail) mail.</summary></entry></feed>
