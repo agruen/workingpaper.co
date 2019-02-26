@@ -155,7 +155,7 @@ font_settings:
 
 advanced_settings:
   ajax_loading: false
-  analytics_code: "<!-- Global site tag (gtag.js) - Google Analytics --><script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-38501325-2\"></script><script>window.dataLayer = window.dataLayer  [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-38501325-2');</script>"
+  analytics_code: "<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(66370106);</script><script async src="//static.getclicky.com/js"></script>"
   custom_styles: ""
   header_js: ""
   footer_js: ""
