@@ -1,8 +1,8 @@
 ---
-title: About me
-subtitle: Personal is the perfect theme for developers, designers and other creatives.
-description: Personal is the perfect theme for developers, designers and other creatives.
-featured_image: /images/demo/about.jpg
+title: 7 March 2019 Sign Up
+subtitle: Join the Geeks Hour to build your own IoT Temperature and Humidity sensor
+description: 
+featured_image: /images/blog/esp8266-bme280.jpg
 ---
 
 ## Features
