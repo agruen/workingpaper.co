@@ -174,6 +174,92 @@
 <h2 id="sign-up">Sign Up</h2>
 <center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfRk9-yhr-H6eiBg00nzxA9_JErhNgxLZaX_eozvdTN6osAiQ/viewform?embedded=true" width="640" height="662" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></center>
 
+<h2 id="session-instructions">Session Instructions</h2>
+
+<h3 id="preparing-your-hardware">Preparing your hardware</h3>
+<ol>
+  <li>Your kit should come with four parts:
+ <img src="images/nodemcu-bkc/1.jpg" alt="" />
+    <ol>
+      <li>NodeMCU Microcontroller</li>
+      <li>AM2302 (DHT22) Temperature/Humidity Sensor</li>
+      <li>Cables with pin adaptors</li>
+      <li>Micro USB cable</li>
+    </ol>
+  </li>
+  <li>Putting software on the Microcontroller (please be sure you’ve already downloaded everything in the <a href="#prerecs">Prerecs</a> section above)
+    <ol>
+      <li>First, we’ll install the <a href="https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers">Silicon Labs drivers</a> for your system</li>
+      <li>Next, we’ll use the  the <a href="https://github.com/marcelstoer/nodemcu-pyflasher/releases">NodeMCU PyFlasher</a> to load the <a href="nodemcu-master-15-modules-2019-01-06-01-35-33-float.bin">firmware</a> onto the microcontroller
+        <ul>
+          <li>Connect your microcontroler to your laptop with the included USB cable.
+ <img src="images/nodemcu-bkc/2.jpg" alt="" /></li>
+          <li>Open PyFlasher, select the select the correct serial port from the list, and pick the correct connection speed and type.  The ones in the screenshot seem to work well for these devices, but your milage may vary… Be sure to try things if they don’t work for you.</li>
+          <li>Select the firmware to load, choose erase flash, and then click the big ‘Flash NodeMCU’ Button!
+ <img src="images/nodemcu-bkc/pyflasher.png" alt="" /></li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>Now that we have NodeMCU on your microcontroller, we need to install the software to read from the sensor and publish the data over HTTP.  For this project, we’re using <a href="https://github.com/NorthernMan54/homebridge-mcuiot/tree/master/nodemcu/lua">homebridge-mcuiot</a>.  We’ll use the <a href="https://esp8266.ru/esplorer/">ESPlorer</a> to actually “install” the software on the microcontroller.
+    <ol>
+      <li>After downloading all the files in the <code class="highlighter-rouge">lua</code> folder, we need to edit a two of them.
+ <img src="images/nodemcu-bkc/lua.png" alt="" />
+        <ul>
+          <li>First, we’ll add the correct WiFi information to the <code class="highlighter-rouge">passwords_sample.lua</code> file.  Note the file has blanks for two WiFi networks.  Delete the second one.  After you’re finished, rename the file <code class="highlighter-rouge">passwords.lua</code>.
+ <img src="images/nodemcu-bkc/passwords.png" alt="" /></li>
+          <li>Second, we need to edit the <code class="highlighter-rouge">config.lua</code> file.  Here we tell the microcontroller which type of sensor we’re using (line 4 <code class="highlighter-rouge">DHT</code>), that we do not want the LEDs running all the time (line 8 <code class="highlighter-rouge">2</code>), and which pin we will use for data from the sensor (line 17 <code class="highlighter-rouge">5</code> – we’ll use pin 5, because it’s next to the ground and power pins).
+ <img src="images/nodemcu-bkc/config.png" alt="" /></li>
+        </ul>
+      </li>
+      <li>Now, we need to connect to our functioning microcontroller using ESPlorer.  To do so, we open the app, select the correct serial port, enable <code class="highlighter-rouge">DTR</code> and <code class="highlighter-rouge">RTS</code> and set the bitrate to <code class="highlighter-rouge">115200</code>.  Then we click the big <code class="highlighter-rouge">open</code> button.
+ <img src="images/nodemcu-bkc/esplorer-setup.png" alt="" /></li>
+      <li>Once connected, we can upload the <code class="highlighter-rouge">homebridge-mcuiot</code> software.  To do so, we must upload six files individually, by clicking the upload button, finding them on our system, and clicking open for each.  The five files we need to upload are:
+        <ul>
+          <li>config.lua</li>
+          <li>led.lua</li>
+          <li>main.lua</li>
+          <li>passwords.lua</li>
+          <li>setup.lua</li>
+          <li>test.lua
+ <img src="images/nodemcu-bkc/esplorer-upload.png" alt="" /></li>
+        </ul>
+      </li>
+      <li>After uploading all the files, we can now test our microcontroller to see if it can connect to WiFi.  We use the ESplorer to run the test by selecting <code class="highlighter-rouge">dofile("")</code> from the action menu; editing it to add our test tool, so it reads <code class="highlighter-rouge">dofile("test.lua")</code>, and then clicking the send button.  If the microcontroller panics, it will reboot.  Run the test file again. (This happens with regularity.)
+ <img src="images/nodemcu-bkc/esplorer-test.png" alt="" />
+ If the test is successful, ESPlorer will display the connected WiFi network and the device’s IP address.
+ <img src="images/nodemcu-bkc/esplorer-test-running.png" alt="" /></li>
+    </ol>
+  </li>
+  <li>Next, we’ll attach our sensor to the microcontroller.
+    <ol>
+      <li>Close ESplorer and unplug your microcontroller from your laptop.</li>
+      <li>Attach your pin cables to the <code class="highlighter-rouge">3V3</code>, <code class="highlighter-rouge">GND</code>, and <code class="highlighter-rouge">D5</code> pins.  They’re all next to one another.
+ <img src="images/nodemcu-bkc/4.jpg" alt="" /></li>
+      <li>Using the colors of your pin cables as your guide, make the following connections on your AM2302 sensor module:
+        <ul>
+          <li><code class="highlighter-rouge">3V3</code> –&gt; <code class="highlighter-rouge">VCC</code> (middle pin)</li>
+          <li><code class="highlighter-rouge">GND</code> –&gt; <code class="highlighter-rouge">GND</code> (bottom pin)</li>
+          <li><code class="highlighter-rouge">D5</code>  –&gt; <code class="highlighter-rouge">DAT</code> (top pin)
+ <img src="images/nodemcu-bkc/5.jpg" alt="" /></li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>Now we can re-connect the microcontroller to your laptop via USB, and see if it is pulling data from the sensor.
+    <ol>
+      <li>After re-connecting, open ESPlorer and open the connection again (it should have saved your settings from before).</li>
+      <li>Run the test file again, by entering <code class="highlighter-rouge">dofile("test.lua")</code> into the action menu and clicking send.</li>
+      <li>If you connected the sensor correctly, ESPlorer will show you the readout from the sensor, as illustrated below.
+ <img src="images/nodemcu-bkc/esplorer-sensor-test.png" alt="" /></li>
+    </ol>
+  </li>
+  <li>To access the data remotely, you can visit the IP address shown by ESPlorer in your browser.  It’s a simple JSON formatted file, accessible by HTTP.  You can incorporate this into your own application, or use many different home automation tools to read this file.  If you use the Apple ecosystem, you can install the client portion of <a href="https://github.com/NorthernMan54/homebridge-mcuiot/">homebridge-mcuiot</a> along with <a href="https://homebridge.io/">homebridge</a>.  There is good documentation for this on the sites for both pieces of software.
+<img src="images/nodemcu-bkc/browser.png" alt="" /></li>
+  <li>Once you’re ready to perminently install your sensor, we need to add one more file to our microcontroller, <code class="highlighter-rouge">init.lua</code>, which tells it to run the homebridge-mcuiot software on boot.  To do so, click the upload button, find the <code class="highlighter-rouge">init.lua</code> file downloaded earlier, and click open.</li>
+  <li>Congrats!  Go plug your controller in somewhere!</li>
+</ol>
+
 
 		</article>
 
