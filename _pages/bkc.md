@@ -2,7 +2,7 @@
 title: 7 March 2019 Sign Up
 subtitle: Join the Geeks Hour to build your own IoT Temperature and Humidity sensor
 description: 
-featured_image: /images/blog/esp8266-bme280.jpg
+featured_image: /images/nodemcu-bkc/3.jpg
 ---
 
 ## Overview
