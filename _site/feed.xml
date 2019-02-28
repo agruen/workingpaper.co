@@ -1,4 +1,151 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-26T21:10:32-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">workingpaper.co</title><entry><title type="html">We’re Back</title><link href="http://localhost:4000/blog/were-back" rel="alternate" type="text/html" title="We’re Back" /><published>2019-01-28T08:00:00-06:00</published><updated>2019-01-28T08:00:00-06:00</updated><id>http://localhost:4000/blog/were-back</id><content type="html" xml:base="http://localhost:4000/blog/were-back">&lt;p&gt;&lt;em&gt;Programming note: Welcome to the first Working Paper newsletter of 2019!  This year, I’m aiming to deliver about 30 editions… meaning it will become a bi-weekly, with a few special editions when we need to share something faster.&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-02-27T22:06:55-06:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">workingpaper.co</title><entry><title type="html">GitHub is for more than code</title><link href="http://0.0.0.0:4000/blog/git-for-writing-not-code" rel="alternate" type="text/html" title="GitHub is for more than code" /><published>2019-02-27T16:05:00-06:00</published><updated>2019-02-27T16:05:00-06:00</updated><id>http://0.0.0.0:4000/blog/git-for-writing-not-code</id><content type="html" xml:base="http://0.0.0.0:4000/blog/git-for-writing-not-code">&lt;h2 id=&quot;media-folks-and-other-non-technical-writers-dont-know-enough-about-github&quot;&gt;Media folks and other non-technical writers don’t know enough about GitHub.&lt;/h2&gt;
+&lt;h3 id=&quot;lets-fix-that&quot;&gt;Let’s fix that.&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/blog/github.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A remarkable amount of my writing is now done collaboratively.  As a result, I’ve been on an odyssey for better tools and have landed in an unexpected place: GitHub. (Yes, I use G Suite a ton, but it falls down when working on long, complex documents and on creating something that’s beautifully typeset.)&lt;/p&gt;
+
+&lt;p&gt;While &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; is often thought of as a repository for open-source software projects, I’ve integrated it into three recent Working Paper projects that have almost nothing to do with code.  I’m currently using GitHub to collaborate on large reports, to power &lt;a href=&quot;https://workingpaper.co/&quot;&gt;WorkingPaper.co&lt;/a&gt;, and most interestingly to create a new “book.”&lt;/p&gt;
+
+&lt;p&gt;When telling a client about this, I realized how few people (besides software developers) have any idea at all about what version control is, let alone what they might do with a system built on top of it, like GitHub.&lt;/p&gt;
+
+&lt;h4 id=&quot;writing-a-book-and-building-an-organization-in-a-source-control-system-yep&quot;&gt;Writing a book (and building an organization) in a source-control system? Yep.&lt;/h4&gt;
+&lt;p&gt;The most interesting example first: we’re starting a non-profit organization to support the creation and updating of a “text book”.  By way of bakground, my collaborator &lt;a href=&quot;https://www.vettnews.com/paul-glader&quot;&gt;Paul Glader&lt;/a&gt; and I are collecting resources for &lt;a href=&quot;entj.io&quot;&gt;teaching entrepreneurial journalism&lt;/a&gt; because the next generation of journalists need a new set of skills: how to operate an organization. Throughout their careers, we expect them to freelance, start new enterprises, and report on businesses.&lt;/p&gt;
+
+&lt;p&gt;However, the typical way of distributing an academic primer – a book – is plainly ridiculous in this arena.  Things change too fast.  Clearly, we’ll be delivering content over the Web.  But a Wiki doesn’t quite work either; we want authoritative voices writing on teach topic.  But by putting the text into a public GitHub repository, anyone in the world can &lt;em&gt;propose&lt;/em&gt; edits, to be accepted by an established author.  Further, thanks to a feature called &lt;a href=&quot;https://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt;, the text can be written in &lt;a href=&quot;https://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; and yet displayed as a beautiful Web site. Also, it’s entirely free.&lt;/p&gt;
+
+&lt;h4 id=&quot;web-site-publishing&quot;&gt;Web site publishing&lt;/h4&gt;
+&lt;p&gt;GitHub Pages (powered by a static-site generator called &lt;a href=&quot;jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;) also means you can host other sites for free.  Better still, there is simply no content management system.  Write a text file either in your browser or on your device and push it up to GitHub, and your entire site is rebuilt.  This is particularly valuable for working on an iPad – a simple text editing app can now be a Web editor.  There’s a burgeoning collection of nice looking &lt;a href=&quot;https://jekyllrb.com/resources/&quot;&gt;themes&lt;/a&gt;, too.  And again, did I mention it’s free?  Anyone who has visited &lt;a href=&quot;workingpaper.co&quot;&gt;workingpaper.co&lt;/a&gt; recently (which is, admittedly, approximately five humans), might notice that I’ve converted it over to Jekyll and GitHub, too.  There’s a future post (next month) in how you can use the markdown source you write for Jekyll to automatically generate a nice-looking newsletter, too.&lt;/p&gt;
+
+&lt;h4 id=&quot;collaborative-long-form-documents&quot;&gt;Collaborative, long-form documents&lt;/h4&gt;
+&lt;p&gt;Last, &lt;a href=&quot;overleaf.com&quot;&gt;Overleaf&lt;/a&gt; syncs to GitHub, meaning that I can write and update &lt;a href=&quot;https://www.latex-project.org&quot;&gt;LaTeX&lt;/a&gt; documents on my phone.  Better still, any edits I make are merged back into the main document, meaning collaborators get the updates.  And the results are well-structured, beautiful PDFs, like my recent &lt;a href=&quot;https://shorensteincenter.org/wp-content/uploads/2018/10/2018.Facebook_Friends.pdf?x78124&quot;&gt;Shorenstein Center report&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There’s clearly more here – but too much for a newsletter.  If you’re interested, just reply and lets talk.&lt;/p&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Two common sense media links this edition, one about retaining digital audience and another on how media build trust with said audience.  Both seem painfully needed.
+    &lt;ul&gt;
+      &lt;li&gt;In some of my favorite research to come out of &lt;a href=&quot;medill.northwestern.edu&quot;&gt;Medill&lt;/a&gt; in years, the Integrated Marketing Communications faculty churned through massive amounts of subscriber data to help prove out what we should have already known: that optimizing for stories that get read in their entirety, and for reading multiple stories per session, &lt;a href=&quot;http://www.niemanlab.org/2019/02/researchers-crunched-13-tb-of-local-newspaper-subscriber-data-heres-what-they-found-about-who-sticks-around/&quot;&gt;helps retain subscribers&lt;/a&gt;.  It is better than optimizing for page views.  Also note: this came from serious, quantitative researchers on the marketing side of the house.  We need more of this, and them.  There is no more pure journalism.&lt;/li&gt;
+      &lt;li&gt;In another obvious finding, but one I’m glad to see, newspapers are building audience trust by &lt;a href=&quot;http://www.niemanlab.org/2019/02/want-to-build-trust-with-readers-try-adding-a-box-that-explains-the-story-process/&quot;&gt;explaining how they do their work&lt;/a&gt;.  This is, again, common sense, and makes for great storytelling.  Who doesn’t like a behind-the-scenes look?  The more we can show how we craft stories, the better.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;As I promised in the last edition, I’ve codified a bunch of what I’ve learned about open-source IoT hardware into a single page.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/blog/node-mcu-instructions&quot;&gt;This post&lt;/a&gt; walks you through what you need to build your own $5 WiFi temperature and humidity sensor.&lt;/li&gt;
+  &lt;li&gt;If you’re in the Boston area, I’m giving a seminar on March 7 at the &lt;a href=&quot;cyber.harvard.edu&quot;&gt;Berkman Klein Center for Internet and Society&lt;/a&gt; on this very topic.  If you’d like to come, &lt;a href=&quot;/bkc&quot;&gt;register here&lt;/a&gt;. (I’ll email you to confirm there’s space.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;On pain of going down the credit-card-points-rabbit hole, I will simply point out that the &lt;a href=&quot;http://refer.amex.us/ANDREG2rdi?xl=cpcw&quot;&gt;American Express Platinum Business&lt;/a&gt; card now gives you a year subscription to &lt;a href=&quot;wework.com&quot;&gt;WeWork&lt;/a&gt;.  You can visit as many locations as often as you wish.  The $600 annual fee is 1/3rd the price of what I paid for my old co-working space.  Needless to say, I signed up instantly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://daringfireball.net/linked/2019/02/25/google-bird-mode&quot;&gt;How Google Maps ‘Satellite’ View Was Almost Named ‘Bird Mode’&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album//782955173?i=782955237&quot;&gt;So Far - Habanot Nechama&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Media folks and other non-technical writers don’t know enough about GitHub. Let’s fix that.</summary></entry><entry><title type="html">NodeMCU IoT Build Instructions</title><link href="http://0.0.0.0:4000/blog/node-mcu-instructions" rel="alternate" type="text/html" title="NodeMCU IoT Build Instructions" /><published>2019-02-26T15:27:00-06:00</published><updated>2019-02-26T15:27:00-06:00</updated><id>http://0.0.0.0:4000/blog/node-mcu-instructions</id><content type="html" xml:base="http://0.0.0.0:4000/blog/node-mcu-instructions">&lt;h2 id=&quot;prerecs&quot;&gt;Prerecs&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;At least one &lt;a href=&quot;https://www.aliexpress.com/item/Update-Industry-4-0-New-esp8266-NodeMCU-v2-Lua-WIFI-networking-development-kit-board-based-on/32358722888.html&quot;&gt;ESP8266 microcontroller&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;At least one &lt;a href=&quot;https://www.aliexpress.com/item/High-Precision-AM2302-DHT22-Digital-Temperature-Humidity-Sensor-Module-For-Uno-R3/32292594513.html&quot;&gt;Temperature and humidity sensors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers&quot;&gt;ESP8266 Serial Drivers&lt;/a&gt; from &lt;a href=&quot;silabs.com&quot;&gt;Silicon Labs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;nodemcu-master-15-modules-2019-01-06-01-35-33-float.bin&quot;&gt;ESP8266 Firmware&lt;/a&gt; (I’ve pre-compiled this for you and am hosting it… but if you want to build your own, it’s easy, and you can do so &lt;a href=&quot;https://nodemcu-build.com&quot;&gt;here&lt;/a&gt;, just be sure to include the needed modules including wifi, your sensor type, etc. Again, contact me if you want more info.)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://esp8266.ru/esplorer/&quot;&gt;ESPlorer&lt;/a&gt; (requires java)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/marcelstoer/nodemcu-pyflasher/releases&quot;&gt;NodeMCU PyFlasher&lt;/a&gt; (Mac and Windows availible, if you’re running linux, you can either build it from source or write me and I’ll get you going.)&lt;/li&gt;
+  &lt;li&gt;Software for your NodeMCU device (in this case, &lt;a href=&quot;https://github.com/NorthernMan54/homebridge-mcuiot/tree/master/nodemcu/lua&quot;&gt;homebridge-mcuiot&lt;/a&gt; – download all the Lua files, or clone the whole repo)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-by-step-instructions&quot;&gt;Step-by-step instructions&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Your kit should come with four parts:
+ &lt;img src=&quot;/images/nodemcu-bkc/1.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;ol&gt;
+      &lt;li&gt;NodeMCU Microcontroller&lt;/li&gt;
+      &lt;li&gt;AM2302 (DHT22) Temperature/Humidity Sensor&lt;/li&gt;
+      &lt;li&gt;Cables with pin adaptors&lt;/li&gt;
+      &lt;li&gt;Micro USB cable&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Putting software on the Microcontroller (please be sure you’ve already downloaded everything in the &lt;a href=&quot;#prerecs&quot;&gt;Prerecs&lt;/a&gt; section above)
+    &lt;ol&gt;
+      &lt;li&gt;First, we’ll install the &lt;a href=&quot;https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers&quot;&gt;Silicon Labs drivers&lt;/a&gt; for your system&lt;/li&gt;
+      &lt;li&gt;Next, we’ll use the  the &lt;a href=&quot;https://github.com/marcelstoer/nodemcu-pyflasher/releases&quot;&gt;NodeMCU PyFlasher&lt;/a&gt; to load the &lt;a href=&quot;nodemcu-master-15-modules-2019-01-06-01-35-33-float.bin&quot;&gt;firmware&lt;/a&gt; onto the microcontroller
+        &lt;ul&gt;
+          &lt;li&gt;Connect your microcontroler to your laptop with the included USB cable.
+ &lt;img src=&quot;/images/nodemcu-bkc/2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+          &lt;li&gt;Open PyFlasher, select the select the correct serial port from the list, and pick the correct connection speed and type.  The ones in the screenshot seem to work well for these devices, but your milage may vary… Be sure to try things if they don’t work for you.&lt;/li&gt;
+          &lt;li&gt;Select the firmware to load, choose erase flash, and then click the big ‘Flash NodeMCU’ Button!
+ &lt;img src=&quot;/images/nodemcu-bkc/pyflasher.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Now that we have NodeMCU on your microcontroller, we need to install the software to read from the sensor and publish the data over HTTP.  For this project, we’re using &lt;a href=&quot;https://github.com/NorthernMan54/homebridge-mcuiot/tree/master/nodemcu/lua&quot;&gt;homebridge-mcuiot&lt;/a&gt;.  We’ll use the &lt;a href=&quot;https://esp8266.ru/esplorer/&quot;&gt;ESPlorer&lt;/a&gt; to actually “install” the software on the microcontroller.
+    &lt;ol&gt;
+      &lt;li&gt;After downloading all the files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;lua&lt;/code&gt; folder, we need to edit a two of them.
+ &lt;img src=&quot;/images/nodemcu-bkc/lua.png&quot; alt=&quot;&quot; /&gt;
+        &lt;ul&gt;
+          &lt;li&gt;First, we’ll add the correct WiFi information to the &lt;code class=&quot;highlighter-rouge&quot;&gt;passwords_sample.lua&lt;/code&gt; file.  Note the file has blanks for two WiFi networks.  Delete the second one.  After you’re finished, rename the file &lt;code class=&quot;highlighter-rouge&quot;&gt;passwords.lua&lt;/code&gt;.
+ &lt;img src=&quot;/images/nodemcu-bkc/passwords.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+          &lt;li&gt;Second, we need to edit the &lt;code class=&quot;highlighter-rouge&quot;&gt;config.lua&lt;/code&gt; file.  Here we tell the microcontroller which type of sensor we’re using (line 4 &lt;code class=&quot;highlighter-rouge&quot;&gt;DHT&lt;/code&gt;), that we do not want the LEDs running all the time (line 8 &lt;code class=&quot;highlighter-rouge&quot;&gt;2&lt;/code&gt;), and which pin we will use for data from the sensor (line 17 &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt; – we’ll use pin 5, because it’s next to the ground and power pins).
+ &lt;img src=&quot;/images/nodemcu-bkc/config.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Now, we need to connect to our functioning microcontroller using ESPlorer.  To do so, we open the app, select the correct serial port, enable &lt;code class=&quot;highlighter-rouge&quot;&gt;DTR&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;RTS&lt;/code&gt; and set the bitrate to &lt;code class=&quot;highlighter-rouge&quot;&gt;115200&lt;/code&gt;.  Then we click the big &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt; button.
+ &lt;img src=&quot;/images/nodemcu-bkc/esplorer-setup.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Once connected, we can upload the &lt;code class=&quot;highlighter-rouge&quot;&gt;homebridge-mcuiot&lt;/code&gt; software.  To do so, we must upload six files individually, by clicking the upload button, finding them on our system, and clicking open for each.  The five files we need to upload are:
+        &lt;ul&gt;
+          &lt;li&gt;config.lua&lt;/li&gt;
+          &lt;li&gt;led.lua&lt;/li&gt;
+          &lt;li&gt;main.lua&lt;/li&gt;
+          &lt;li&gt;passwords.lua&lt;/li&gt;
+          &lt;li&gt;setup.lua&lt;/li&gt;
+          &lt;li&gt;test.lua
+ &lt;img src=&quot;/images/nodemcu-bkc/esplorer-upload.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;After uploading all the files, we can now test our microcontroller to see if it can connect to WiFi.  We use the ESplorer to run the test by selecting &lt;code class=&quot;highlighter-rouge&quot;&gt;dofile(&quot;&quot;)&lt;/code&gt; from the action menu; editing it to add our test tool, so it reads &lt;code class=&quot;highlighter-rouge&quot;&gt;dofile(&quot;test.lua&quot;)&lt;/code&gt;, and then clicking the send button.  If the microcontroller panics, it will reboot.  Run the test file again. (This happens with regularity.)
+ &lt;img src=&quot;/images/nodemcu-bkc/esplorer-test.png&quot; alt=&quot;&quot; /&gt;
+ If the test is successful, ESPlorer will display the connected WiFi network and the device’s IP address.
+ &lt;img src=&quot;/images/nodemcu-bkc/esplorer-test-running.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Next, we’ll attach our sensor to the microcontroller.
+    &lt;ol&gt;
+      &lt;li&gt;Close ESplorer and unplug your microcontroller from your laptop.&lt;/li&gt;
+      &lt;li&gt;Attach your pin cables to the &lt;code class=&quot;highlighter-rouge&quot;&gt;3V3&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;GND&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;D5&lt;/code&gt; pins.  They’re all next to one another.
+ &lt;img src=&quot;/images/nodemcu-bkc/4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;Using the colors of your pin cables as your guide, make the following connections on your AM2302 sensor module:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;3V3&lt;/code&gt; –&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;VCC&lt;/code&gt; (middle pin)&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GND&lt;/code&gt; –&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;GND&lt;/code&gt; (bottom pin)&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;D5&lt;/code&gt;  –&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;DAT&lt;/code&gt; (top pin)
+ &lt;img src=&quot;/images/nodemcu-bkc/5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Now we can re-connect the microcontroller to your laptop via USB, and see if it is pulling data from the sensor.
+    &lt;ol&gt;
+      &lt;li&gt;After re-connecting, open ESPlorer and open the connection again (it should have saved your settings from before).&lt;/li&gt;
+      &lt;li&gt;Run the test file again, by entering &lt;code class=&quot;highlighter-rouge&quot;&gt;dofile(&quot;test.lua&quot;)&lt;/code&gt; into the action menu and clicking send.&lt;/li&gt;
+      &lt;li&gt;If you connected the sensor correctly, ESPlorer will show you the readout from the sensor, as illustrated below.
+ &lt;img src=&quot;/images/nodemcu-bkc/esplorer-sensor-test.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;To access the data remotely, you can visit the IP address shown by ESPlorer in your browser.  It’s a simple JSON formatted file, accessible by HTTP.  You can incorporate this into your own application, or use many different home automation tools to read this file.  If you use the Apple ecosystem, you can install the client portion of &lt;a href=&quot;https://github.com/NorthernMan54/homebridge-mcuiot/&quot;&gt;homebridge-mcuiot&lt;/a&gt; along with &lt;a href=&quot;https://homebridge.io/&quot;&gt;homebridge&lt;/a&gt;.  There is good documentation for this on the sites for both pieces of software.
+&lt;img src=&quot;/images/nodemcu-bkc/browser.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Once you’re ready to perminently install your sensor, we need to add one more file to our microcontroller, &lt;code class=&quot;highlighter-rouge&quot;&gt;init.lua&lt;/code&gt;, which tells it to run the homebridge-mcuiot software on boot.  To do so, click the upload button, find the &lt;code class=&quot;highlighter-rouge&quot;&gt;init.lua&lt;/code&gt; file downloaded earlier, and click open.&lt;/li&gt;
+  &lt;li&gt;Congrats!  Go plug your controller in somewhere!&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Prerecs At least one ESP8266 microcontroller At least one Temperature and humidity sensors ESP8266 Serial Drivers from Silicon Labs ESP8266 Firmware (I’ve pre-compiled this for you and am hosting it… but if you want to build your own, it’s easy, and you can do so here, just be sure to include the needed modules including wifi, your sensor type, etc. Again, contact me if you want more info.) ESPlorer (requires java) NodeMCU PyFlasher (Mac and Windows availible, if you’re running linux, you can either build it from source or write me and I’ll get you going.) Software for your NodeMCU device (in this case, homebridge-mcuiot – download all the Lua files, or clone the whole repo)</summary></entry><entry><title type="html">We’re Back</title><link href="http://0.0.0.0:4000/blog/were-back" rel="alternate" type="text/html" title="We’re Back" /><published>2019-01-28T08:00:00-06:00</published><updated>2019-01-28T08:00:00-06:00</updated><id>http://0.0.0.0:4000/blog/were-back</id><content type="html" xml:base="http://0.0.0.0:4000/blog/were-back">&lt;p&gt;&lt;em&gt;Programming note: Welcome to the first Working Paper newsletter of 2019!  This year, I’m aiming to deliver about 30 editions… meaning it will become a bi-weekly, with a few special editions when we need to share something faster.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;I write the newsletter to achieve two goals:&lt;/em&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -88,7 +235,60 @@
 &lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/roman-ii-from-knife-in-the-water/514843606?i=514843926&quot;&gt;Roman II – Krzysztof Komeda Quartet&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Programming note: Welcome to the first Working Paper newsletter of 2019! This year, I’m aiming to deliver about 30 editions… meaning it will become a bi-weekly, with a few special editions when we need to share something faster.</summary></entry><entry><title type="html">Independence Edition</title><link href="http://localhost:4000/blog/independence" rel="alternate" type="text/html" title="Independence Edition" /><published>2018-09-03T07:00:00-05:00</published><updated>2018-09-03T07:00:00-05:00</updated><id>http://localhost:4000/blog/independence</id><content type="html" xml:base="http://localhost:4000/blog/independence">&lt;p&gt;There isn’t supposed to be much news in the last week of August.  This past week was different.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Programming note: Welcome to the first Working Paper newsletter of 2019! This year, I’m aiming to deliver about 30 editions… meaning it will become a bi-weekly, with a few special editions when we need to share something faster.</summary></entry><entry><title type="html">New Year, More Facebook Troubles</title><link href="http://0.0.0.0:4000/blog/new-year-more-facebook-troubles" rel="alternate" type="text/html" title="New Year, More Facebook Troubles" /><published>2018-09-03T07:00:00-05:00</published><updated>2018-09-03T07:00:00-05:00</updated><id>http://0.0.0.0:4000/blog/new-year-more-facebook-troubles</id><content type="html" xml:base="http://0.0.0.0:4000/blog/new-year-more-facebook-troubles">&lt;p&gt;I can’t stop writing about Facebook.&lt;/p&gt;
+
+&lt;p&gt;Yet again, they’re linked below this week in a good summary from the Nieman Lab. The core issue: “publishing an article is not the same as the article being seen by people interested in it.” Facebook is a master of what Ben Thompson calls &lt;a href=&quot;https://stratechery.com/concept/aggregation-theory/&quot;&gt;“aggregation theory”&lt;/a&gt;, where owning demand is more important than supply in the value chain for digital goods/services. Clearly, Facebook is an outsized winner in this regard: huge swaths of the population (&lt;a href=&quot;https://twitter.com/agolis/status/1039170866851004416?s=12&quot;&gt;but not everyone&lt;/a&gt;) start their news consumption diets there.&lt;/p&gt;
+
+&lt;p&gt;My open question remains: who else, with more of a civic-minded bent to them, could do this kind of aggregation?&lt;/p&gt;
+
+&lt;p&gt;In a conversation, I started to wonder if this would be a role (classic news aggregator) for a digital-era Public Service Broadcaster. Then I got sad again: &lt;a href=&quot;https://twitter.com/emilybell/status/1038777790668124160?s=12&quot;&gt;“Americans could barely buy a coffee with what they spend per year on public media”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For those who are celebrating, L’Shana Tova.&lt;/p&gt;
+
+&lt;p&gt;Andrew&lt;/p&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+&lt;p&gt;Unlike the new Twitter news advertising policy from last week’s note, Facebook is yet again being confronted over &lt;a href=&quot;http://www.niemanlab.org/2018/09/are-you-sure-that-promoted-article-is-still-political-content-facebook/&quot;&gt;the lack of nuance in its own policy&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Naja Nielsen, the chief journalism officer of Orb Media, the non-profit profiled in the above-linked Nieman Lab story, summed this up better than I’ve seen.&lt;/li&gt;
+  &lt;li&gt;“I completely acknowledge that Facebook is a private company. They have the rules they want to have. We as users have to listen to whatever decisions they’re making,” Nielsen said. “But, as we all know, in the age of the internet publishing an article is not the same as the article being seen by people interested in it.”\&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Verizon issues a &lt;a href=&quot;https://www.verizonenterprise.com/resources/reports/rp_DBIR_2018_Report_execsummary_en_xg.pdf&quot;&gt;report&lt;/a&gt; on their security breach investigations.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Financial gain remains at the top of the list for attack motives.&lt;/li&gt;
+  &lt;li&gt;Bad actors have been targeting our media/public sphere via means that we’ve given them (advertising APIs, etc.)… But we need some thinking about what happens if they decide to make an outright attack?&lt;/li&gt;
+  &lt;li&gt;For example: what kind of security procedures do our preeminent business journalists undertake?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
+&lt;p&gt;The Census Bureau Tried to Use Differential Privacy for the 2020 Census. &lt;a href=&quot;https://arxiv.org/pdf/1809.02201.pdf&quot;&gt;It was hard&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The Bureau encountered many issues a start-up might (including a lack of trained staff), but perhaps most interesting to me: the lack of computational resources&lt;/li&gt;
+  &lt;li&gt;They estimated that using differential privacy would require &lt;em&gt;three orders of magnitude&lt;/em&gt; more computational power than what they currently require.&lt;/li&gt;
+  &lt;li&gt;Here is yet another example of how the elasticity of shared computing resources is so valuable (“cloud computing”).&lt;/li&gt;
+  &lt;li&gt;Genomics is leading the way here, both in terms of &lt;a href=&quot;https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002195&quot;&gt;need&lt;/a&gt; and &lt;a href=&quot;https://cbiit.cancer.gov/ncip/crdc-cloud-resources&quot;&gt;policy response&lt;/a&gt;, but we will see this play out across every industry&lt;/li&gt;
+  &lt;li&gt;H/T to my Berkman colleague &lt;a href=&quot;http://cyber.harvard.edu/people/ram-shankar-siva-kumar&quot;&gt;Ram Shankar Siva Kumar&lt;/a&gt; for highlighting the paper.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
+&lt;p&gt;*I know this one sounds crazy. I know. But it isn’t. * One of the keys to making travel easier for me is having a bag that is, essentially, pre-packed. That includes toiletries.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;It’s all about having almost zero cognitive load.&lt;/li&gt;
+  &lt;li&gt;Did you know you can get &lt;a href=&quot;https://duckduckgo.com/?q=2.5+oz+toothpaste&amp;amp;t=h_&amp;amp;ia=products&quot;&gt;bigger-than-test-yet-smaller-than-three-ounce toothpaste tubes&lt;/a&gt;?&lt;/li&gt;
+  &lt;li&gt;I can get a couple of trips out of this – meaning even less that I even need on a pre-travel checklist.&lt;/li&gt;
+  &lt;li&gt;Next week, the same principle applied to one of my most favorite subjects: ⚡️charging ⚡️.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2018/09/05/obituaries/melitta-bentz-overlooked.html&quot;&gt;Overlooked No More: Melitta Bentz, Who Invented the Coffee Filter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/fading-blues/65881604?i=65880513&quot;&gt;Fading Blues - Hird&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">I can’t stop writing about Facebook.</summary></entry><entry><title type="html">Independence Edition</title><link href="http://0.0.0.0:4000/blog/independence" rel="alternate" type="text/html" title="Independence Edition" /><published>2018-09-03T07:00:00-05:00</published><updated>2018-09-03T07:00:00-05:00</updated><id>http://0.0.0.0:4000/blog/independence</id><content type="html" xml:base="http://0.0.0.0:4000/blog/independence">&lt;p&gt;There isn’t supposed to be much news in the last week of August.  This past week was different.&lt;/p&gt;
 
 &lt;p&gt;I intended to continue the discussion of information fiduciaries, but there were too many other interesting links on a different subject: media companies are continuing the trend of independence from tech platforms.&lt;/p&gt;
 
@@ -166,60 +366,7 @@
 &lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/secret-place-tor-remix/1335279975?i=1335279993&quot;&gt;Secret Place (Tor Remix) - CloZee&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">There isn’t supposed to be much news in the last week of August.  This past week was different.</summary></entry><entry><title type="html">New Year, More Facebook Troubles</title><link href="http://localhost:4000/blog/new-year-more-facebook-troubles" rel="alternate" type="text/html" title="New Year, More Facebook Troubles" /><published>2018-09-03T07:00:00-05:00</published><updated>2018-09-03T07:00:00-05:00</updated><id>http://localhost:4000/blog/new-year-more-facebook-troubles</id><content type="html" xml:base="http://localhost:4000/blog/new-year-more-facebook-troubles">&lt;p&gt;I can’t stop writing about Facebook.&lt;/p&gt;
-
-&lt;p&gt;Yet again, they’re linked below this week in a good summary from the Nieman Lab. The core issue: “publishing an article is not the same as the article being seen by people interested in it.” Facebook is a master of what Ben Thompson calls &lt;a href=&quot;https://stratechery.com/concept/aggregation-theory/&quot;&gt;“aggregation theory”&lt;/a&gt;, where owning demand is more important than supply in the value chain for digital goods/services. Clearly, Facebook is an outsized winner in this regard: huge swaths of the population (&lt;a href=&quot;https://twitter.com/agolis/status/1039170866851004416?s=12&quot;&gt;but not everyone&lt;/a&gt;) start their news consumption diets there.&lt;/p&gt;
-
-&lt;p&gt;My open question remains: who else, with more of a civic-minded bent to them, could do this kind of aggregation?&lt;/p&gt;
-
-&lt;p&gt;In a conversation, I started to wonder if this would be a role (classic news aggregator) for a digital-era Public Service Broadcaster. Then I got sad again: &lt;a href=&quot;https://twitter.com/emilybell/status/1038777790668124160?s=12&quot;&gt;“Americans could barely buy a coffee with what they spend per year on public media”&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For those who are celebrating, L’Shana Tova.&lt;/p&gt;
-
-&lt;p&gt;Andrew&lt;/p&gt;
-
-&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
-&lt;p&gt;Unlike the new Twitter news advertising policy from last week’s note, Facebook is yet again being confronted over &lt;a href=&quot;http://www.niemanlab.org/2018/09/are-you-sure-that-promoted-article-is-still-political-content-facebook/&quot;&gt;the lack of nuance in its own policy&lt;/a&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Naja Nielsen, the chief journalism officer of Orb Media, the non-profit profiled in the above-linked Nieman Lab story, summed this up better than I’ve seen.&lt;/li&gt;
-  &lt;li&gt;“I completely acknowledge that Facebook is a private company. They have the rules they want to have. We as users have to listen to whatever decisions they’re making,” Nielsen said. “But, as we all know, in the age of the internet publishing an article is not the same as the article being seen by people interested in it.”\&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Verizon issues a &lt;a href=&quot;https://www.verizonenterprise.com/resources/reports/rp_DBIR_2018_Report_execsummary_en_xg.pdf&quot;&gt;report&lt;/a&gt; on their security breach investigations.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Financial gain remains at the top of the list for attack motives.&lt;/li&gt;
-  &lt;li&gt;Bad actors have been targeting our media/public sphere via means that we’ve given them (advertising APIs, etc.)… But we need some thinking about what happens if they decide to make an outright attack?&lt;/li&gt;
-  &lt;li&gt;For example: what kind of security procedures do our preeminent business journalists undertake?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
-&lt;p&gt;The Census Bureau Tried to Use Differential Privacy for the 2020 Census. &lt;a href=&quot;https://arxiv.org/pdf/1809.02201.pdf&quot;&gt;It was hard&lt;/a&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The Bureau encountered many issues a start-up might (including a lack of trained staff), but perhaps most interesting to me: the lack of computational resources&lt;/li&gt;
-  &lt;li&gt;They estimated that using differential privacy would require &lt;em&gt;three orders of magnitude&lt;/em&gt; more computational power than what they currently require.&lt;/li&gt;
-  &lt;li&gt;Here is yet another example of how the elasticity of shared computing resources is so valuable (“cloud computing”).&lt;/li&gt;
-  &lt;li&gt;Genomics is leading the way here, both in terms of &lt;a href=&quot;https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002195&quot;&gt;need&lt;/a&gt; and &lt;a href=&quot;https://cbiit.cancer.gov/ncip/crdc-cloud-resources&quot;&gt;policy response&lt;/a&gt;, but we will see this play out across every industry&lt;/li&gt;
-  &lt;li&gt;H/T to my Berkman colleague &lt;a href=&quot;http://cyber.harvard.edu/people/ram-shankar-siva-kumar&quot;&gt;Ram Shankar Siva Kumar&lt;/a&gt; for highlighting the paper.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
-&lt;p&gt;*I know this one sounds crazy. I know. But it isn’t. * One of the keys to making travel easier for me is having a bag that is, essentially, pre-packed. That includes toiletries.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;It’s all about having almost zero cognitive load.&lt;/li&gt;
-  &lt;li&gt;Did you know you can get &lt;a href=&quot;https://duckduckgo.com/?q=2.5+oz+toothpaste&amp;amp;t=h_&amp;amp;ia=products&quot;&gt;bigger-than-test-yet-smaller-than-three-ounce toothpaste tubes&lt;/a&gt;?&lt;/li&gt;
-  &lt;li&gt;I can get a couple of trips out of this – meaning even less that I even need on a pre-travel checklist.&lt;/li&gt;
-  &lt;li&gt;Next week, the same principle applied to one of my most favorite subjects: ⚡️charging ⚡️.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2018/09/05/obituaries/melitta-bentz-overlooked.html&quot;&gt;Overlooked No More: Melitta Bentz, Who Invented the Coffee Filter&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/fading-blues/65881604?i=65880513&quot;&gt;Fading Blues - Hird&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">I can’t stop writing about Facebook.</summary></entry><entry><title type="html">Problem Solution Edition</title><link href="http://localhost:4000/blog/problem-solution" rel="alternate" type="text/html" title="Problem Solution Edition" /><published>2018-08-27T07:00:00-05:00</published><updated>2018-08-27T07:00:00-05:00</updated><id>http://localhost:4000/blog/problem-solution</id><content type="html" xml:base="http://localhost:4000/blog/problem-solution">&lt;p&gt;Two pieces caught my attention this week: one sets up the core problem of Facebook in society today. The other sets out a (surprisingly) simple and well-thought-out way to solve it. &lt;em&gt;I wrote about it on &lt;a href=&quot;http://blogs.harvard.edu/workingpaper/2018/08/27/information-fiduciaries/&quot;&gt;Working Paper&lt;/a&gt; in more detail, and started a discussion of what it might mean for news organizations, too.&lt;/em&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">There isn’t supposed to be much news in the last week of August.  This past week was different.</summary></entry><entry><title type="html">Problem Solution Edition</title><link href="http://0.0.0.0:4000/blog/problem-solution" rel="alternate" type="text/html" title="Problem Solution Edition" /><published>2018-08-27T07:00:00-05:00</published><updated>2018-08-27T07:00:00-05:00</updated><id>http://0.0.0.0:4000/blog/problem-solution</id><content type="html" xml:base="http://0.0.0.0:4000/blog/problem-solution">&lt;p&gt;Two pieces caught my attention this week: one sets up the core problem of Facebook in society today. The other sets out a (surprisingly) simple and well-thought-out way to solve it. &lt;em&gt;I wrote about it on &lt;a href=&quot;http://blogs.harvard.edu/workingpaper/2018/08/27/information-fiduciaries/&quot;&gt;Working Paper&lt;/a&gt; in more detail, and started a discussion of what it might mean for news organizations, too.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;While the two authors didn’t intend to speak to one another directly, they are a part of the same conversation.&lt;/p&gt;
 
@@ -281,7 +428,55 @@
 &lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/orinoco-flow/62446480?i=62446464&quot;&gt;Orinoco Flow - Enya&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Two pieces caught my attention this week: one sets up the core problem of Facebook in society today. The other sets out a (surprisingly) simple and well-thought-out way to solve it. I wrote about it on Working Paper in more detail, and started a discussion of what it might mean for news organizations, too.</summary></entry><entry><title type="html">Peak Humidity</title><link href="http://localhost:4000/blog/working-paper-weekly" rel="alternate" type="text/html" title="Peak Humidity" /><published>2018-08-13T10:34:00-05:00</published><updated>2018-08-13T10:34:00-05:00</updated><id>http://localhost:4000/blog/working-paper-weekly</id><content type="html" xml:base="http://localhost:4000/blog/working-paper-weekly">&lt;p&gt;Between the actual weather, and the peak hot air emerging from the American political system this past week, I hope we’ve actually reached Peak Humidity.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Two pieces caught my attention this week: one sets up the core problem of Facebook in society today. The other sets out a (surprisingly) simple and well-thought-out way to solve it. I wrote about it on Working Paper in more detail, and started a discussion of what it might mean for news organizations, too.</summary></entry><entry><title type="html">Mail (of all sorts) Edition</title><link href="http://0.0.0.0:4000/blog/mail-of-all-sorts" rel="alternate" type="text/html" title="Mail (of all sorts) Edition" /><published>2018-08-13T10:34:00-05:00</published><updated>2018-08-13T10:34:00-05:00</updated><id>http://0.0.0.0:4000/blog/mail-of-all-sorts</id><content type="html" xml:base="http://0.0.0.0:4000/blog/mail-of-all-sorts">&lt;p&gt;This week: an interesting story, an interesting technology, an ask, and the magic of the (snail) mail.&lt;/p&gt;
+
+&lt;p&gt;First up, &lt;a href=&quot;https://www.vanityfair.com/news/2018/08/felix-salmon-axios-continues-its-push-bloomberg&quot;&gt;Axios has hired Felix Salmon and Courtenay Brown&lt;/a&gt;. I read Salmon, in particular, and couldn’t be more excited to see him in a new home. But for our purposes, it gives us a news peg to think about &lt;a href=&quot;https://www.axios.com/&quot;&gt;Axios&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Quick brief for those new to Axios: a group of &lt;a href=&quot;https://www.politico.com/&quot;&gt;Politico&lt;/a&gt;’s key leadership, and some of its key reportorial talent &lt;a href=&quot;https://www.wsj.com/articles/politico-co-founder-jim-vandehei-to-launch-news-venture-for-professionals-1473201458&quot;&gt;left in late 2016 with the goal of launching a subscription newsletter business&lt;/a&gt; for busy professionals. It launched in 2017, with the mantra of “smart brevity” – very short pieces that get right to the point. A core part of the strategy has been to hire reporters who can command audiences via newsletters (think Mike Allen’s Playbook, which put Politico on the map). According to the above-linked Vanity Fair piece, weekly advertising rates for those newsletters can command $75,000 to reach 200,000 subscribers. They’ve raised some $30 million, and are developing additional revenue streams like &lt;a href=&quot;https://www.wsj.com/articles/axios-to-create-limited-run-series-for-hbo-1533718801&quot;&gt;content licencing with HBO&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is particularly interesting in light of last week’s letter. (And, I’ll admit, is a bit meta.) Axios is showing an “obvious” alternative strategy for a modern media organization: smart, non-dependent use of tech platforms.  &lt;em&gt;Axios does its own distribution.&lt;/em&gt; As we’ve been &lt;a href=&quot;https://medium.com/single-subject-news-project/six-lessons-about-email-and-audience-growth-for-nonprofit-news-e05b8ea46a63&quot;&gt;saying at Shorenstein&lt;/a&gt;, newsletters are one of the few ways to reach people that don’t depend on another company that can charge for access to an audience. They also give editorial control that a Facebook post or Google ad don’t.&lt;/p&gt;
+
+&lt;p&gt;This isn’t exactly a new strategy, and marketers have long known the value of &lt;a href=&quot;https://hbr.org/2014/10/making-sense-of-owned-media&quot;&gt;“owned” media&lt;/a&gt;, but it’s a trend I expect to explode over the next year. As the difficulty of working with (or, maybe, for) large tech platforms becomes clearer, people will be increasingly willing to do the hard work of reaching an audience, and owning that connection. In many ways, this is also the same logic that underlies the growth in interest in reader-revenue at news publications as well.&lt;/p&gt;
+
+&lt;p&gt;Now, on to a bit of technology. A few friends of mine from the &lt;a href=&quot;https://cyber.harvard.edu/&quot;&gt;Berkman Klein Center&lt;/a&gt; are working on a new technology, called &lt;a href=&quot;https://underlay.mit.edu/&quot;&gt;Underlay&lt;/a&gt;, designed to help make visible from where a fact is sourced inside a document. We’ve been talking about use cases, and journalism (particularly in the era of “fake news”) is an obvious one.&lt;/p&gt;
+
+&lt;p&gt;Now for the ask: we’re looking for media partners who want to try publishing a big, serious piece with some technology that is developed by the Underlay team. We’re still in the early stages, but news with a &lt;a href=&quot;https://en.m.wikipedia.org/wiki/Ontology_(information_science)&quot;&gt;knowledge graph&lt;/a&gt; attached to it is something I’d like to see exist in the world. So, if you are such a person, or can forward this note to one… do so, and &lt;a href=&quot;mailto:ag@workingpaper.co&quot;&gt;get in touch&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Andrew&lt;/p&gt;
+
+&lt;h4 id=&quot;about-working-paper&quot;&gt;About Working Paper&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.workingpaper.co/&quot;&gt;Working Paper&lt;/a&gt; is a boutique management consultancy run by &lt;a href=&quot;https://www.workingpaper.co/andrew-gruen&quot;&gt;Andrew Gruen&lt;/a&gt;.  We develop research-based strategies for media organizations, research universities, and advertisers. &lt;/p&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.vanityfair.com/news/2018/08/felix-salmon-axios-continues-its-push-bloomberg&quot;&gt;Axios, Felix Salmon and Courtenay Brown&lt;/a&gt; are re-affirming the power of newsletters with authors who have a strong point of view and voice.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Given that I currently am shipping myself 27 boxes, including my entire library (more below), I can’t recommend the &lt;a href=&quot;https://junecloud.com/software/iphone/deliveries.html&quot;&gt;Deliveries App&lt;/a&gt; enough. I’ve been using it for years, and it does a great job of keeping all my, well, deliveries in one place.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/769fcba2-ac4d-48b5-b66b-de3d35ca1f78.jpeg&quot; alt=&quot;&quot; /&gt;
+| Making use of Media Mail |&lt;/p&gt;
+
+&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Not an upgrade &lt;em&gt;per se&lt;/em&gt;, but one that certainly makes travel easier.&lt;/li&gt;
+  &lt;li&gt;I was reminded that most folks don’t know about the United States Postal Service’s &lt;a href=&quot;https://about.usps.com/notices/not121/not121_tech.htm&quot;&gt;Media Mail&lt;/a&gt; or &lt;a href=&quot;https://about.usps.com/postal-bulletin/2007/html/pb22203a/imm_chngs.6.9.html&quot;&gt;M-Bag&lt;/a&gt; services.&lt;/li&gt;
+  &lt;li&gt;I shipped my entire library, from undergrad to today, across the country for less than $200. When in grad school, I used the M-Bag to send myself books overseas – a service that originated after World War II to help re-stock libraries in Europe.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2018/08/17/opinion/college-students.html&quot;&gt;How to Get the Most Out Of College&lt;/a&gt; — I benefited from mentors and my cohort so much.  Thank you.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/blue-boss/1333401744?i=1333401747&quot;&gt;Blue Boss — Sampa the Great&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">This week: an interesting story, an interesting technology, an ask, and the magic of the (snail) mail.</summary></entry><entry><title type="html">Peak Humidity</title><link href="http://0.0.0.0:4000/blog/working-paper-weekly" rel="alternate" type="text/html" title="Peak Humidity" /><published>2018-08-13T10:34:00-05:00</published><updated>2018-08-13T10:34:00-05:00</updated><id>http://0.0.0.0:4000/blog/working-paper-weekly</id><content type="html" xml:base="http://0.0.0.0:4000/blog/working-paper-weekly">&lt;p&gt;Between the actual weather, and the peak hot air emerging from the American political system this past week, I hope we’ve actually reached Peak Humidity.&lt;/p&gt;
 
 &lt;p&gt;Fall can’t come soon enough.&lt;/p&gt;
 
@@ -334,52 +529,4 @@
 &lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/dont-talk/978923158?i=978923163&quot;&gt;Don’t Talk – Melody Gardot&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Between the actual weather, and the peak hot air emerging from the American political system this past week, I hope we’ve actually reached Peak Humidity.</summary></entry><entry><title type="html">Mail (of all sorts) Edition</title><link href="http://localhost:4000/blog/mail-of-all-sorts" rel="alternate" type="text/html" title="Mail (of all sorts) Edition" /><published>2018-08-13T10:34:00-05:00</published><updated>2018-08-13T10:34:00-05:00</updated><id>http://localhost:4000/blog/mail-of-all-sorts</id><content type="html" xml:base="http://localhost:4000/blog/mail-of-all-sorts">&lt;p&gt;This week: an interesting story, an interesting technology, an ask, and the magic of the (snail) mail.&lt;/p&gt;
-
-&lt;p&gt;First up, &lt;a href=&quot;https://www.vanityfair.com/news/2018/08/felix-salmon-axios-continues-its-push-bloomberg&quot;&gt;Axios has hired Felix Salmon and Courtenay Brown&lt;/a&gt;. I read Salmon, in particular, and couldn’t be more excited to see him in a new home. But for our purposes, it gives us a news peg to think about &lt;a href=&quot;https://www.axios.com/&quot;&gt;Axios&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Quick brief for those new to Axios: a group of &lt;a href=&quot;https://www.politico.com/&quot;&gt;Politico&lt;/a&gt;’s key leadership, and some of its key reportorial talent &lt;a href=&quot;https://www.wsj.com/articles/politico-co-founder-jim-vandehei-to-launch-news-venture-for-professionals-1473201458&quot;&gt;left in late 2016 with the goal of launching a subscription newsletter business&lt;/a&gt; for busy professionals. It launched in 2017, with the mantra of “smart brevity” – very short pieces that get right to the point. A core part of the strategy has been to hire reporters who can command audiences via newsletters (think Mike Allen’s Playbook, which put Politico on the map). According to the above-linked Vanity Fair piece, weekly advertising rates for those newsletters can command $75,000 to reach 200,000 subscribers. They’ve raised some $30 million, and are developing additional revenue streams like &lt;a href=&quot;https://www.wsj.com/articles/axios-to-create-limited-run-series-for-hbo-1533718801&quot;&gt;content licencing with HBO&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is particularly interesting in light of last week’s letter. (And, I’ll admit, is a bit meta.) Axios is showing an “obvious” alternative strategy for a modern media organization: smart, non-dependent use of tech platforms.  &lt;em&gt;Axios does its own distribution.&lt;/em&gt; As we’ve been &lt;a href=&quot;https://medium.com/single-subject-news-project/six-lessons-about-email-and-audience-growth-for-nonprofit-news-e05b8ea46a63&quot;&gt;saying at Shorenstein&lt;/a&gt;, newsletters are one of the few ways to reach people that don’t depend on another company that can charge for access to an audience. They also give editorial control that a Facebook post or Google ad don’t.&lt;/p&gt;
-
-&lt;p&gt;This isn’t exactly a new strategy, and marketers have long known the value of &lt;a href=&quot;https://hbr.org/2014/10/making-sense-of-owned-media&quot;&gt;“owned” media&lt;/a&gt;, but it’s a trend I expect to explode over the next year. As the difficulty of working with (or, maybe, for) large tech platforms becomes clearer, people will be increasingly willing to do the hard work of reaching an audience, and owning that connection. In many ways, this is also the same logic that underlies the growth in interest in reader-revenue at news publications as well.&lt;/p&gt;
-
-&lt;p&gt;Now, on to a bit of technology. A few friends of mine from the &lt;a href=&quot;https://cyber.harvard.edu/&quot;&gt;Berkman Klein Center&lt;/a&gt; are working on a new technology, called &lt;a href=&quot;https://underlay.mit.edu/&quot;&gt;Underlay&lt;/a&gt;, designed to help make visible from where a fact is sourced inside a document. We’ve been talking about use cases, and journalism (particularly in the era of “fake news”) is an obvious one.&lt;/p&gt;
-
-&lt;p&gt;Now for the ask: we’re looking for media partners who want to try publishing a big, serious piece with some technology that is developed by the Underlay team. We’re still in the early stages, but news with a &lt;a href=&quot;https://en.m.wikipedia.org/wiki/Ontology_(information_science)&quot;&gt;knowledge graph&lt;/a&gt; attached to it is something I’d like to see exist in the world. So, if you are such a person, or can forward this note to one… do so, and &lt;a href=&quot;mailto:ag@workingpaper.co&quot;&gt;get in touch&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Andrew&lt;/p&gt;
-
-&lt;h4 id=&quot;about-working-paper&quot;&gt;About Working Paper&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.workingpaper.co/&quot;&gt;Working Paper&lt;/a&gt; is a boutique management consultancy run by &lt;a href=&quot;https://www.workingpaper.co/andrew-gruen&quot;&gt;Andrew Gruen&lt;/a&gt;.  We develop research-based strategies for media organizations, research universities, and advertisers. &lt;/p&gt;
-
-&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.vanityfair.com/news/2018/08/felix-salmon-axios-continues-its-push-bloomberg&quot;&gt;Axios, Felix Salmon and Courtenay Brown&lt;/a&gt; are re-affirming the power of newsletters with authors who have a strong point of view and voice.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hacks&quot;&gt;Hacks&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Given that I currently am shipping myself 27 boxes, including my entire library (more below), I can’t recommend the &lt;a href=&quot;https://junecloud.com/software/iphone/deliveries.html&quot;&gt;Deliveries App&lt;/a&gt; enough. I’ve been using it for years, and it does a great job of keeping all my, well, deliveries in one place.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/769fcba2-ac4d-48b5-b66b-de3d35ca1f78.jpeg&quot; alt=&quot;&quot; /&gt;
-| Making use of Media Mail |&lt;/p&gt;
-
-&lt;h2 id=&quot;upgrades&quot;&gt;Upgrades&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Not an upgrade &lt;em&gt;per se&lt;/em&gt;, but one that certainly makes travel easier.&lt;/li&gt;
-  &lt;li&gt;I was reminded that most folks don’t know about the United States Postal Service’s &lt;a href=&quot;https://about.usps.com/notices/not121/not121_tech.htm&quot;&gt;Media Mail&lt;/a&gt; or &lt;a href=&quot;https://about.usps.com/postal-bulletin/2007/html/pb22203a/imm_chngs.6.9.html&quot;&gt;M-Bag&lt;/a&gt; services.&lt;/li&gt;
-  &lt;li&gt;I shipped my entire library, from undergrad to today, across the country for less than $200. When in grad school, I used the M-Bag to send myself books overseas – a service that originated after World War II to help re-stock libraries in Europe.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;im-reading&quot;&gt;I’m Reading&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2018/08/17/opinion/college-students.html&quot;&gt;How to Get the Most Out Of College&lt;/a&gt; — I benefited from mentors and my cohort so much.  Thank you.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;im-listening-to&quot;&gt;I’m Listening To&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/album/blue-boss/1333401744?i=1333401747&quot;&gt;Blue Boss — Sampa the Great&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">This week: an interesting story, an interesting technology, an ask, and the magic of the (snail) mail.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Between the actual weather, and the peak hot air emerging from the American political system this past week, I hope we’ve actually reached Peak Humidity.</summary></entry></feed>
