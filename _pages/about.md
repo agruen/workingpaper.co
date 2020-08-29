@@ -9,6 +9,7 @@ featured_image: /images/demo/about.jpg
 
 We've packed Personal full of powerful features to help showcase your work:
 
+* Testing!
 * Beautiful, minimal design
 * Large header image and single column post layout
 * Responsive – works perfectly on all devices
