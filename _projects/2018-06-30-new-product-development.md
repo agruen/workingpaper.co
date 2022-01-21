@@ -1,9 +1,9 @@
 ---
 title: New Product Development
+date: 2018-06-30 00:00:00 Z
 subtitle: Media. E-Commerce. Research.
-date: 2018-06-30 00:00:00
 description: Working Paper partners with organizations to develop new digital products.
-featured_image: '/images/gradients/magenta-purple.png'
+featured_image: "/images/gradients/magenta-purple.png"
 ---
 
 ![](/images/demo/demo-landscape.jpg)

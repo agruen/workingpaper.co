@@ -1,9 +1,10 @@
 ---
-title: 'Mail (of all sorts) Edition'
-date: 2018-08-13 15:34:00
-description: 'Email Newsletters, Media Mail, and the M-Bag'
-featured_image: 'https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/769fcba2-ac4d-48b5-b66b-de3d35ca1f78.jpeg'
+title: Mail (of all sorts) Edition
+date: 2018-08-13 15:34:00 Z
+description: Email Newsletters, Media Mail, and the M-Bag
+featured_image: https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/769fcba2-ac4d-48b5-b66b-de3d35ca1f78.jpeg
 ---
+
 This week: an interesting story, an interesting technology, an ask, and the magic of the (snail) mail.
 
 First up, [Axios has hired Felix Salmon and Courtenay Brown](https://www.vanityfair.com/news/2018/08/felix-salmon-axios-continues-its-push-bloomberg). I read Salmon, in particular, and couldn't be more excited to see him in a new home. But for our purposes, it gives us a news peg to think about [Axios](https://www.axios.com/).

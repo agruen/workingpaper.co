@@ -1,9 +1,10 @@
 ---
-title: 'Independence Edition'
-date: 2018-09-03 12:00:00
-description: 'Media companies are trying to declare independence from tech platforms'
-featured_image: 'https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/5b43a7bf-a963-4784-b6c5-722eadc965d7.jpg'
+title: Independence Edition
+date: 2018-09-03 12:00:00 Z
+description: Media companies are trying to declare independence from tech platforms
+featured_image: https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/5b43a7bf-a963-4784-b6c5-722eadc965d7.jpg
 ---
+
 There isn't supposed to be much news in the last week of August.  This past week was different.
 
 I intended to continue the discussion of information fiduciaries, but there were too many other interesting links on a different subject: media companies are continuing the trend of independence from tech platforms.

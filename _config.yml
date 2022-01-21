@@ -1,55 +1,51 @@
-site: Personal Jekyll Theme
-
+---
+title: Workingpaper.Co
+timezone: UTC
 collections:
   pages:
+    title: Pages
     output: true
-    permalink: /:name
+    permalink: "/:name"
   posts:
+    title: Posts
     output: true
-    permalink: /blog/:slug
   projects:
+    title: Projects
     output: true
-    permalink: /project/:slug
-
+    permalink: "/project/:slug"
+  uploads:
+    title: Uploads
+    output: true
 defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  -
-    scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
-
+- scope:
+    path: ''
+  values:
+    layout: default
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+- scope:
+    path: ''
+    type: projects
+  values:
+    layout: project
+site: Personal Jekyll Theme
 markdown: kramdown
-
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-  
 sass:
   style: compressed
-
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-feed
 paginate: 6
 paginate_path: "/blog/page:num/"
-  

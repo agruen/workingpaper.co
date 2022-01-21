@@ -1,9 +1,10 @@
 ---
-title: 'New Year, More Facebook Troubles'
-date: 2018-09-03 12:00:00
-description: 'L’Shana Tova... and Facebook as an aggregator'
+title: New Year, More Facebook Troubles
+date: 2018-09-03 12:00:00 Z
+description: L’Shana Tova... and Facebook as an aggregator
 featured_image: ''
 ---
+
 I can't stop writing about Facebook.
 
 Yet again, they're linked below this week in a good summary from the Nieman Lab. The core issue: "publishing an article is not the same as the article being seen by people interested in it." Facebook is a master of what Ben Thompson calls ["aggregation theory"](https://stratechery.com/concept/aggregation-theory/), where owning demand is more important than supply in the value chain for digital goods/services. Clearly, Facebook is an outsized winner in this regard: huge swaths of the population ([but not everyone](https://twitter.com/agolis/status/1039170866851004416?s=12)) start their news consumption diets there.

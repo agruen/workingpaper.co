@@ -1,8 +1,9 @@
 ---
-title: 'GitHub is for more than code'
-date: 2019-02-27 22:05:00
-description: Media folks and other non-technical writers don't know enough about GitHub.  Let's fix that.
-featured_image: '/images/gradients/green-blue.png'
+title: GitHub is for more than code
+date: 2019-02-27 22:05:00 Z
+description: Media folks and other non-technical writers don't know enough about GitHub.  Let's
+  fix that.
+featured_image: "/images/gradients/green-blue.png"
 ---
 
 ## Media folks and other non-technical writers don't know enough about GitHub.

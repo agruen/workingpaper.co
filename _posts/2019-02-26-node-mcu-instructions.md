@@ -1,8 +1,8 @@
 ---
-title: 'NodeMCU IoT Build Instructions'
-date: 2019-02-26 21:27:00
+title: NodeMCU IoT Build Instructions
+date: 2019-02-26 21:27:00 Z
 description: Clearer instructions for setting up your own open-source IoT sensors
-featured_image: '/images/nodemcu-bkc/3.jpg'
+featured_image: "/images/nodemcu-bkc/3.jpg"
 ---
 
 ## Prerecs

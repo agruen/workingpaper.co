@@ -1,9 +1,10 @@
 ---
-title: 'Peak Humidity'
-date: 2018-08-13 15:34:00
+title: Peak Humidity
+date: 2018-08-13 15:34:00 Z
 description: 'The “it’s obvious” edition: Publishers can only depend on themselves'
 featured_image: ''
 ---
+
 Between the actual weather, and the peak hot air emerging from the American political system this past week, I hope we’ve actually reached Peak Humidity.
 
 Fall can’t come soon enough.  

@@ -1,9 +1,10 @@
 ---
-title: 'Problem Solution Edition'
-date: 2018-08-27 12:00:00
-description: 'Consumer data brokerage and information fiduciaries'
-featured_image: 'https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/1ae14c0d-4c00-41c2-b89a-fccd47dd13f5.jpg'
+title: Problem Solution Edition
+date: 2018-08-27 12:00:00 Z
+description: Consumer data brokerage and information fiduciaries
+featured_image: https://gallery.mailchimp.com/07a1acc515b8fcb9bf0c93832/images/1ae14c0d-4c00-41c2-b89a-fccd47dd13f5.jpg
 ---
+
 Two pieces caught my attention this week: one sets up the core problem of Facebook in society today. The other sets out a (surprisingly) simple and well-thought-out way to solve it. *I wrote about it on [Working Paper](http://blogs.harvard.edu/workingpaper/2018/08/27/information-fiduciaries/) in more detail, and started a discussion of what it might mean for news organizations, too.*
 
 While the two authors didn't intend to speak to one another directly, they are a part of the same conversation.
