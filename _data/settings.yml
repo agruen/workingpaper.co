@@ -1,6 +1,7 @@
 basic_settings:
   site_title: Working Paper
   favicon_image: /images/WPLogo.png
+  copyright_entity: Working Paper LLC
 
 header_settings:
   logo_image: /images/WPLogoWithText.png
