@@ -6,49 +6,32 @@ featured_image: "/images/gradients/orange-red.png"
 ---
 
 <script type="text/javascript">
-  function customDecode(encodedStr) {
-    var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var output = "";
-    var chr1, chr2, chr3;
-    var enc1, enc2, enc3, enc4;
-    var i = 0;
+// This function parses the query string and returns the value for the specified key
+function getQueryStringValue(key) {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  return urlParams.get(key);
+}
 
-    
-    encodedStr = encodedStr.replace(/-/g, '+').replace(/_/g, '/');
-
-
-    encodedStr = encodedStr.replace(/=+$/, '');
-
-    while (i < encodedStr.length) {
-      enc1 = keyStr.indexOf(encodedStr.charAt(i++));
-      enc2 = keyStr.indexOf(encodedStr.charAt(i++));
-      enc3 = keyStr.indexOf(encodedStr.charAt(i++));
-      enc4 = keyStr.indexOf(encodedStr.charAt(i++));
-
-      chr1 = (enc1 << 2) | (enc2 >> 4);
-      chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
-      chr3 = ((enc3 & 3) << 6) | enc4;
-
-      output = output + String.fromCharCode(chr1);
-
-      if (enc3 != 64) {
-        output = output + String.fromCharCode(chr2);
-      }
-      if (enc4 != 64) {
-        output = output + String.fromCharCode(chr3);
-      }
-    }
-
-    output = decodeURIComponent(escape(output));
-
-    return output;
+// This function creates the SMS link and opens it
+function sendSMS() {
+  // Get the phone number from the URL parameter 'phone'
+  const phoneNumber = getQueryStringValue('phone');
+  if (phoneNumber) {
+    // Construct the SMS link
+    const smsLink = `sms:${phoneNumber}`;
+    // Open the SMS app with the link
+    window.location.href = smsLink;
+  } else {
+    // Handle the error case where the phone number is not provided
+    alert('Phone number is missing from the URL parameters.');
   }
+}
 
-  window.onload = function() {
-    var hiddenData = 'c21zOisxODQ3NDE0NDM0Mg==';
-    var linkToActivate = customDecode(hiddenData);
-    window.location.href = linkToActivate;
-  };
+// Call the sendSMS function when the window is finished loading
+window.onload = function() {
+  sendSMS();
+};
 </script>
 
   <p>If you are not redirected automatically, please check your settings or contact support.</p>
