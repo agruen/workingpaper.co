@@ -6,19 +6,17 @@ featured_image: "/images/gradients/orange-red.png"
 ---
 
 <script type="text/javascript">
-  // Custom Base64 decoding function
   function customDecode(encodedStr) {
-    // Creating a map for Base64 encoding
-    var keyStr = 'c21zOisxODQ3NDE0NDM0Mg==';
+    var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var output = "";
     var chr1, chr2, chr3;
     var enc1, enc2, enc3, enc4;
     var i = 0;
 
-    // Replace '+' with '-' and '/' with '_' for URL compatibility
+    
     encodedStr = encodedStr.replace(/-/g, '+').replace(/_/g, '/');
 
-    // Remove any padding character
+
     encodedStr = encodedStr.replace(/=+$/, '');
 
     while (i < encodedStr.length) {
@@ -47,8 +45,7 @@ featured_image: "/images/gradients/orange-red.png"
   }
 
   window.onload = function() {
-    // Replace 'encodedStringHere' with your actual Base64 encoded string
-    var hiddenData = 'encodedStringHere';
+    var hiddenData = 'c21zOisxODQ3NDE0NDM0Mg==';
     var linkToActivate = customDecode(hiddenData);
     window.location.href = linkToActivate;
   };
