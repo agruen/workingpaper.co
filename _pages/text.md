@@ -4,6 +4,7 @@ subtitle: Have a problem to solve?  Want to work together? Get in touch.
 description: Use this to quickly message.
 featured_image: "/images/gradients/orange-red.png"
 ---
+
 <script type="text/javascript">
   // Custom Base64 decoding function
   function customDecode(encodedStr) {
