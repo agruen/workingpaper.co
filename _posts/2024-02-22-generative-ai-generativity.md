@@ -7,18 +7,22 @@ featured_image: "/images/gradients/green-blue.png"
 
 ## Checking Back In on Generativity
 ### In an era of "generative" AI, what's happening to "generativity"?
-![](/images/blog/rpi-nas.jpg)	
-_DALL-E's idea of a "generative Raspberry Pi"..._
 
-**[Skip ahead](#instructions) if you're just here for the NAS instructions**
+![](/images/blog/rpi-nas.jpg)	
+
+***DALL-E's idea of a "generative Raspberry Pi"...**
+
+[Skip ahead](#instructions) if you're just here for the NAS instructions.
 
 Nearly five years ago, I [wrote]({% post_url 2019-01-28-were-back %}) about the concept of "[generativity](https://en.wikipedia.org/wiki/Generativity#Use_in_Technology)" and speculated that it was back, but at a different layer of the stack:
 
-> With open-source software and [crazily inexpensive open-source hardware](https://www.aliexpress.com/item/DHT-Pro-Shield-for-WeMos-D1-mini-DHT22-Single-bus-digital-temperature-and-humidity-sensor-module/32648082692.html), one can pretty easily tinker with and ***connect*** multiple ***closed*** devices.  I’ve connected my NestCam and my hand-made, $5 WiFi temperature and humidity sensors to Apple’s walled garden of a home automation system.  Each input is on equal footing.  And the result is a delightful system for my apartment.
-> 
-> It’s generativity, but at a different layer of the stack.  I used to mess with the devices; now I mess with the network of devices. (And, if I’m willing — I can dive back into the device-level at any time.)
-> 
-> Will most people build their own home IoT devices? No.  But most people didn't build their own PCs.  Those who did invented new ways of doing things.  That was enough.  
+```
+With open-source software and [crazily inexpensive open-source hardware](https://www.aliexpress.com/item/DHT-Pro-Shield-for-WeMos-D1-mini-DHT22-Single-bus-digital-temperature-and-humidity-sensor-module/32648082692.html), one can pretty easily tinker with and ***connect*** multiple ***closed*** devices.  I’ve connected my NestCam and my hand-made, $5 WiFi temperature and humidity sensors to Apple’s walled garden of a home automation system.  Each input is on equal footing.  And the result is a delightful system for my apartment.
+
+It’s generativity, but at a different layer of the stack.  I used to mess with the devices; now I mess with the network of devices. (And, if I’m willing — I can dive back into the device-level at any time.)
+
+Will most people build their own home IoT devices? No.  But most people didn't build their own PCs.  Those who did invented new ways of doing things.  That was enough.  
+```
 
 I'm revisiting this concept now, in light of the ready availability of generative AI tools like [ChatGPT](https://chat.openai.com/).
 
