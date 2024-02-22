@@ -10,19 +10,17 @@ featured_image: "/images/gradients/green-blue.png"
 
 ![](/images/blog/rpi-nas.jpg)	
 
-***DALL-E's idea of a "generative Raspberry Pi"...**
+***DALL-E's idea of a "generative Raspberry Pi"...***
 
 [Skip ahead](#instructions) if you're just here for the NAS instructions.
 
 Nearly five years ago, I [wrote]({% post_url 2019-01-28-were-back %}) about the concept of "[generativity](https://en.wikipedia.org/wiki/Generativity#Use_in_Technology)" and speculated that it was back, but at a different layer of the stack:
 
-```
 With open-source software and [crazily inexpensive open-source hardware](https://www.aliexpress.com/item/DHT-Pro-Shield-for-WeMos-D1-mini-DHT22-Single-bus-digital-temperature-and-humidity-sensor-module/32648082692.html), one can pretty easily tinker with and ***connect*** multiple ***closed*** devices.  I’ve connected my NestCam and my hand-made, $5 WiFi temperature and humidity sensors to Apple’s walled garden of a home automation system.  Each input is on equal footing.  And the result is a delightful system for my apartment.
 
 It’s generativity, but at a different layer of the stack.  I used to mess with the devices; now I mess with the network of devices. (And, if I’m willing — I can dive back into the device-level at any time.)
 
-Will most people build their own home IoT devices? No.  But most people didn't build their own PCs.  Those who did invented new ways of doing things.  That was enough.  
-```
+Will most people build their own home IoT devices? No.  But most people didn't build their own PCs.  Those who did invented new ways of doing things.  That was enough.
 
 I'm revisiting this concept now, in light of the ready availability of generative AI tools like [ChatGPT](https://chat.openai.com/).
 
@@ -33,16 +31,16 @@ A few projects I recently built are good examples, and the implications of easie
 Perhaps the simplest example is of building my own digital picture frame.  While there are commercial devices, few of them connect to my preferred photo storage system (iCloud Photo Library), and fewer still have smart cropping features to make all the photos look good, regardless of their aspect ratio.
 
 With just the smallest bit of knowledge -- that python could run scripts to generate HTML and that Chromium can run in kiosk mode, full screen on a Raspberry Pi... I had my own custom picture frame system.  I asked for:
-	* A pull of my iCloud Photo "favorites" album
-	* To crop all the images to the exact size of my display, but with faces centered for portrait pictures, since the screen is landscape
-	* To randomize the order of images, and for them to rotate once per minute
-	* To display the current time in the lower-left corner
-	* To write the resulting work to a static HTML file
-	* To launch that file in a kiosk-mode browser
-	* And to run all this on boot
+* A pull of my iCloud Photo "favorites" album
+* To crop all the images to the exact size of my display, but with faces centered for portrait pictures, since the screen is landscape
+* To randomize the order of images, and for them to rotate once per minute
+* To display the current time in the lower-left corner
+* To write the resulting work to a static HTML file
+* To launch that file in a kiosk-mode browser
+* And to run all this on boot
 
 ![](/images/blog/pi-frame.jpg)	
-_The actual picture is a story for another day._
+*The actual picture is a story for another day.*
 
 The point of all this isn't to suggest the end of software developers, quite the contrary.  When the barrier to entry is lower, it's reasonable to expect there will be MANY more like me: lower-quality, quick-and-dirty, hacks-on-hacks developers.  But, they'll be solving actual problems for actual people.
 
