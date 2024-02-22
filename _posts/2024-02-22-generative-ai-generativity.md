@@ -1,6 +1,6 @@
 ---
 title: Checking Back In on Generativity
-date: 2019-02-27 22:05:00 Z
+date: 2024-02-22 16:17:00 Z
 description: In an era of "generative" AI, what's happening to "generativity"?
 featured_image: "/images/gradients/green-blue.png"
 ---
