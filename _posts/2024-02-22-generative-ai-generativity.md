@@ -10,7 +10,7 @@ featured_image: "/images/gradients/green-blue.png"
 
 ![](/images/blog/rpi-nas.jpg)	
 
-***DALL-E's idea of a "generative Raspberry Pi"...***
+<center>***DALL-E's idea of a "generative Raspberry Pi"...***</center>
 
 [Skip ahead](#instructions) if you're just here for the NAS instructions.
 
@@ -40,7 +40,7 @@ With just the smallest bit of knowledge -- that python could run scripts to gene
 * And to run all this on boot
 
 ![](/images/blog/pi-frame.jpg)	
-*The actual picture is a story for another day.*
+<center>***The actual picture is a story for another day.***</center>
 
 The point of all this isn't to suggest the end of software developers, quite the contrary.  When the barrier to entry is lower, it's reasonable to expect there will be MANY more like me: lower-quality, quick-and-dirty, hacks-on-hacks developers.  But, they'll be solving actual problems for actual people.
 
