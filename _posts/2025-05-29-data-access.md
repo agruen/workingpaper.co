@@ -1,8 +1,6 @@
 ---
-title: Concept Note: A Data Access Strategy
-date: 2025-05-20 16:00:00 Z
-description: What are all the parts of a complete data access framework?
-featured_image: "/images/gradients/yellow-green.png"
+title: 2025 05 29 Data Access
+date: 2025-05-29 15:29:52.890000000 Z
 ---
 
 _This was a note I prepared about a year ago on conceptualizing data access in general.  I'm publishing here as I think the framework could be useful to those working in the field.  Feedback is, of course, [incredibly welcome](https://workingpaper.co/contact)._
