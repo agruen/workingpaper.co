@@ -5,9 +5,9 @@ description: What are all the parts of a complete data access framework?
 featured_image: "/images/gradients/yellow-green.png"
 ---
 
-_This was a note I prepared about a year ago on conceptualizing data access in general.  I'm publishing here as I think the framework could be useful to those working in the field.  Feedback is, of course, [incredibly welcome](https://workingpaper.co/contact).
+_This was a note I prepared about a year ago on conceptualizing data access in general.  I'm publishing here as I think the framework could be useful to those working in the field.  Feedback is, of course, [incredibly welcome](https://workingpaper.co/contact)._
 
--- Andrew_
+_Andrew_
 
 ## Concept Note: A Data Access Strategy
 ### What are all the parts of a complete data access framework?
