@@ -46,7 +46,7 @@ As referenced above, there are four criteria worth considering for each data acc
 |  | Donations and Scraping | Observational Log Data | Experimental Access |
 | :---- | ----- | ----- | ----- |
 | **Consent** | Not Necessarily | Not Necessarily | Yes |
-| **Collection Source** | Organization → Researcher User → Researcher Web → Researcher  | Organization → Researcher | Organization → Researcher |
+| **Collection Source** | Organization → Researcher<br />User → Researcher<br />Web → Researcher  | Organization → Researcher | Organization → Researcher |
 | **Individual/ Aggregate** | Individual | Both | Both |
 | **Causal Inference** | No | No | Yes |
 
