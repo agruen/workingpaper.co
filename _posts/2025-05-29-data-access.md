@@ -5,7 +5,9 @@ description: What are all the parts of a complete data access framework?
 featured_image: "/images/gradients/yellow-green.png"
 ---
 
-_This was a note I prepared about a year ago on conceptualizing data access in general.  I'm publishing here as I think the framework could be useful to those working in the field.  Feedback is, of course, [incredibly welcome](https://workingpaper.co/contact)._
+_This was a note I prepared about a year ago on conceptualizing data access in general.  I'm publishing here as I think the framework could be useful to those working in the field.  Feedback is, of course, [incredibly welcome](https://workingpaper.co/contact).
+
+-- Andrew_
 
 ## Concept Note: A Data Access Strategy
 ### What are all the parts of a complete data access framework?
@@ -70,6 +72,6 @@ While researchers rarely have the resources to pay the amounts that various comp
 
 Relatively recently, data access has been included in pieces of proposed or passed legislation.  The strongest form of legal mandate that has become law to date, Article 40 of the EU’s Digital Services Act, has yet to come into full force, but from it we have already learned an important lesson: be careful what you wish for.
 
-As various Very Large Online Platforms (VLOPs) — the companies subject to the DSA’s data sharing provisions — have prepared to come into compliance with the law, they have trended toward minimal and literal interpretations of their obligations.  While this is an entirely rational approach to new regulation that carries both significant business risk (reputational and otherwise), along with very large financial risk (up to 10 percent of global turnover), it has had a perverse effect on data access.  For example, some VLOPs have produced the required “real time” access to “public content” in ways that are so onerous to use that they have, effectively, reduced the amount of useful data shared, all while truthfully claiming they are sharing more than ever before.
+As various Very Large Online Platforms (VLOPs) — the companies subject to the Digital Services Act's [data sharing provisions](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2065#art_40) — have prepared to come into compliance with the law, they have trended toward minimal and literal interpretations of their obligations.  While this is an entirely rational approach to new regulation that carries both significant business risk (reputational and otherwise), along with very large financial risk (in the form of fines), it has had a perverse effect on data access.  For example, some VLOPs have produced the required “real time” access to “public content” in ways that are so onerous to use that they have, effectively, reduced the amount of useful data shared, all while truthfully claiming they are sharing more than ever before.
 
 While the ultimate implementation of Article 40 has yet to play out, the lesson learned here in early 2024 is that mandatory data access has to either be immensely prescriptive in what organizations must do to share, or must build-in the ability for an independent, fair arbiter to create new specifics as the world changes.
