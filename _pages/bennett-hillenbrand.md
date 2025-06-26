@@ -26,7 +26,7 @@ featured_image: "/images/gradients/orange-red.png"
 	<div class="wrap">
 
 		<article class="single-post">
-
+<img style="padding: 0 15px; float: left;" src="/images/bennett-hillenbrand.png" width="300" />
 Bennett is a product executive with a background in data science, policy development and implementation, and people management. He has led product and program teams in the data and AI/ML space supporting political, commercial, and research use cases. He is an expert in helping organizations develop and execute strategies that support their mission. 
 
 Bennett is a co-founder and Principal Consultant at Working Paper, where he helps clients establish product and engineering teams, supports established product teams that are evolving into mature, process-driven organizations, drives strategy and execution for 0-1 programs and products, and provides strategic guidance to executives when their programs and products interact with complex regulatory environments or critical policy objectives.
