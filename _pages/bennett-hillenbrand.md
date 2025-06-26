@@ -15,7 +15,8 @@ featured_image: "/images/gradients/orange-red.png"
 
 		<h1>About Bennett</h1>
 		<em>Principal Consultant</em> <b>Working Paper</b><br />
-
+		<em>Adjunct Processor, Data Science and Public Policy</em> <b>Georgetown University, McCourt School of Public Policy</b><br />
+		<p><a href="/bennett-hillenbrand/2025.06.Hillenbrand_CV.pdf" target=_blank style="color: rgba(255,255,255,0.8);text-decoration: underline;">Curriculum Vitae (June 2025)</a></p>
 	</div>
 
 </section>

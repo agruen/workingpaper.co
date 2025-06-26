@@ -6,7 +6,9 @@ featured_image: "/images/gradients/orange-red.png"
 ---
 
 
-## [Andrew Gruen](/andrew-gruen)
-### Principal Consultant
-## [Bennett Hillenbrand](/bennett-hillenbrand)
-### Principal Consultant
+### [Andrew Gruen](/andrew-gruen)
+##### Principal Consultant
+[Biography](/andrew-gruen)
+### [Bennett Hillenbrand](/bennett-hillenbrand)
+##### Principal Consultant
+[Biography](/bennett-hillenbrand)
