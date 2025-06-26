@@ -17,6 +17,11 @@ menu_settings:
       url: '/subscribe'
     - title: 'Andrew Gruen'
       url: '/andrew-gruen'
+    - title: 'Team'
+        title: 'Andrew Gruen'
+        url: '/andrew-gruen'
+        title: 'Bennett Hillenbrand'
+        url: '/bennett-hillenbrand'  
     - title: 'Contact'
       url: '/contact'
 
