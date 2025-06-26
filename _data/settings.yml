@@ -15,8 +15,6 @@ menu_settings:
       url: '/blog/'
     - title: 'Subscribe'
       url: '/subscribe'
-    - title: 'Andrew Gruen'
-      url: '/andrew-gruen'
     - title: 'Team'
       url: '/team'
     - title: 'Contact'
