@@ -18,10 +18,7 @@ menu_settings:
     - title: 'Andrew Gruen'
       url: '/andrew-gruen'
     - title: 'Team'
-        - title: 'Andrew Gruen'
-          url: '/andrew-gruen'
-        - title: 'Bennett Hillenbrand'
-          url: '/bennett-hillenbrand'  
+      url: '/team'
     - title: 'Contact'
       url: '/contact'
 
