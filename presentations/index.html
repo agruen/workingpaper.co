@@ -7,7 +7,9 @@ layout: default
 
 <div class="presentations-list">
 {% for page in site.pages %}
-  {% if page.path contains 'presentations/' and page.name == 'index.html' and page.path != 'presentations/index.html' %}
+  {% if page.path contains 'presentations/' %}
+    {% unless page.path == 'presentations/index.html' %}
+      {% if page.title and page.title != '' %}
   <div class="presentation-item" style="margin-bottom: 2em;">
     <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
     {% if page.description %}
@@ -22,6 +24,8 @@ layout: default
       {% endif %}
     </div>
   </div>
+      {% endif %}
+    {% endunless %}
   {% endif %}
 {% endfor %}
 </div>
