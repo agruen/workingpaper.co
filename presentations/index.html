@@ -1,0 +1,27 @@
+---
+layout: default
+title: Presentations
+---
+
+<h1>Presentations</h1>
+
+<div class="presentations-list">
+{% assign presentations = site.pages | where_exp: "page", "page.dir contains '/presentations/'" | where_exp: "page", "page.name == 'index.html'" | where_exp: "page", "page.dir != '/presentations/'" | sort: 'date' | reverse %}
+
+{% for presentation in presentations %}
+  <div class="presentation-item">
+    <h2><a href="{{ presentation.url }}">{{ presentation.title }}</a></h2>
+    {% if presentation.description %}
+      <p>{{ presentation.description }}</p>
+    {% endif %}
+    <div class="presentation-meta">
+      {% if presentation.date %}
+        <span class="date">{{ presentation.date | date: "%B %d, %Y" }}</span>
+      {% endif %}
+      {% if presentation.audience %}
+        <span class="audience"> | {{ presentation.audience }}</span>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
+</div>
