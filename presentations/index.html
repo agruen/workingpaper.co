@@ -5,9 +5,12 @@ layout: default
 
 <h1>Presentations</h1>
 
+<!-- Debug: Total pages: {{ site.pages | size }} -->
+
 <div class="presentations-list">
 {% for page in site.pages %}
   {% if page.path contains 'presentations/' %}
+    <!-- Debug: Found presentation page: {{ page.path }} - Title: {{ page.title }} - Layout: {{ page.layout }} -->
     {% unless page.path == 'presentations/index.html' %}
       {% if page.title and page.title != '' %}
   <div class="presentation-item" style="margin-bottom: 2em;">
