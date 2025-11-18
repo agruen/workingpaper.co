@@ -5,14 +5,16 @@ layout: default
 
 <h1>Presentations</h1>
 
-<!-- Debug: Total pages: {{ site.pages | size }} -->
+<!-- Debug info -->
+{% for page in site.pages %}
+  <!-- Page: {{ page.url }} | Path: {{ page.path }} | Title: {{ page.title }} -->
+{% endfor %}
+<!-- End debug -->
 
 <div class="presentations-list">
-{% for page in site.pages %}
-  {% if page.path contains 'presentations/' %}
-    <!-- Debug: Found presentation page: {{ page.path }} - Title: {{ page.title }} - Layout: {{ page.layout }} -->
-    {% unless page.path == 'presentations/index.html' %}
-      {% if page.title and page.title != '' %}
+{% for page in site.html_pages %}
+  {% if page.url contains '/presentations/' and page.url != '/presentations/' %}
+    {% if page.title and page.title != '' and page.layout == 'raw' %}
   <div class="presentation-item" style="margin-bottom: 2em;">
     <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
     {% if page.description %}
@@ -27,8 +29,7 @@ layout: default
       {% endif %}
     </div>
   </div>
-      {% endif %}
-    {% endunless %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 </div>
