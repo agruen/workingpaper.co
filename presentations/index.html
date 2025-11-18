@@ -28,13 +28,15 @@ featured_image: "/images/gradients/orange-red.png"
 {% assign presentation_pages = site.html_pages | where_exp: "page", "page.url contains '/presentations/'" | where_exp: "page", "page.url != '/presentations/'" | where_exp: "page", "page.layout == 'raw'" | sort: 'date' | reverse %}
 {% for page in presentation_pages %}
   {% if page.title and page.title != '' %}
+			<div style="margin-bottom: 3em;">
 {% if page.date or page.audience %}
-			<p><small>{% if page.date %}{{ page.date | date: "%B %d, %Y" }}{% endif %}{% if page.date and page.audience %} | {% endif %}{% if page.audience %}{{ page.audience }}{% endif %}</small></p>
+				<p style="margin-bottom: 0.5em;"><small>{% if page.date %}{{ page.date | date: "%B %d, %Y" }}{% endif %}{% if page.date and page.audience %} | {% endif %}{% if page.audience %}{{ page.audience }}{% endif %}</small></p>
 {% endif %}
-			<h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+				<h3 style="margin-top: 0;"><a href="{{ page.url }}">{{ page.title }}</a></h3>
 {% if page.description %}
-			<p>{{ page.description }}</p>
+				<p>{{ page.description }}</p>
 {% endif %}
+			</div>
 
   {% endif %}
 {% endfor %}
