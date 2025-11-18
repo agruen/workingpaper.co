@@ -9,14 +9,14 @@ layout: default
 {% for page in site.html_pages %}
   {% if page.url contains '/presentations/' and page.url != '/presentations/' %}
     {% if page.title and page.title != '' and page.layout == 'raw' %}
-### [{{ page.title }}]({{ page.url }})
+<h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
 {% if page.description %}
-{{ page.description }}
+<p>{{ page.description }}</p>
 {% endif %}
 {% if page.date or page.audience %}
-<small>
+<p><small>
 {% if page.date %}{{ page.date | date: "%B %d, %Y" }}{% endif %}{% if page.date and page.audience %} | {% endif %}{% if page.audience %}{{ page.audience }}{% endif %}
-</small>
+</small></p>
 {% endif %}
 
     {% endif %}
