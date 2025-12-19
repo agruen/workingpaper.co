@@ -1,9 +1,6 @@
 ---
-title: Expanding Access to High-Quality,
-Factual, Philanthropic Data
-date: 2025-12-19 12:00:00 Z
-description: How MCP is changing data access -- and how we think about accuracy with LLMs
-featured_image: "/images/MCP@2x.jpg"
+title: 2025 12 19 Mcp Convening
+date: 2025-12-19 12:02:43.777000000 Z
 ---
 
 Working Paper recently convened fifteen organizations -- including experts from  [ICPSR](https://www.icpsr.umich.edu/sites/icpsr/home), the [World Bank](worldbank.org), [Google Data Commons](https://datacommons.org), [Robert Wood Johnson Foundation](rwjf.org), and [NYU's Center for Social Media and Politics](https://csmapnyu.org/) -- to discuss how the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) is changing how social impact organizations access and trust their data.
