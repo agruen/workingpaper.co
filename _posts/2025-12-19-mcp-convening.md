@@ -1,7 +1,8 @@
 ---
 title: Expanding Access to High-Quality, Factual, Philanthropic Data
 date: 2025-12-19 12:00:00 Z
-description: How MCP is changing data access -- and how we think about accuracy with LLMs
+description: How MCP is changing data access -- and how we think about accuracy with
+  LLMs
 featured_image: "/images/blog/MCP@2x.jpg"
 ---
 
