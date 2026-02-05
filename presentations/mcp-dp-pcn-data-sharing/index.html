@@ -1,0 +1,652 @@
+---
+title: Natural Language Access To Privacy-Preserving Data: Integrating The Model Context Protocol With Differentially Private Query Engines
+date: 2026-02-10 00:00:00 Z
+description: Solving one of the long-standing issues in privacy-preserved data sharing: lowering the technical bar to access with LLMs, MCP servers, a differential privacy query engine, and a novel technology pioneered by the World Bank: Proof Carrying Numbers. 
+audience: Privacy and Public Policy Conference, Georgetown University
+layout: raw
+---
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<style>
+:root{
+--logo: ;
+--logo-size: ;
+--text-scale-intensity: 1.8;
+--darkaccent1color: #fff;
+--lightaccent1color: #fff;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #fff;
+--darktitletextcolor: #fff;
+--lightbodytextcolor: #fff;
+--darkbodytextcolor: #fff;
+--lightbackgroundcolor: transparent;
+--darkbackgroundcolor: transparent;
+--bodyfont: inconsolata;
+--titlefont: inconsolata;
+--lightframecolor: #000000;
+--darkframecolor: #000000;
+} 
+
+</style>
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/sanfrancisco.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+</head>
+<body class="responsive ">
+<div class="reveal">
+<div class="slides">
+<section class="variable-size-headings light title-and-columns-container wide"  data-background-color="#00a8ff"style="--lightbackgroundcolor: #00a8ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title-and-columns slide-contents columns-items-2 media-grid"> 
+ <div class="title-part element-group">
+  <h1 id="mcpdppcn">MCP + DP + PCN =</h1> 
+  <h2 id="datasharingnirvana">Data Sharing Nirvana?</h2>
+ </div> 
+ <div class="column-part element-group has-media has-media-first has-media-last">
+  <div class="layout-grid media-grid grid-items-2">
+   <figure class="">
+    <img src="media/bh_for_presenter.png" class=" size-contain position-center-bottom" />
+    <figcaption> 
+     <b>Bennett Hillenbrand</b>
+     <br />President, Working Paper
+    </figcaption>
+   </figure>
+   <figure class="">
+    <img src="media/ag_for_presenter.png" class=" size-contain position-center-bottom" />
+    <figcaption> 
+     <b>Andrew Gruen, PhD</b>
+     <br />CEO, Working Paper
+     <br />Senior Fellow, Future of Privacy Forum
+    </figcaption>
+   </figure>
+  </div> 
+ </div>
+ <div class="column-part element-group has-media has-media-first has-media-last">
+  <div class="layout-grid media-grid grid-items-2">
+   <figure class="">
+    <img src="media/honacker_for_presenter.png" class=" size-contain position-center-bottom" />
+    <figcaption> 
+     <b>James Honacker, PhD</b>
+     <br />Co-Founder, Agusta Griffin
+    </figcaption>
+   </figure>
+   <figure class="">
+    <img src="media/sharon_for_presenter.png" class=" size-contain position-center-bottom" />
+    <figcaption> 
+     <b>Sharon Gibbons</b>
+     <br />Co-Founder, Agusta Griffin
+    </figcaption>
+   </figure>
+  </div> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#117eff"style="--lightbackgroundcolor: #117eff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="“whatdollmsactuallydo”">“What do LLMs actually do?”</h1> 
+  <p>Summarization? Translation?</p> 
+  <p>Also: Why does MCP exist?</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#2354ff"style="--lightbackgroundcolor: #2354ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="challenge:">Challenge:</h1> 
+  <h2 id="privacysafedatahastremendouspromisebuttheoperationalizingofaccesshasalwayshadlimitations.brbr">Privacy safe data has tremendous promise but the operationalizing of access has always had limitations. <br /><br /></h2> 
+  <h3 id="--privacyutility--">&lt;--Privacy/utility--&gt;</h3>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light default-container wide"  data-background-color="#3431ff"style="--lightbackgroundcolor: #3431ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h3 class="kicker" id="differentiallyprivatedataisthegoldstandardforprivacypreservingdataaccesswhichweusually">Differentially private data is the gold standard for privacy preserving data access, which we usually</h3>
+  <h1 id="applyinoneoftwoways:">Apply in one of two ways:</h1> 
+  <ol> 
+   <li>As a pre-computed set of aggregates (census 2020, examples)</li> 
+   <li>As a differentially private query engine where a user can write queries (SQL or equivalent) and receive back differentially private data. 
+    <ul> 
+     <li>Not Pareto optimized</li> 
+     <li>Privacy budget is consumed ad-hoc</li> 
+     <li>Requires data querying and analysis skills.</li> 
+    </ul></li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#451bff"style="--lightbackgroundcolor: #451bff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="inallcasesdifferentiallyprivateoutputsorqueryengineshaverequiredanalysisskills.">In all cases, differentially private outputs or query engines have required analysis skills.</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#5504ff"style="--lightbackgroundcolor: #5504ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="withmodernaitoolswecanaddanaturallanguagelayerontopofthedifferentiallyprivatedata">With modern AI tools, we can add a natural language layer on top of the differentially private data</h1> 
+  <p>However: we still need to protect the underlying microdata, manage the privacy budgets, and ensure the provided data is real data with noise perturbation... rather than hallucination. </p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#6500ff"style="--lightbackgroundcolor: #6500ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="thisguidesustoasolutionofmcpdp.">This guides us to a solution of MCP + DP.</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#7600ff"style="--lightbackgroundcolor: #7600ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h4 class="kicker" id="whichstilldoesnotsolvefortheproblemofpotentialhallucination">Which still does not solve for the problem of potential hallucination</h4>
+  <h1 id="howdoweknowifweareright">How do we know if we are right?</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#8700ff"style="--lightbackgroundcolor: #8700ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="proofcarryingnumbers">Proof Carrying Numbers</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light default-container wide"  data-background-color="#9d00ff"style="--lightbackgroundcolor: #9d00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <p><code>provide “verification instead of description. It doesn’t replace metadata or statistical standards; it complements them by automatically checking whether an AI system’s numerical outputs remain faithful to the reference data.”</code></p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#b300ff"style="--lightbackgroundcolor: #b300ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="wait.what">Wait. What?</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light v-split-container wide"  data-background-color="#c500f7"style="--lightbackgroundcolor: #c500f7;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="verifyingllmoutput">Verifying LLM Output</h1> 
+  <h3 id="againsttheunderlyingdata">Against the underlying data</h3> 
+  <blockquote lang="en"> 
+   <p>“What matters is not how often a model is right, but whether users are informed when it might be wrong.” - Aivin Solatorio</p> 
+  </blockquote>
+ </div> 
+ <figure class=""> 
+  <img src="media/Clipboard.png" class=" size-contain position-center-center" /> 
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light grid-container wide"  data-background-color="#d500ea"style="--lightbackgroundcolor: #d500ea;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media">
+  <h1 id="howthisworks">How this works</h1> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/Clipboard 1.png" class=" size-contain position-center-center" />
+   </figure>
+  </div> 
+  <ul> 
+   <li>Claim IDs</li> 
+   <li>A policy that governs the verification process</li> 
+   <li>And a prompt instruction about how to surface empirical information and associate (or fail to associate) the relevant claims.</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#e600de"style="--lightbackgroundcolor: #e600de;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="pcnmeansverificationwithoutdisclosure">PCN means verification without disclosure</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light default-container wide"  data-background-color="#ef03c6"style="--lightbackgroundcolor: #ef03c6;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <p>With our PCNs, we can know that a number produced by the LLM is valid, then inject noise under DP, providing a privacy safe result based on the natural language query. </p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#f906af"style="--lightbackgroundcolor: #f906af;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="implicitchallenge:">Implicit challenge:</h1> 
+  <h2 id="doesthismeanweneedtoprecomputeeveryaggregateausermaybeinterestedin">Does this mean we need to precompute every aggregate a user may be interested in?</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light title-container wide"  data-background-color="#ff0f94"style="--lightbackgroundcolor: #ff0f94;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="nope">Nope!</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ff2176"style="--lightbackgroundcolor: #ff2176;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="theownerofthedatadecideswhattodo">The owner of the data decides what to do</h1> 
+  <h2 id="andtheuserhasachoice">And the user has a choice</h2> 
+  <p>The owner can reject non-verified results... But if the owner chooses to display, the user can reject if they don't want to spend their budget.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light grid-container wide"  data-background-color="#ff3458"style="--lightbackgroundcolor: #ff3458;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-4 media-grid"> 
+ <div class="element-group">
+  <p>1 </p> 
+  <p>Surface results, but with an indicator: Doesn't exist? <strong>OR</strong> Negatively impacted? (e.g. improper rounding)</p>
+ </div>
+ <div class="element-group">
+  <p>2</p> 
+  <p>provide the differentially private answer with the flag, </p>
+ </div>
+ <div class="element-group">
+  <p>3</p> 
+  <p>don’t provide any answer at all, or</p>
+ </div>
+ <div class="element-group">
+  <p>4</p> 
+  <p>let the user know there will be an issue with the data but their privacy budget will still be impacted and ask them if they want to proceed.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ff4240"style="--lightbackgroundcolor: #ff4240;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="okbutactually...">OK, but actually...</h1> 
+  <h4 id="doesn’tthisstillrunafoulofneedingtoprecomputetheaggregates">Doesn’t this still run afoul of needing to precompute the aggregates?</h4>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light title-container wide"  data-background-color="#ff4f2a"style="--lightbackgroundcolor: #ff4f2a;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="yesandno.">Yes and no.</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light default-container wide"  data-background-color="#ff5d17"style="--lightbackgroundcolor: #ff5d17;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="usecases:">Use Cases:</h1> 
+  <ol> 
+   <li>All government administrative data everywhere</li> 
+   <li>Nearly every quantitative social science dataset ever produced</li> 
+   <li>Social Science One</li> 
+   <li>Raj Chetty social mobility - can we get schools access to grade level socio-economic information (e.g. from the IRS)</li> 
+   <li>Aggregates of individual medical data across providers?</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ff6c0d"style="--lightbackgroundcolor: #ff6c0d;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="researchagenda">Research Agenda</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ff7c03"style="--lightbackgroundcolor: #ff7c03;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="1">1</h1> 
+  <h1 id="prototypebuildoutofthepcnround-tripservice">Prototype build out of the PCN round-trip service</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ff9200"style="--lightbackgroundcolor: #ff9200;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="2">2</h1> 
+  <h1 id="trustworthinessofresponsesasafunctionofsystemdesign">Trustworthiness of responses as a function of system design</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ffaa00"style="--lightbackgroundcolor: #ffaa00;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="3">3</h1> 
+  <h1 id="rebuildexistingdatareleaseusecaseswiththisarchitecture">Rebuild existing data release use cases with this architecture</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ffc400"style="--lightbackgroundcolor: #ffc400;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="4">4</h1> 
+  <h1 id="privacybudgetconsumptionrateswithnaturallanguagevssql-likeinterfaces">Privacy budget consumption rates with natural language vs SQL-like interfaces</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+</div>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/pptxgen.min.js"></script>
+<script src="engine/pfill.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
+</html>
