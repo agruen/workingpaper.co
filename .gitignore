@@ -4,3 +4,12 @@ _pages/.DS_Store
 images/.DS_Store
 images/.DS_Store
 presentations/.claude/settings.local.json
+
+# Jekyll local build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+vendor/
+.ruby-version
