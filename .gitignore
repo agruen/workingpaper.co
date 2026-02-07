@@ -12,4 +12,5 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 vendor/
+.bundle/
 .ruby-version

@@ -11,14 +11,26 @@ menu_settings:
   menu_items:
     - title: 'Home'
       url: '/'
-    - title: 'Updates'
-      url: '/blog/'
-    - title: 'Subscribe'
-      url: '/subscribe'
     - title: 'Team'
       url: '/team'
-    - title: 'Contact'
+      children:
+        - title: 'Andrew Gruen'
+          url: '/andrew-gruen'
+        - title: 'Bennett Hillenbrand'
+          url: '/bennett-hillenbrand'
+    - title: 'Updates'
+      url: '/blog/'
+    - title: 'Connect'
       url: '/contact'
+      children:
+        - title: 'Contact'
+          url: '/contact'
+        - title: 'Book a Meeting'
+          url: '/calendar'
+        - title: 'Subscribe'
+          url: '/subscribe'
+        - title: 'Careers'
+          url: '/jobs'
 
 
 footer_settings:

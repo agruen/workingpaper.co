@@ -19,8 +19,20 @@
 			<div class="menu__wrap">
 				<ul class="menu__list">
 					{% for item in site.data.settings.menu_settings.menu_items %}
-					<li class="menu__list__item">
+					<li class="menu__list__item{% if item.children %} menu__list__item--has-children{% endif %}">
 						<a href="{{ item.url }}" class="menu__list__item__link">{{ item.title }}</a>
+						{% if item.children %}
+						<button class="menu__submenu-toggle js-submenu-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Toggle {{ item.title }} submenu">
+							<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
+						</button>
+						<ul class="menu__submenu">
+							{% for child in item.children %}
+							<li class="menu__submenu__item">
+								<a href="{{ child.url }}" class="menu__list__item__link">{{ child.title }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
 					</li>
 					{% endfor %}
 				</ul>

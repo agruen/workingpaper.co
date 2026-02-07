@@ -6,8 +6,8 @@ featured_image: "/images/gradients/orange-red.png"
 ---
 
 ### [Andrew Gruen](/andrew-gruen)
-##### Principal Consultant
+##### CEO & Chief Policy Officer
 [Biography](/andrew-gruen)
 ### [Bennett Hillenbrand](/bennett-hillenbrand)
-##### Principal Consultant
+##### President & Chief Product Officer
 [Biography](/bennett-hillenbrand)

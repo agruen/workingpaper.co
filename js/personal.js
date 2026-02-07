@@ -388,9 +388,27 @@
 	$(document).on('click', '.menu__list__item__link', function (){
 
 		// If menu is open when you click a link on mobile
-		if ( $('.menu').hasClass('menu--open') ) {
-			$('.menu').removeClass('menu--open');
+		if ( $('body').hasClass('menu--open') ) {
+			$('body').removeClass('menu--open');
+			$('.submenu--open').removeClass('submenu--open');
+			$('.js-submenu-toggle').attr('aria-expanded', 'false');
 		}
+	});
+
+	// Submenu toggle for mobile
+	$(document).on('click', '.js-submenu-toggle', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		var $parent = $(this).closest('.menu__list__item');
+		var isOpen = $parent.hasClass('submenu--open');
+
+		// Close other open submenus
+		$('.submenu--open').not($parent).removeClass('submenu--open');
+		$('.js-submenu-toggle').not(this).attr('aria-expanded', 'false');
+
+		// Toggle this submenu
+		$parent.toggleClass('submenu--open');
+		$(this).attr('aria-expanded', isOpen ? 'false' : 'true');
 	});
 
 

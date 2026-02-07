@@ -9,6 +9,8 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Header
 
 .header {
+	position: relative;
+	z-index: 10;
 	margin-top: 20px;
 
 	@include mq(tabletp) {
@@ -223,9 +225,112 @@
 	@include mq(laptop) {
 		font-size: $menu-large;
 	}
-	
+
 	&.active-link {
 		color: $accent-color;
+	}
+}
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Submenus
+
+.menu__list__item--has-children {
+	position: relative;
+
+	@include mq(tabletl) {
+		& > .menu__list__item__link {
+			padding-right: 16px;
+		}
+	}
+}
+
+.menu__submenu-toggle {
+	appearance: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: $text-dark-color;
+	padding: 8px 12px;
+	position: absolute;
+	right: 0;
+	top: 4px;
+	line-height: 1;
+
+	svg {
+		@include transition(transform 0.2s);
+	}
+
+	@include mq(tabletl) {
+		display: none;
+	}
+}
+
+.submenu--open > .menu__submenu-toggle svg {
+	transform: rotate(180deg);
+}
+
+.menu__submenu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	// Mobile: accordion
+	max-height: 0;
+	overflow: hidden;
+	@include transition(max-height 0.3s ease);
+
+	.submenu--open > & {
+		max-height: 500px;
+	}
+
+	@include mq(tabletl) {
+		// Desktop: dropdown
+		max-height: none;
+		overflow: visible;
+		position: absolute;
+		top: 100%;
+		left: -12px;
+		min-width: 180px;
+		background: $background-color;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		border-radius: 4px;
+		padding: 8px 0;
+		visibility: hidden;
+		opacity: 0;
+		@include transition(all 0.2s ease-in-out);
+		z-index: 100;
+	}
+}
+
+.menu__list__item--has-children:hover > .menu__submenu {
+	@include mq(tabletl) {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.menu__submenu__item {
+	padding-left: 15px;
+
+	@include mq(tabletl) {
+		padding-left: 0;
+	}
+
+	.menu__list__item__link {
+		display: block;
+		font-size: $menu-small * 0.85;
+		padding: 6px 0;
+
+		@include mq(tabletl) {
+			font-size: $menu-medium;
+			padding: 6px 16px;
+			white-space: nowrap;
+		}
+
+		@include mq(laptop) {
+			font-size: $menu-large * 0.9;
+		}
 	}
 }
 
