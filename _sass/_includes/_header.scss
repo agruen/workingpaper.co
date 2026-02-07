@@ -238,6 +238,10 @@
 .menu__list__item--has-children {
 	position: relative;
 
+	& > .menu__list__item__link {
+		padding-right: 44px;
+	}
+
 	@include mq(tabletl) {
 		& > .menu__list__item__link {
 			padding-right: 16px;
@@ -251,11 +255,13 @@
 	border: none;
 	cursor: pointer;
 	color: $text-dark-color;
-	padding: 8px 12px;
+	padding: 19px 17px;
 	position: absolute;
 	right: 0;
-	top: 4px;
+	top: 0;
+	z-index: 1;
 	line-height: 1;
+	-webkit-tap-highlight-color: transparent;
 
 	svg {
 		@include transition(transform 0.2s);
