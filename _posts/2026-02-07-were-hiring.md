@@ -1,7 +1,8 @@
 ---
 title: We're Hiring
 date: 2026-02-07 12:00:00 Z
-description: Working Paper is growing -- and looking for a Senior Consultant to join our team.
+description: Working Paper is growing -- and looking for a Senior Consultant to join
+  our team.
 featured_image: "/images/gradients/purple-blue.png"
 ---
 
