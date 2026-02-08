@@ -156,6 +156,8 @@ o(document).on("click",".js-menu-toggle",function(){
 o("body").hasClass("menu--open")?o("body").removeClass("menu--open"):o("body").addClass("menu--open")}),o(document).on("click",".menu__list__item__link",function(){
 // If menu is open when you click a link on mobile
 o(".menu").hasClass("menu--open")&&o(".menu").removeClass("menu--open")}),
+// Submenu toggle for mobile
+o(document).on("click",".js-submenu-toggle",function(e){e.preventDefault();e.stopPropagation();var t=o(this).closest(".menu__list__item"),n=t.hasClass("submenu--open");o(".submenu--open").not(t).removeClass("submenu--open");o(".js-submenu-toggle").not(this).attr("aria-expanded","false");t.toggleClass("submenu--open");o(this).attr("aria-expanded",n?"false":"true")}),
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Listing post click
 // Click anywhere on the post to go to the link
 o(document).on("click",".post",function(){var t=o(this).find(".post__title a").attr("href");o("body").hasClass("ajax-loading")?(

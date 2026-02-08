@@ -202,6 +202,7 @@
 }
 
 .menu__list__item__link {
+	display: block;
 	font-size: $menu-small;
 	font-weight: $menu-weight;
 	color: $text-dark-color;
@@ -212,7 +213,6 @@
 	}
 
 	@include mq(tabletl) {
-		display: block;
 		padding: 0 0 8px;
 		font-size: $menu-medium;
 		color: $text-dark-color;
@@ -237,12 +237,21 @@
 
 .menu__list__item--has-children {
 	position: relative;
+	display: flex;
+	flex-wrap: wrap;
 
 	& > .menu__list__item__link {
-		padding-right: 44px;
+		flex: 1;
+		padding-right: 0;
+	}
+
+	& > .menu__submenu {
+		width: 100%;
 	}
 
 	@include mq(tabletl) {
+		display: inline-block;
+
 		& > .menu__list__item__link {
 			padding-right: 16px;
 		}
@@ -255,15 +264,15 @@
 	border: none;
 	cursor: pointer;
 	color: $text-dark-color;
-	padding: 19px 17px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	z-index: 1;
+	padding: 10px 17px;
 	line-height: 1;
+	touch-action: manipulation;
 	-webkit-tap-highlight-color: transparent;
+	flex: 0 0 auto;
 
 	svg {
+		display: block;
+		pointer-events: none;
 		@include transition(transform 0.2s);
 	}
 
