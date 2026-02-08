@@ -3,7 +3,9 @@
     "allow": [
       "WebSearch",
       "WebFetch(domain:jekyllrb.com)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)"
     ],
     "deny": [],
     "ask": []

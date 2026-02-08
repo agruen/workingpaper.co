@@ -3,7 +3,7 @@ images/.DS_Store
 _pages/.DS_Store
 images/.DS_Store
 images/.DS_Store
-presentations/.claude/settings.local.json
+.claude/
 
 # Jekyll local build artifacts
 _site/
