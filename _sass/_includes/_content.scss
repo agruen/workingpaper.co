@@ -164,6 +164,19 @@
 	}
 }
 
+.bio-portrait {
+	display: block;
+	margin: 0 auto 20px;
+	max-width: 300px;
+	width: 100%;
+
+	@include mq(tabletp) {
+		float: left;
+		margin: 0 15px 15px 0;
+		padding: 0 15px;
+	}
+}
+
 .image-wrap,
 .video-wrap {
 	position: relative;
