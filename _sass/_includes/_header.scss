@@ -186,18 +186,16 @@
 		max-width: none;
 		margin: 0;
 		padding: 0;
+		display: flex;
+		align-items: center;
+		gap: 20px;
 	}
 }
 
 .menu__list__item {
 
 	@include mq(tabletl) {
-		display: inline-block;
-		margin-left: 20px;
-
-		&:first-child {
-			margin-left: 0;
-		}
+		position: relative;
 	}
 }
 
@@ -229,6 +227,11 @@
 	&.active-link {
 		color: $accent-color;
 	}
+
+	&--parent {
+		cursor: pointer;
+		user-select: none;
+	}
 }
 
 
@@ -253,7 +256,7 @@
 		display: inline-block;
 
 		& > .menu__list__item__link {
-			padding-right: 16px;
+			padding-right: 0;
 		}
 	}
 }

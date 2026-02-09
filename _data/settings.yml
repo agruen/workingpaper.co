@@ -18,10 +18,15 @@ menu_settings:
           url: '/andrew-gruen'
         - title: 'Bennett Hillenbrand'
           url: '/bennett-hillenbrand'
+        - title: 'Isaac Holeman'
+          url: '/isaac-holeman'
     - title: 'Updates'
-      url: '/blog/'
+      children:
+        - title: 'Working Papers'
+          url: '/blog/'
+        - title: 'Presentations'
+          url: '/presentations'
     - title: 'Connect'
-      url: '/contact'
       children:
         - title: 'Contact'
           url: '/contact'

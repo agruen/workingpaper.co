@@ -5,9 +5,15 @@ description: Link to team member bios
 featured_image: "/images/gradients/orange-red.png"
 ---
 
-### [Andrew Gruen](/andrew-gruen)
-##### CEO & Chief Policy Officer
-[Biography](/andrew-gruen)
-### [Bennett Hillenbrand](/bennett-hillenbrand)
-##### President & Chief Product Officer
-[Biography](/bennett-hillenbrand)
+### [Andrew Gruen &rarr;](/andrew-gruen)
+CEO & Chief Policy Officer
+
+<a href="/calendar/andrew/" class="button button--small">Book time with Andrew</a>
+
+### [Bennett Hillenbrand &rarr;](/bennett-hillenbrand)
+President & Chief Product Officer
+
+<a href="/calendar/bennett/" class="button button--small">Book time with Bennett</a>
+
+### [Isaac Holeman &rarr;](/isaac-holeman)
+Senior Consultant

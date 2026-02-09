@@ -5,7 +5,11 @@
       "WebFetch(domain:jekyllrb.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(lsof:*)",
-      "Bash(xargs kill:*)"
+      "Bash(xargs kill:*)",
+      "Bash(bundle config set:*)",
+      "Bash(bundle install:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)"
     ],
     "deny": [],
     "ask": []
