@@ -1,8 +1,8 @@
 ---
 title: Book time with Isaac
 permalink: "/calendar/isaac/"
-subtitle:
-description:
+subtitle: 
+description: 
 featured_image: "/images/gradients/orange-red.png"
 ---
 
