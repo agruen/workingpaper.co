@@ -51,5 +51,5 @@ When adding or removing a team member, update **all** of the following:
 1. **Bio page** – Create or remove `_pages/{firstname}-{lastname}.html` (hero section with title/role, portrait image from `/images/`, bio text, and "Contact {Name}" button)
 2. **Menu** – Add or remove entry under `menu_settings.menu_items > Team > children` in `_data/settings.yml`
 3. **Team page** – Add or remove entry in `_pages/team.md` (name as `h3` link with `→` arrow, job title as plain text, and booking button if applicable)
-4. **Calendar booking page** – If the member should have a booking page, create or remove `_pages/calendar-{firstname}.md` and add a `<a class="button button--small">` booking button on the team page
+4. **Calendar booking page** – If the member should have a booking page, create or remove `_pages/calendar-{firstname}.md` and add a `<a class="button button--small">` booking button on the team page. Also add or remove their entry on the **calendar directory page** (`_pages/calendar.md`), which lists all bookable team members.
 5. **Photo** – Ensure portrait image exists at `/images/{firstname}-{lastname}.jpg` (or `.png`)

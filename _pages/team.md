@@ -17,3 +17,5 @@ President & Chief Product Officer
 
 ### [Isaac Holeman &rarr;](/isaac-holeman)
 Senior Consultant
+
+<a href="/calendar/isaac/" class="button button--small">Book time with Isaac</a>
