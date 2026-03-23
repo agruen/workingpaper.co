@@ -6,4 +6,6 @@ description:
 featured_image: "/images/gradients/orange-red.png"
 ---
 
-<iframe src="https://calendar.app.google/7ot7ocX87pjUSu4T6" width="100%" style="height: 100vh; min-height: 800px;" frameborder="0"></iframe>
+<!-- Google Calendar Appointment Scheduling begin -->
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ29eFBZ_VZvIb4Ok-Wo39MRWlJWT2nXw1bocOmsfCDyzyk4oDELO8ezpoMUjrhcByNmTon9JTfs?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->
