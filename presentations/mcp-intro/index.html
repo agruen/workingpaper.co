@@ -1,0 +1,573 @@
+---
+title: 'An Introduction to MCP for Your Data'
+date: 2026-03-24 13:00:00 Z
+description: 'What is MCP? How can it help you work with your data?'
+audience: Foundations for Research and Innovation in Data and Artificial Intelligence, Rockefeller Foundation
+layout: raw
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<style>
+:root{
+--logo: ;
+--logo-size: ;
+--text-scale-intensity: ;
+--darkaccent1color: #fff;
+--lightaccent1color: #fff;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #fff;
+--darktitletextcolor: #fff;
+--lightbodytextcolor: #fff;
+--darkbodytextcolor: #fff;
+--lightbackgroundcolor: transparent;
+--darkbackgroundcolor: transparent;
+--bodyfont: Inter;
+--titlefont: Inter;
+--lightframecolor: #000000;
+--darkframecolor: #000000;
+} 
+
+</style>
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/sanfrancisco.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+</head>
+<body class="responsive ">
+<div class="reveal">
+<div class="slides">
+<section class="variable-size-headings light default-container wide"  data-background-color="#00a8ff"style="--lightbackgroundcolor: #00a8ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h1 id="whatismcp">What is MCP</h1> 
+  <h2 id="makingyourdataaccessiblewithai">Making Your Data Accessible with AI</h2> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/Untitled@2x.png" class=" size-contain position-right-bottom" />
+    <figcaption> 
+     <b>Andrew Gruen, PhD</b>
+     <br />CEO, Working Paper
+     <br />Senior Fellow, Future of Privacy Forum
+    </figcaption>
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#1574ff"style="--lightbackgroundcolor: #1574ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="whoareyoutotellmeanything">Who are you to tell me anything?!</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light v-split-container wide"  data-background-color="#2b40ff"style="--lightbackgroundcolor: #2b40ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h1 id="thedataparadox">The Data Paradox</h1>
+ </div> 
+ <div class="element-group">
+  <p>Philanthropies sit on decades of invaluable data: grant records, evaluation reports, outcome data, policy documents, and hard-won lessons from running programs.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#4021ff"style="--lightbackgroundcolor: #4021ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="thisdatacouldinformbetterdecisionsacrosstheentiresector">This data could inform better decisions across the entire sector</h1>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light title-container wide"  data-background-color="#5405ff"style="--lightbackgroundcolor: #5405ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="mcpisthemodernwayofsharingthatevidence">MCP is the modern way of sharing that evidence</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light v-split-container wide"  data-background-color="#6900ff"style="--lightbackgroundcolor: #6900ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents"> 
+ <div class="element-group">
+  <h1 id="whatllmscanandcantdo">What LLMs Can and Can't Do</h1> 
+  <ul> 
+   <li>They're very good at: synthesis, translation, summarization, conversational interaction with complex information.</li> 
+   <li>They're bad at: knowing YOUR data. And they hallucinate when they don't know.</li> 
+  </ul>
+ </div> 
+ <div class="element-group">
+  <h2 id="andyouprobablydontwanttohandyoursensitivedatatoafoundationmodelcompanytotrainon.">And you probably don't want to hand your sensitive data to a foundation model company to train on.</h2> 
+  <ul> 
+   <li>(But you may want to give them some training data... more on that in Q&amp;A)</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light default-container wide"  data-background-color="#7c00ff"style="--lightbackgroundcolor: #7c00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="theworkaroundsbeforemcp">The Workarounds (Before MCP)</h1> 
+  <ol> 
+   <li><strong>Archives:</strong> Operationally expensive taxonomies layered on top of data... Card Catalogs!</li> 
+   <li><strong>Fine-tuning:</strong> Expensive, goes stale, no attribution, your data leaves your hands.</li> 
+   <li><strong>RAG:</strong> Custom per integration, brittle, doesn't compose across datasets.</li> 
+   <li><strong>Bespoke chatbots:</strong> One-off builds that serve one audience through one interface.</li> 
+  </ol> 
+  <p>None of this scales. Each approach requires rebuilding from scratch for every new dataset and every new AI tool.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light grid-container wide"  data-background-color="#9500ff"style="--lightbackgroundcolor: #9500ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h1 id="howmcpworks">How MCP Works</h1> 
+  <ol> 
+   <li>You structure your data. 
+    <ul> 
+     <li>This isn't complex! It's definitions and organization.</li> 
+    </ul></li> 
+   <li>You define tools: functions that describe what questions can be asked and what data comes back.</li> 
+   <li>You expose those tools through a standard protocol.</li> 
+   <li>Any AI assistant connects to your server and calls those tools.</li> 
+  </ol> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/MCP Data Integration.png" class=" size-contain position-center-center" />
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light default-container wide"  data-background-color="#b100ff"style="--lightbackgroundcolor: #b100ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h1 id="whathappensatquerytime">What Happens at Query Time</h1> 
+  <h4 id="example:chicagopublicschoolsaiguidanceforparents">Example: Chicago Public Schools AI Guidance for Parents</h4> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/Parental Consent Query Flow-2026-03-23-173416.png" class=" size-contain position-center-center" />
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#c800f5"style="--lightbackgroundcolor: #c800f5;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="whatmakesthisdifferent">What Makes This Different</h1> 
+  <p>One server serves every AI client, just like one website serves every browser.</p> 
+  <p>The data owner controls what's exposed and how.</p> 
+  <p>It's an open standard: not locked to any vendor.</p> 
+  <p>Your data never leaves your infrastructure.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#dc00e5"style="--lightbackgroundcolor: #dc00e5;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="thisissimplerthanyouthink">This Is Simpler Than You Think</h1> 
+  <h2 id="haveyoumetmyfriendclaude">Have you met my friend, Claude?</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light default-container wide"  data-background-color="#eb01cf"style="--lightbackgroundcolor: #eb01cf;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h2 class="kicker" id="a52-pageschooldistrictaipolicypdf">A 52-page school district AI policy PDF</h2>
+  <h1 id="thecpsaiguidebook">The CPS AI Guidebook</h1> 
+  <ul> 
+   <li>Converted to structured JSON. Served by a Python app that runs on a Raspberry Pi.</li> 
+   <li>~15 tools. Full OAuth authentication (if you want it). Built-in usage analytics (think carefully about the implications).</li> 
+   <li>Total infrastructure: a $50 computer. Residential internet. $1.50 of electricity ... at <em>MANHATTAN</em> prices.</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light title-container wide"  data-background-color="#f705b2"style="--lightbackgroundcolor: #f705b2;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="demo"><em>Demo</em></h2> 
+  <p>Chicago Public Schools AI Guidelines...</p> 
+  <p>To Parent/Teacher Answer Engine</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ff1191"style="--lightbackgroundcolor: #ff1191;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="notjustquantitativedata">Not Just Quantitative Data</h1> 
+  <p>MCP doesn't just make numbers queryable.</p> 
+  <p>It makes qualitative data — policy documents, narrative reports, institutional knowledge — accessible the way we've traditionally only accessed quantitative data.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ff276c"style="--lightbackgroundcolor: #ff276c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="queryingqualitativedata">Querying Qualitative Data</h1> 
+  <p>"What does CPS recommend for parents who want to opt out of AI tools?"</p> 
+  <p>"What are the approved positive uses of GenAI for students?"</p> 
+  <p>"Show me classroom examples for middle school science."</p> 
+  <p>"What does the glossary say about hallucination?"</p> 
+  <p>Every answer is grounded in the actual document. Every answer includes attribution.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light v-split-container wide"  data-background-color="#ff3c49"style="--lightbackgroundcolor: #ff3c49;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="thefieldismovingfast">The Field Is Moving Fast</h1> 
+  <p>A recent convening of 15 organizations surfaced real momentum:</p> 
+  <ul> 
+   <li>Launched: 
+    <ul> 
+     <li><strong>World Bank Data360:</strong> 100M+ annual visits in 30+ languages, with cryptographic verification of AI outputs.</li> 
+     <li><strong>Google Data Commons:</strong> public data from statistical offices and NGOs, integrated and queryable.</li> 
+    </ul></li> 
+   <li>Beta: 
+    <ul> 
+     <li><strong>Carnegie Foundation:</strong> educational skill progressions served as structured tools for educators.</li> 
+     <li><strong>ICPSR:</strong> making 250,000+ social science datasets discoverable via natural language.</li> 
+     <li><strong>RWJF:</strong> updates to RWJF Answers (shown here before!) built on well-structured data they've curated for decades!</li> 
+    </ul></li> 
+  </ul>
+ </div> 
+ <figure class="">
+  <img src="media/Clipboard.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light default-container wide"  data-background-color="#ff4d2e"style="--lightbackgroundcolor: #ff4d2e;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="therisksarereal">The Risks Are Real</h1> 
+  <ol> 
+   <li>MCP + LLMs can make weak data look authoritative.</li> 
+   <li>Data quality is chronically underfunded.</li> 
+   <li>Building private integrations instead of shared infrastructure replicates existing inequities.</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light title-container wide"  data-background-color="#ff5d16"style="--lightbackgroundcolor: #ff5d16;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="thefundamentalsarestill...fundamentals:gooddatarequiresexpertiseandinvestment.verifyyourinsights.">The fundamentals are still... fundamentals: good data requires expertise and investment. Verify your insights.</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light default-container wide"  data-background-color="#ff710a"style="--lightbackgroundcolor: #ff710a;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="wherethisgoesnext">Where This Goes Next</h1> 
+  <ul> 
+   <li>Privacy-preserving access: MCP + differential privacy + proof-carrying numbers enables natural language queries against sensitive microdata with formal privacy guarantees — and verification that results aren't hallucinated.</li> 
+   <li>The system improves through use: the queries people actually ask tell you what data to structure and verify next.</li> 
+   <li>A real path toward data commons as digital public goods.</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ff8600"style="--lightbackgroundcolor: #ff8600;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="whatyoucandonow">What You Can Do Now</h1> 
+  <h2 id="claudecodecando...mostofthisforyou">Claude Code can do ... Most of this for you</h2> 
+  <h2 id="andifyoudontdoit--someoneelsewill">*And if you don't do it -- someone else will</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light default-container wide"  data-background-color="#ffa500"style="--lightbackgroundcolor: #ffa500;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <ol> 
+   <li>Structure your data. Pick one dataset, one document, one body of institutional knowledge.</li> 
+   <li>Think about what questions people would ask of it.</li> 
+   <li>Start small. One server, one audience, one use case.</li> 
+   <li>Do the work on prompt engineering to limit hallucinations, inflated claims, etc. (It works remarkably well!)</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings light cover-container wide"  data-background-color="#ffc400"style="--lightbackgroundcolor: #ffc400;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="questions">Questions?</h1> 
+  <h1 id="thankyou">Thank you!</h1> 
+  <h2 id="myinboxisyours📨">My Inbox is Yours 📨</h2> 
+  <p>ag@workingpaper.co</p> 
+  <p>(I am really excited about this and want to find good ways to get data out in the world. <strong>AND: I don't have a boss anymore who can tell me "no, don't go work on that important thing"!</strong> <em>Please</em> don't hesitate to email me.)</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+</div>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/pptxgen.min.js"></script>
+<script src="engine/pfill.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
+</html>
