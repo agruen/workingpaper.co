@@ -1,1 +1,2 @@
-{{ content }}
+{%- capture matomo -%}{%- include analytics.html -%}</head>{%- endcapture -%}
+{{ content | replace: "</head>", matomo }}
