@@ -258,6 +258,10 @@
 		& > .menu__list__item__link {
 			padding-right: 0;
 		}
+
+		& > .menu__submenu {
+			width: max-content;
+		}
 	}
 }
 
@@ -310,6 +314,7 @@
 		top: 100%;
 		left: -12px;
 		min-width: 180px;
+		width: max-content;
 		background: $background-color;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
