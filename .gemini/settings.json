@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "airr-chair-help": {
+      "command": "http://airrchair.help/mcp",
+      "args": []
+    }
+  }
+}
