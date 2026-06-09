@@ -6,7 +6,7 @@ description: Working Paper recognized the policy implications of a product launc
 featured_image: "/images/gradients/magenta-purple.png"
 ---
 
-Working Paper supports clients on technical product decisions that are policy decisions in disguise. The challenge of responsible disclosure in AI evaluation is a clean example of exactly that, and it's worth walking through how we found it and what we did with our client, [MLCommons](https://mlcommons.org).
+Working Paper supports clients on technical product decisions that are policy decisions in disguise. The challenge of [responsible disclosure in AI evaluation](https://mlcommons.org/2026/06/responsible-disclosure/) is a clean example of exactly that, and it's worth walking through how we found it and what we did with our client, [MLCommons](https://mlcommons.org).
 
 ## What we found
 
