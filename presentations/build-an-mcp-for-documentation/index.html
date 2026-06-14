@@ -1,0 +1,787 @@
+---
+title: Instrumenting Document Distribution with MCP for Better Learning
+date: 2026-06-10 00:00:00 Z
+description: MCP can support significantly better information distribution than publishing a raw PDF.  Information distributors can learn what users actually want to do with it.  And the privacy implications of instrumented documents like this are also real.
+audience: Future of Privacy Forum AI Working Group
+layout: raw
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<style>
+:root{
+--logo: /assets/wp logo white@2x.png;
+--logo-size: 7.0;
+--text-scale-intensity: 1.0;
+--darkaccent1color: #fff;
+--lightaccent1color: #fff;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #fff;
+--darktitletextcolor: #fff;
+--lightbodytextcolor: #fff;
+--darkbodytextcolor: #fff;
+--lightbackgroundcolor: transparent;
+--darkbackgroundcolor: transparent;
+--bodyfont: inconsolata;
+--titlefont: inconsolata;
+--lightframecolor: #000000;
+--darkframecolor: #000000;
+} 
+
+</style>
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/sanfrancisco.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+<link rel="stylesheet" href="engine/billboard.min.css">
+</head>
+<body class="responsive  ">
+<div class="reveal">
+<div class="slides">
+<section class="variable-size-headings has-graph-background has-footer light grid-container wide"  data-background-color="#00a8ff"style="--lightbackgroundcolor: #00a8ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h1 id="whendidyoulastreadaprivacypolicy">When did you last read a privacy policy?</h1> 
+  <h2 id="whatifyoucouldjustaskitquestionsinstead">What if you could just ask it questions instead?</h2> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/Untitled@2x.png" class=" size-contain position-right-bottom" />
+    <figcaption>
+     <b>Andrew Gruen, PhD</b>
+     <br />CEO, Working Paper
+     <br />Senior Fellow, FPF
+    </figcaption>
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  1
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light title-container wide"  data-background-color="#137aff"style="--lightbackgroundcolor: #137aff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="right.nobodyreadsthem.">Right. Nobody reads them.</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  2
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#264dff"style="--lightbackgroundcolor: #264dff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="thefineprintisdesignedto">The fine print is designed to</h1> 
+  <ol> 
+   <li>Be complete enough to satisfy regulators</li> 
+   <li><p>Be defensible enough to satisfy lawyers</p> ("Readable" doesn't make the list.)</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  3
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footnotes has-footer light default-container wide"  data-background-color="#382cff"style="--lightbackgroundcolor: #382cff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <p><em>"We may use Content you provide us to improve our Services, for example <strong>to train the models that power ChatGPT</strong>."</em></p> 
+  <p><em>"Once you choose to delete Personal Data, we will remove it from our systems <strong>within 30 days</strong>..."</em><sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></p>
+ </div> 
+</div> 
+<div class="footnotes"> 
+ <ol> 
+  <li id="fn1"> <p>https://openai.com/policies/us-privacy-policy/ <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p> </li> 
+ </ol> 
+</div> 
+<div class="footer">
+ <div class="leading">
+  4
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#4a13ff"style="--lightbackgroundcolor: #4a13ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="theanswersareallinthere">The answers are all in there</h1> 
+  <p>The questions are yours. The gap between them is 25 pages of legal English.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  5
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light title-container wide"  data-background-color="#5c00ff"style="--lightbackgroundcolor: #5c00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="sowhyarewestillreadingdocumentsbyhandwheneveryoneofushasanaiassistantopeninanothertab">So why are we still reading documents by hand when every one of us has an AI assistant open in another tab?</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  6
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#6d00ff"style="--lightbackgroundcolor: #6d00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="teachanaitoreadthefineprint:">Teach an AI to read the fine print:</h1> 
+  <h2 id="buildingandinstrumentingandshippinganmcpserverin30minutes">Building (and instrumenting, and shipping) an MCP server in 30 minutes</h2> 
+  <p>github.com/agruen/mcp-demo — clone it now, everything from today is in there</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  7
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#7f00ff"style="--lightbackgroundcolor: #7f00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h4 class="kicker" id="whatexactlydoyoumeanwhenyousay...">What exactly do you mean when you say...</h4>
+  <h1 id="mcp">MCP</h1> 
+  <p><em>From the Model Context Protocol — an open standard (modelcontextprotocol.io)</em></p> 
+  <ol> 
+   <li>Tools: small functions you write that return structured data — think get_retention_rules()</li> 
+   <li>Transport: discovery and invocation over plain HTTP — the assistant asks "what tools do you have?"</li> 
+   <li>Clients: Claude, ChatGPT, Gemini... one endpoint serves them all</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  8
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#9500ff"style="--lightbackgroundcolor: #9500ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h3 class="kicker" id="thekeymentalshift">The key mental shift</h3>
+  <h1 id="theaiisyouruser">The AI is your user</h1> 
+  <ul> 
+   <li>You're not building an API for developers</li> 
+   <li>A language model reads your tool descriptions and decides, mid-conversation, which one answers the human</li> 
+   <li>Tool descriptions are prompts. Write them like instructions to a smart intern.</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  9
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#ad00ff"style="--lightbackgroundcolor: #ad00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="livedemo">Live demo</h1> 
+  <p>https://mcp-demo.workingpaper.co</p>
+ </div> 
+ <figure class="">
+  <img src="media/Clipboard 9.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  10
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#c300f9"style="--lightbackgroundcolor: #c300f9;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="anatomy:fourlayersnomagic">Anatomy: four layers, no magic</h1> 
+  <ol> 
+   <li>A markdown file — the policy, scraped from openai.com</li> 
+   <li>One JSON file — sections → topics → tables → a 26-term glossary</li> 
+   <li>tools.py — 18 plain Python functions</li> 
+   <li>FastMCP + FastAPI — the MCP endpoint at /mcp/, a docs page at /, the dashboard at /reporting/</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  11
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light title-container wide"  data-background-color="#d400eb"style="--lightbackgroundcolor: #d400eb;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="nodatabase.novectorstore.noembeddings.norag.">No database. No vector store. No embeddings. No RAG.</h2> 
+  <p>A 25-page policy fits in one JSON file that loads once at startup. The model can't hallucinate what it reads from structured data — and every response carries an attribution line back to the source.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  12
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#e600de"style="--lightbackgroundcolor: #e600de;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="designtoolsaroundintentsnotthetableofcontents">Design tools around intents, not the table of contents</h1> 
+  <ul> 
+   <li>get_training_optout() — the question everyone actually has</li> 
+   <li>get_retention_rules() — what "delete" really does</li> 
+   <li>get_children_policy() — the question parents have</li> 
+   <li>get_privacy_essentials() — one "start here" call, so a lazy (efficient) model nails it on the first try</li> 
+   <li>...plus generic list / search / fetch for everything else</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  13
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#f003c4"style="--lightbackgroundcolor: #f003c4;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="atoyanswersquestions.">A toy answers questions.</h1> 
+  <h2 id="aninstrumenttellsyouwhatwasasked.">An instrument tells you what was asked.</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  14
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#fa06ab"style="--lightbackgroundcolor: #fa06ab;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="patternone:userintenthints">Pattern one: user intent hints</h1> 
+  <ol> 
+   <li>Every tool call is implicit intent — calling get_children_policy <em>is</em> the signal "a parent/guardian/caretaker is asking"</li> 
+   <li>Responses steer the model — a hints block with next_steps prompts the assistant <em>through your data</em></li> 
+   <li>The model self-reports — every tool description ends: <em>"call policy.log_activity to report what you helped with"</em></li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  15
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff148d"style="--lightbackgroundcolor: #ff148d;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="theaisummarizestheusersintentandreportsitback">The AI summarizes the user's intent and reports it back</h1> 
+  <ul> 
+   <li>user_goal: what the human was trying to do, in the LLM's own words</li> 
+   <li>interaction_type: question, opt_out_help, deletion_help...</li> 
+   <li>user_type: consumer, parent, teen, business user...</li> 
+   <li><p>concern: training, deletion, ads, children, rights...</p> It's voluntary. Models comply most of the time — and the dashboard measures the rate.</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  16
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light grid-container wide"  data-background-color="#ff276c"style="--lightbackgroundcolor: #ff276c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h1 id="patterntwo:thereportingdashboard">Pattern two: the reporting dashboard</h1> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/Clipboard 10.png" class=" size-contain position-center-center" />
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  17
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff3a4d"style="--lightbackgroundcolor: #ff3a4d;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="apublisheddocumentbecomesaninstrumenteddocument">A published document becomes an instrumented document</h1> 
+  <ul> 
+   <li>Which provisions people actually consult — the training opt-out, or the children's rules?</li> 
+   <li>Where the confusion is — heavy glossary lookups and zero-result searches are a revision agenda, generated by demand</li> 
+   <li><p>Who is asking — the user-type × concern heatmap is a constituent-needs report</p> This is the feedback loop most policy authors never get.</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  18
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff4935"style="--lightbackgroundcolor: #ff4935;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="everythingthatmakesintentdatausefulmakesitsensitive">Everything that makes intent data useful makes it sensitive</h1> 
+  <p><span class="math">\(Intent + Telemetry = Insight + Liability\)</span></p> 
+  <ul> 
+   <li>Questions reveal circumstances: "how do I delete a chat with medical info" is closer to a confession than a page view</li> 
+   <li>The user consented to their assistant — not to your logs</li> 
+   <li>"Anonymous" wears thin at low volume</li> 
+   <li>Run one of these, and you're somebody's data processor now</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  19
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light title-container wide"  data-background-color="#ff571d"style="--lightbackgroundcolor: #ff571d;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="webuiltatoolforaskingwhatdoesthiscompanyknowaboutme">We built a tool for asking "what does this company know about me?"</h2> 
+  <h2 id="butnowthatwehavethetool...wehavethesamequestionagain.whatdoesthemcpknowaboutme">But now that we have the tool... We have the same question <em>again</em>. What does the MCP know about me?</h2> 
+  <p>(That's not a bug in the lesson. That <em>is</em> the lesson.)</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  20
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff6710"style="--lightbackgroundcolor: #ff6710;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="shipit">Ship it</h1> 
+  <p>docker compose up --build -d</p> 
+  <ul> 
+   <li>One container, one command</li> 
+   <li>Runs on a Raspberry Pi — same two commands, 64-bit OS required</li> 
+   <li>Caddy in front for free TLS, or point your existing reverse proxy at :8080</li> 
+   <li>The two gotchas: set PUBLIC_HOST, and don't buffer SSE</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  21
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff7806"style="--lightbackgroundcolor: #ff7806;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="connectyoursrightnow">Connect yours, right now</h1> 
+  <ol> 
+   <li>claude.ai → Settings → Integrations → Add MCP</li> 
+   <li>Paste the server URL (it's on screen)</li> 
+   <li><p>Ask: <em>"Does OpenAI sell my data?"</em></p> Then open /reporting/ — congratulations, you're a data point.</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  22
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff8d00"style="--lightbackgroundcolor: #ff8d00;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="homework:buildonewithclaudecode">Homework: build one with Claude Code</h1> 
+  <ol> 
+   <li>Structure the document — schema first: sections, topics, tables, glossary</li> 
+   <li>Design tools around the 8–10 questions people actually bring</li> 
+   <li>Add the intent loop + the dashboard</li> 
+   <li>Serve and ship — FastMCP + FastAPI + Docker</li> 
+   <li><p>Verify like you mean it — call every tool through the real endpoint</p> Steps 1–2 are where the human judgment lives. Claude Code is genuinely good at 3–5 — once it has a working example to follow. You now have two.</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  23
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ffa800"style="--lightbackgroundcolor: #ffa800;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="whatdocumentwillyouserve">What document will you serve?</h1> 
+  <ul> 
+   <li>The employee handbook</li> 
+   <li>Your lease</li> 
+   <li>The union contract</li> 
+   <li>The city zoning code</li> 
+   <li>A school district's AI policy (we did that one too — it's in /example)</li> 
+  </ul>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  24
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#ffc400"style="--lightbackgroundcolor: #ffc400;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="questions">Questions?</h1> 
+  <h1 id="thankyou">Thank you!</h1> 
+  <h2 id="myinboxisyours📨">My Inbox is Yours 📨</h2> 
+  <p>ag@workingpaper.co</p> 
+  <p>github.com/agruen/mcp-demo</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  25
+ </div>
+ <div class="middle">
+  6/14/26
+ </div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+</div>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/d3v4.min.js"></script>
+<script src="engine/billboard.min.js"></script>
+<script src="engine/infographics.js"></script>
+<script src="engine/highlight.min.js"></script>
+<script src="engine/katex/katex.min.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
+</html>
