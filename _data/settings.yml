@@ -20,6 +20,8 @@ menu_settings:
           url: '/bennett-hillenbrand'
         - title: 'Isaac Holeman'
           url: '/isaac-holeman'
+        - title: 'Tim Colbourne'
+          url: '/tim-colbourne'
     - title: 'Focus Areas'
       children:
         - title: 'International Standards'
