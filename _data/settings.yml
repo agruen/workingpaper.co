@@ -22,6 +22,8 @@ menu_settings:
           url: '/isaac-holeman'
         - title: 'Tim Colbourne'
           url: '/tim-colbourne'
+        - title: 'Michelle Best'
+          url: '/michelle-best'
     - title: 'Focus Areas'
       children:
         - title: 'International Standards'

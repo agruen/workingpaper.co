@@ -24,3 +24,8 @@ Senior Consultant
 Senior Advisor
 
 <a href="/contact" class="button button--small">Contact Tim</a>
+
+### [Michelle Best &rarr;](/michelle-best)
+Advisor, Education & Nonprofit Enablement
+
+<a href="/contact" class="button button--small">Contact Michelle</a>
