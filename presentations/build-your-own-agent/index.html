@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<style>
+:root{
+--logo: ;
+--logo-size: ;
+--text-scale-intensity: ;
+--darkaccent1color: #fff;
+--lightaccent1color: #fff;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #fff;
+--darktitletextcolor: #fff;
+--lightbodytextcolor: #fff;
+--darkbodytextcolor: #fff;
+--lightbackgroundcolor: transparent;
+--darkbackgroundcolor: transparent;
+--bodyfont: Inter;
+--titlefont: Inter;
+--lightframecolor: #000000;
+--darkframecolor: #000000;
+} 
+
+</style>
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/sanfrancisco.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+<link rel="stylesheet" href="engine/billboard.min.css">
+</head>
+<body class="responsive  ">
+<div class="reveal">
+<div class="slides">
+<section class="variable-size-headings has-graph-background light grid-container wide"  data-background-color="#00a8ff"style="--lightbackgroundcolor: #00a8ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h1 id="buildingacustomaiagent">Building a Custom AI Agent</h1> 
+  <h2 id="apracticalwalkthroughforpolicyteams">A practical walkthrough for policy teams</h2> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/Untitled@2x.png" class=" size-contain position-right-bottom" />
+    <figcaption>
+     <b>Andrew Gruen, PhD</b>
+     <br />Senior Fellow, Future of Privacy Forum
+     <br />CEO, Working Paper
+    </figcaption>
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#117eff"style="--lightbackgroundcolor: #117eff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="therearetwoagentsinthistalk">There are two agents in this talk</h1> 
+  <ol> 
+   <li>The one that built the thing (hi Claude/Codex 👋)</li> 
+   <li>The one that IS the thing (you're going to make one!) <br /><br /></li> 
+  </ol> 
+  <h5 id="thisisconfusing.ididntnamethem.welcometoai.">(This is confusing. I didn't name them. Welcome to AI.)</h5>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light v-split-container wide"  data-background-color="#2354ff"style="--lightbackgroundcolor: #2354ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="theproblem">The problem</h1> 
+  <p>Every month, somebody at FPF reads everything that went wrong with AI and asks one question about each item:</p> 
+  <p><em>Was that a privacy thing?</em></p>
+ </div> 
+ <figure class="">
+  <img src="media/Clipboard 9.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#3431ff"style="--lightbackgroundcolor: #3431ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="whatwewanted">What we wanted</h1> 
+  <p>A table. One row per incident.</p> 
+  <p>Date, incident number, headline, what happened, risk category.</p> 
+  <p>A human edits it. The tool never sends it.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#451bff"style="--lightbackgroundcolor: #451bff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="basicallywewantedthis:">Basically, we wanted this:</h1> 
+  <table> 
+   <colgroup> 
+    <col style="text-align:left;" /> 
+    <col style="text-align:left;" /> 
+    <col style="text-align:left;" /> 
+    <col style="text-align:left;" /> 
+    <col style="text-align:left;" /> 
+   </colgroup> 
+   <thead> 
+    <tr> 
+     <th style="text-align:left;">Date</th> 
+     <th style="text-align:left;">Incident Number</th> 
+     <th style="text-align:left;">Headline</th> 
+     <th style="text-align:left;">What Happened</th> 
+     <th style="text-align:left;">AI Governance Risk Categories</th> 
+    </tr> 
+   </thead> 
+   <tbody> 
+    <tr> 
+     <td style="text-align:left;">8/15/26</td> 
+     <td style="text-align:left;">1643</td> 
+     <td style="text-align:left;"><a href="https://incidentdatabase.ai/cite/1643"><strong>Grok Allegedly Used to Generate Explicit Images of Woman From Childhood Photo</strong></a></td> 
+     <td style="text-align:left;">A Wyoming woman alleges her stepfather used xAI's Grok to generate thousands of sexually explicit images from a childhood photograph, in federal court filings. Source: <a href="https://www.washingtonpost.com/technology/2026/08/15/woman-alleges-grok-made-thousands-sexual-abuse-images-childhood-snap/">washingtonpost.com</a></td> 
+     <td style="text-align:left;"><strong>Nonconsensual Deepfake Generation:</strong> Image generator lacked safeguards blocking sexualized synthesis from an uploaded photo of an identifiable minor.</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align:left;">8/19/26</td> 
+     <td style="text-align:left;">1660</td> 
+     <td style="text-align:left;"><a href="https://incidentdatabase.ai/cite/1660"><strong>Deepfake Impersonating Miami Immigration Attorney Defrauded Bronx Resident</strong></a></td> 
+     <td style="text-align:left;">Scammers allegedly used AI-generated videos impersonating an immigration attorney to solicit a citizenship-seeker, who sent money and handed over Social Security and residency documents before discovering the fraud. Source: <a href="https://abc7ny.com/amp/post/legal-resident-loses-thousands-seeking-citizenship-ai-immigration-attorney-7-side-investiates/19704074/">abc7ny.com</a>, <a href="https://www.miamiherald.com/news/local/immigration/article316074884.html">miamiherald.com</a>, <a href="https://www.cbsnews.com/miami/news/south-florida-immigration-attorney-says-ai-scammers-are-using-his-identity-to-target-immigrants/">cbsnews.com</a></td> 
+     <td style="text-align:left;"><strong>Deepfake Impersonation Fraud:</strong> No likeness-verification or provenance signals let a fabricated professional identity harvest sensitive PII.</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align:left;">8/5/26</td> 
+     <td style="text-align:left;">1649</td> 
+     <td style="text-align:left;"><a href="https://incidentdatabase.ai/cite/1649"><strong>Meta AI Model Reportedly Exploited Third-Party Service in Misconfigured Test</strong></a></td> 
+     <td style="text-align:left;">During a Meta cybersecurity evaluation, one of its AI models reportedly gained unintended internet access after a misconfiguration and exploited a vulnerability in a real third-party service. Source: <a href="https://www.reuters.com/technology/metas-ai-model-hacked-another-company-during-testing-information-reports-2026-08-05/">reuters.com</a>, <a href="https://www.bleepingcomputer.com/news/security/meta-ai-model-hacked-a-company-during-misconfigured-cyber-test/">bleepingcomputer.com</a>, <a href="https://www.washingtonpost.com/technology/2026/08/10/openai-anthropic-under-pressure-explain-ai-hacking-sprees/">washingtonpost.com</a></td> 
+     <td style="text-align:left;"><strong>Autonomous Agent Containment Failure:</strong> Evaluation-environment misconfiguration let an AI agent reach and attack live external systems unsupervised.</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align:left;">8/17/26</td> 
+     <td style="text-align:left;">1665</td> 
+     <td style="text-align:left;"><a href="https://incidentdatabase.ai/cite/1665"><strong>AI-Generated Fake Interview Misused Australian Broadcaster's Likeness for Crypto Scam</strong></a></td> 
+     <td style="text-align:left;">An online article reportedly used AI imagery to falsely depict an ABC finance presenter interviewing Australia's central bank governor to promote an unlicensed crypto platform, which regulators flagged as scam. Source: <a href="https://www.smh.com.au/business/companies/the-fake-alan-kohler-interview-that-shows-a-type-of-scam-that-s-on-the-rise-20260816-p60opm.html">smh.com.au</a>, <a href="https://www.abc.net.au/news/2026-08-17/asic-ai-powered-impersonation-scams-warning-alan-kohler/107038256">abc.net.au</a>, <a href="https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-195mr-asic-warns-scammers-are-using-ai-to-spin-vast-webs-of-deception">asic.gov.au</a></td> 
+     <td style="text-align:left;"><strong>Deepfake Impersonation Fraud:</strong> Absent likeness protections and content authentication enabled misappropriation of public figures for investment fraud.</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align:left;">8/18/26</td> 
+     <td style="text-align:left;">1663</td> 
+     <td style="text-align:left;"><a href="https://incidentdatabase.ai/cite/1663"><strong>AI-Assisted Scam Impersonating NPR Host Defrauded Comedy Writer</strong></a></td> 
+     <td style="text-align:left;">A writer reportedly received personalized messages impersonating NPR's Terry Gross inviting him onto a fake show, and sent money before learning the interview was fraudulent. Source: <a href="https://whyy.org/articles/scam-emails-terry-gross-fresh-air/">whyy.org</a>, <a href="https://www.hollywoodreporter.com/news/general-news/celebrity-podcast-scam-bruce-vilanch-seth-rudetsky-1236676601/">hollywoodreporter.com</a></td> 
+     <td style="text-align:left;"><strong>Impersonation &amp; Targeted Profiling:</strong> Highly tailored lures suggest harvested personal data fed AI-composed impersonation with no sender verification.</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align:left;">8/18/26</td> 
+     <td style="text-align:left;">1664</td> 
+     <td style="text-align:left;"><a href="https://incidentdatabase.ai/cite/1664"><strong>AI-Assisted Podcast Scam Led to Broadway Host's Facebook Takeover</strong></a></td> 
+     <td style="text-align:left;">A SiriusXM host reportedly received a fake podcast invitation impersonating a comedian and lost access to his Facebook page after scammers guided him through permission changes. Source: <a href="https://www.hollywoodreporter.com/news/general-news/celebrity-podcast-scam-bruce-vilanch-seth-rudetsky-1236676601/">hollywoodreporter.com</a></td> 
+     <td style="text-align:left;"><strong>Account Takeover via Social Engineering:</strong> AI-composed lures plus permission-granting manipulation bypassed account-access safeguards and controls.</td> 
+    </tr> 
+    <tr> 
+     <td style="text-align:left;">8/14/26</td> 
+     <td style="text-align:left;">1639</td> 
+     <td style="text-align:left;"><a href="https://incidentdatabase.ai/cite/1639"><strong>Turkish National Posted AI-Generated Image With Eric Trump to Bolster Persona</strong></a></td> 
+     <td style="text-align:left;">A Turkish national reportedly posted a purportedly AI-generated LinkedIn image depicting himself with Eric Trump while promoting a Trump-branded hotel and portraying close political ties. Source: <a href="https://tr.euronews.com/2026/08/14/kendini-trumpin-danismani-olarak-tanitan-turk-vatandasi-gozaltina-alindi">tr.euronews.com</a></td> 
+     <td style="text-align:left;"><strong>Likeness Misappropriation:</strong> Unauthorized synthetic use of a public figure's likeness lacked platform authenticity checks.</td> 
+    </tr> 
+   </tbody> 
+  </table>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footnotes light default-container wide"  data-background-color="#5504ff"style="--lightbackgroundcolor: #5504ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="theingredient">The ingredient</h1> 
+  <p>The AI Incident Database.<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></p> 
+  <p>Community-maintained. Weekly snapshot. About 1,600 incidents and counting.</p> 
+  <p>Each one already comes with a pile of news reports attached.</p>
+ </div> 
+</div> 
+<div class="footnotes"> 
+ <ol> 
+  <li id="fn1"> <p>https://incidentdatabase.ai <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p> </li> 
+ </ol> 
+</div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#6500ff"style="--lightbackgroundcolor: #6500ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="isthisanagentproblem">Is this an agent problem?</h1> 
+  <ol> 
+   <li>It recurs on a schedule</li> 
+   <li>The inputs are machine-readable</li> 
+   <li>The output has a fixed shape</li> 
+   <li><p>A human was going to review it anyway</p> Obviously.</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#7600ff"style="--lightbackgroundcolor: #7600ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="youmightask">You might ask</h1> 
+  <h1 id="doesapolicypersonneedtoknowhowtobuildsoftware">Does a policy person need to know how to build software?</h1> 
+  <p>No.</p> 
+  <p>That's the point.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#8700ff"style="--lightbackgroundcolor: #8700ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="thisisacookingshow">This is a cooking show</h1> 
+  <p>Here's one I made earlier.</p> 
+  <p>The recipe cards are prompts. You get to see each card, then the dish.</p> 
+  <p>Then you cook.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#9d00ff"style="--lightbackgroundcolor: #9d00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="recipecard1:theplan">Recipe card 1: the plan</h1> 
+  <pre><code>ok so: every month someone at FPF reads everything that went wrong with AI and pulls out the privacy incidents for a digest. I want a small tool that does the reading and drafting, and a human does the editing.
+
+Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one container, one database file, one source to start (the AI Incident Database), the model drafts and never sends. Break it into phases I can build one at a time.
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footnotes light v-split-container wide"  data-background-color="#b300ff"style="--lightbackgroundcolor: #b300ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="whatcameout">What came out</h1> 
+  <p>146 lines. A section called "Decisions locked." Eight phases.</p> 
+  <p>Written before a single line of code.<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></p>
+ </div> 
+ <figure class="">
+  <img src="media/Clipboard 10.png" class=" position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"> 
+ <ol> 
+  <li id="fn1"> <p>https://github.com/agruen/ai-privacy-newsletter/blob/main/docs/BUILD_PLAN.md <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p> </li> 
+ </ol> 
+</div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#c500f7"style="--lightbackgroundcolor: #c500f7;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <p><em>Sources: AIID only in v1, behind a pluggable SourceConnector interface so Federal Register / DPA feeds / arXiv / RSS can be added later.</em></p> 
+  <p>Each source is a thing that breaks when nobody is watching. So: one first.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#d500ea"style="--lightbackgroundcolor: #d500ea;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="recipecard2:thebuild">Recipe card 2: the build</h1> 
+  <pre><code>Build Phase 0 from docs/BUILD_PLAN.md. Nothing from later phases. Tests must pass. Commit with a message that says what you did, then stop and show me.
+</code></pre> 
+  <p>Then I said "next phase" seven more times.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light grid-container wide"  data-background-color="#e600de"style="--lightbackgroundcolor: #e600de;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/Clipboard 11.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light v-split-container wide"  data-background-color="#ef03c6"style="--lightbackgroundcolor: #ef03c6;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="eightcommitsoneafternoon">Eight commits, one afternoon</h1> 
+  <p>A commit is the old-school 💾 button + a version number <code>MyFile-v2.doc</code></p> 
+  <p>Phase 0 through Phase 7. All dated June 19.</p> 
+  <p>I had lunch.</p>
+ </div> 
+ <figure class="">
+  <img src="media/Clipboard 12.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light v-split-container wide"  data-background-color="#f906af"style="--lightbackgroundcolor: #f906af;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="recipecard3:theinspection">Recipe card 3: the inspection</h1> 
+  <pre><code>I'm about to put this on the internet. Review it as a hostile security auditor. Rank what you find, fix the blockers, and tell me what you couldn't fix.
+</code></pre> 
+  <p>It found a forgeable login key and a container running as root. It fixed both.</p> 
+  <p>Do this before you deploy anything. Every time. Particularly if you're putting it on the Internet. If it's just on your machine... less of a worry!</p>
+ </div> 
+ <figure class="">
+  <img src="media/Clipboard 13.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light v-split-container wide"  data-background-color="#ff0f94"style="--lightbackgroundcolor: #ff0f94;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="whatcameoutoftheoven">What came out of the oven</h1> 
+  <p>1,656 incidents ingested</p> 
+  <p>One issue: seven rows</p> 
+  <p>Thirteen cents</p>
+ </div> 
+ <figure class="">
+  <img src="media/Clipboard 14.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light title-container wide"  data-background-color="#ff2176"style="--lightbackgroundcolor: #ff2176;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="theparttheyeditoutontv">The part they edit out on TV</h2>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff3458"style="--lightbackgroundcolor: #ff3458;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="burntbatch1:thefreefilter">Burnt batch 1: the free filter</h1> 
+  <p>The plan said: don't pay a model to classify. Use the database's own "Privacy &amp; Security" tag.</p> 
+  <p>The tag flagged almost nothing.</p> 
+  <pre><code>The privacy tag from the database is catching almost nothing, maybe 3 of 30 incidents a month. Have the model screen every incident for a privacy angle instead. Keep the tag as a hint. Store the judgments so I'm not billed twice for the same month.
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff4240"style="--lightbackgroundcolor: #ff4240;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="burntbatch2:thelinks">Burnt batch 2: the links</h1> 
+  <p>The model writes very convincing URLs. They don't resolve.</p> 
+  <pre><code>The model keeps inventing links that don't resolve. Change the design so it never writes a URL. It fills in four text cells per row; the date, the incident number and every link get joined from our own database when the page renders.
+</code></pre> 
+  <p>The fix was not a better prompt. It was taking the job away.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#ff4f2a"style="--lightbackgroundcolor: #ff4f2a;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="thebill">The bill</h1> 
+  <p>Thirteen cents per issue</p> 
+  <p>Under $25 a month for hosting</p> 
+  <p>A $100 monthly cap, enforced by the code, not by me</p> 
+  <p>The coffee cost more.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff5d17"style="--lightbackgroundcolor: #ff5d17;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="recipecard4:therunbook">Recipe card 4: the runbook</h1> 
+  <pre><code>Write docs/RUNBOOK.md for the person who will run this every month. Assume they have never seen the code and never will. Start with the monthly review, then what to do when the source is down.
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff6c0d"style="--lightbackgroundcolor: #ff6c0d;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="wherethehumanstays">Where the human stays</h1> 
+  <ol> 
+   <li>Read the member-mention banner first</li> 
+   <li>Edit the four cells the model wrote; the rest is our data</li> 
+   <li>Drop weak rows, pull stronger ones from the pool</li> 
+   <li>Approve. That locks it.</li> 
+   <li>Export, and paste into the real sending tool</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff7c03"style="--lightbackgroundcolor: #ff7c03;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="disclosetwice">Disclose twice</h1> 
+  <p>In the commit log, for whoever maintains it</p> 
+  <p>In the footer, for whoever reads it</p> 
+  <pre><code>Add a one-line disclosure at the end of every export saying the table was drafted with an AI model from AI Incident Database records and reviewed by FPF staff.
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff9200"style="--lightbackgroundcolor: #ff9200;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="thechecklist✅">The checklist ✅</h1> 
+  <ol> 
+   <li>Recurring task, machine-readable inputs, fixed output shape. If not, write a checklist instead.</li> 
+   <li>Plan first. Lock the decisions. Write down what you are NOT building yet.</li> 
+   <li>One source. Add the second when the first is boring.</li> 
+   <li>Check the filter against a real month before you trust it.</li> 
+   <li>Never ask the model for a fact you already have in a database.</li> 
+   <li>Hard cost cap in code. Buttons that refuse to bill twice.</li> 
+   <li>Hostile review before it touches the internet.</li> 
+   <li>Decide where the human sits and make the tool stop there.</li> 
+   <li><p>Disclose twice.</p> 
+    <center>
+     <br />(Hint: This is the slide to screenshot.)
+    </center></li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#ffaa00"style="--lightbackgroundcolor: #ffaa00;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="nowyoucook">Now you cook</h1> 
+  <p>A classic car auction listing.</p> 
+  <p>It says it has 142 photos. Seven are in the page.</p> 
+  <p>Your agent's first job is to notice.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#ffc400"style="--lightbackgroundcolor: #ffc400;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="questions">Questions?</h1> 
+  <h1 id="thankyou">Thank you!</h1> 
+  <h2 id="myinboxisyours📨">My Inbox is Yours 📨</h2> 
+  <p>ag@workingpaper.co</p> 
+  <p>workingpaper.co/presentations/build-your-own-agent</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div>
+</section>
+</div>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/d3v4.min.js"></script>
+<script src="engine/billboard.min.js"></script>
+<script src="engine/infographics.js"></script>
+<script src="engine/highlight.min.js"></script>
+<script src="engine/katex/katex.min.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
+</html>
