@@ -1,3 +1,11 @@
+---
+title: Building a Custom AI Agent
+date: 2026-09-22 00:00:00 Z
+description: A practical walkthrough for policy teams
+audience: FPF Membership
+layout: raw
+---
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,9 +13,9 @@
 <meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
 <style>
 :root{
---logo: ;
---logo-size: ;
---text-scale-intensity: ;
+--logo: /assets/wp logo white@2x.png;
+--logo-size: 8.0;
+--text-scale-intensity: 1.8;
 --darkaccent1color: #fff;
 --lightaccent1color: #fff;
 --accent2: #43aa8b;
@@ -21,8 +29,8 @@
 --darkbodytextcolor: #fff;
 --lightbackgroundcolor: transparent;
 --darkbackgroundcolor: transparent;
---bodyfont: Inter;
---titlefont: Inter;
+--bodyfont: inconsolata;
+--titlefont: inconsolata;
 --lightframecolor: #000000;
 --darkframecolor: #000000;
 } 
@@ -36,36 +44,38 @@
 <body class="responsive  ">
 <div class="reveal">
 <div class="slides">
-<section class="variable-size-headings has-graph-background light grid-container wide"  data-background-color="#00a8ff"style="--lightbackgroundcolor: #00a8ff;">
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#00a8ff"style="--lightbackgroundcolor: #00a8ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
- <div class="element-group has-media has-media-last">
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
   <h1 id="buildingacustomaiagent">Building a Custom AI Agent</h1> 
-  <h2 id="apracticalwalkthroughforpolicyteams">A practical walkthrough for policy teams</h2> 
-  <div class="single-image-wrapper">
-   <figure class="">
-    <img src="media/Untitled@2x.png" class=" size-contain position-right-bottom" />
-    <figcaption>
-     <b>Andrew Gruen, PhD</b>
-     <br />Senior Fellow, Future of Privacy Forum
-     <br />CEO, Working Paper
-    </figcaption>
-   </figure>
-  </div>
+  <h2 id="apracticalwalkthroughforpolicyteams">A practical walkthrough for policy teams</h2>
  </div> 
+ <figure class="">
+  <img src="media/Untitled@2x.png" class=" size-contain position-right-bottom" />
+  <figcaption>
+   <b>Andrew Gruen, PhD</b>
+   <br />Senior Fellow, Future of Privacy Forum
+   <br />CEO, Working Paper
+  </figcaption>
+ </figure> 
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  1
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#117eff"style="--lightbackgroundcolor: #117eff;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#117fff"style="--lightbackgroundcolor: #117fff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -83,12 +93,16 @@
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  2
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light v-split-container wide"  data-background-color="#2354ff"style="--lightbackgroundcolor: #2354ff;">
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#2257ff"style="--lightbackgroundcolor: #2257ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -106,12 +120,16 @@
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  3
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#3431ff"style="--lightbackgroundcolor: #3431ff;">
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#3234ff"style="--lightbackgroundcolor: #3234ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -127,12 +145,16 @@
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  4
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#451bff"style="--lightbackgroundcolor: #451bff;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#421eff"style="--lightbackgroundcolor: #421eff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -214,12 +236,16 @@
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  5
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background has-footnotes light default-container wide"  data-background-color="#5504ff"style="--lightbackgroundcolor: #5504ff;">
+<section class="variable-size-headings has-graph-background has-footnotes has-footer light default-container wide"  data-background-color="#5208ff"style="--lightbackgroundcolor: #5208ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -239,12 +265,16 @@
  </ol> 
 </div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  6
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#6500ff"style="--lightbackgroundcolor: #6500ff;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#6200ff"style="--lightbackgroundcolor: #6200ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -263,33 +293,41 @@
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  7
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#7600ff"style="--lightbackgroundcolor: #7600ff;">
+<section class="variable-size-headings has-graph-background has-footer light section-container wide"  data-background-color="#7100ff"style="--lightbackgroundcolor: #7100ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
 </div> 
-<div class="layout-cover slide-contents"> 
- <div class="element-group">
-  <h1 id="youmightask">You might ask</h1> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 class="kicker" id="youmightask">You might ask</h3>
   <h1 id="doesapolicypersonneedtoknowhowtobuildsoftware">Does a policy person need to know how to build software?</h1> 
   <p>No.</p> 
-  <p>That's the point.</p>
+  <p>That's the point.</p> 
  </div> 
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  8
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#8700ff"style="--lightbackgroundcolor: #8700ff;">
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#8100ff"style="--lightbackgroundcolor: #8100ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -305,12 +343,16 @@
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  9
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#9d00ff"style="--lightbackgroundcolor: #9d00ff;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#9500ff"style="--lightbackgroundcolor: #9500ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -327,12 +369,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  10
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background has-footnotes light v-split-container wide"  data-background-color="#b300ff"style="--lightbackgroundcolor: #b300ff;">
+<section class="variable-size-headings has-graph-background has-footnotes has-footer light v-split-container wide"  data-background-color="#ab00ff"style="--lightbackgroundcolor: #ab00ff;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -354,12 +400,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
  </ol> 
 </div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  11
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#c500f7"style="--lightbackgroundcolor: #c500f7;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#bf00fc"style="--lightbackgroundcolor: #bf00fc;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -373,12 +423,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  12
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#d500ea"style="--lightbackgroundcolor: #d500ea;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ce00f0"style="--lightbackgroundcolor: #ce00f0;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -394,12 +448,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  13
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light grid-container wide"  data-background-color="#e600de"style="--lightbackgroundcolor: #e600de;">
+<section class="variable-size-headings has-graph-background has-footer light grid-container wide"  data-background-color="#de00e4"style="--lightbackgroundcolor: #de00e4;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -412,12 +470,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  14
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light v-split-container wide"  data-background-color="#ef03c6"style="--lightbackgroundcolor: #ef03c6;">
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#ea01d2"style="--lightbackgroundcolor: #ea01d2;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -436,12 +498,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  15
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light v-split-container wide"  data-background-color="#f906af"style="--lightbackgroundcolor: #f906af;">
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#f304bc"style="--lightbackgroundcolor: #f304bc;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -461,12 +527,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  16
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light v-split-container wide"  data-background-color="#ff0f94"style="--lightbackgroundcolor: #ff0f94;">
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#fd07a5"style="--lightbackgroundcolor: #fd07a5;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -485,12 +555,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  17
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light title-container wide"  data-background-color="#ff2176"style="--lightbackgroundcolor: #ff2176;">
+<section class="variable-size-headings has-graph-background has-footer light title-container wide"  data-background-color="#ff1689"style="--lightbackgroundcolor: #ff1689;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -503,12 +577,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  18
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff3458"style="--lightbackgroundcolor: #ff3458;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff276c"style="--lightbackgroundcolor: #ff276c;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -525,12 +603,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  19
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff4240"style="--lightbackgroundcolor: #ff4240;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff394f"style="--lightbackgroundcolor: #ff394f;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -547,12 +629,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  20
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#ff4f2a"style="--lightbackgroundcolor: #ff4f2a;">
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#ff453a"style="--lightbackgroundcolor: #ff453a;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -569,12 +655,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  21
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff5d17"style="--lightbackgroundcolor: #ff5d17;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff5225"style="--lightbackgroundcolor: #ff5225;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -589,12 +679,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  22
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff6c0d"style="--lightbackgroundcolor: #ff6c0d;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff6015"style="--lightbackgroundcolor: #ff6015;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -614,12 +708,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  23
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff7c03"style="--lightbackgroundcolor: #ff7c03;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff6f0c"style="--lightbackgroundcolor: #ff6f0c;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -636,12 +734,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  24
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light default-container wide"  data-background-color="#ff9200"style="--lightbackgroundcolor: #ff9200;">
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff7e02"style="--lightbackgroundcolor: #ff7e02;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -668,12 +770,16 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  25
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#ffaa00"style="--lightbackgroundcolor: #ffaa00;">
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#ff9300"style="--lightbackgroundcolor: #ff9300;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -689,12 +795,44 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
+ <div class="leading">
+  26
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light grid-container wide"  data-background-color="#ffab00"style="--lightbackgroundcolor: #ffab00;">
+<div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
  <div class="trailing"></div>
+</div> 
+<div class="layout-grid has-media-first has-media-middle has-media-last slide-contents grid-items-3 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/Build-along_ download every photo from an auction listing.jpg" class=" size-contain position-center-center" />
+ </figure>
+ <figure class="">
+  <img src="media/Build-along_ download every photo from an auction listing2.jpg" class=" size-contain position-center-center" />
+ </figure>
+ <figure class="">
+  <img src="media/Build-along_ download every photo from an auction listing3.jpg" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  27
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
-<section class="variable-size-headings has-graph-background light cover-container wide"  data-background-color="#ffc400"style="--lightbackgroundcolor: #ffc400;">
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#ffc400"style="--lightbackgroundcolor: #ffc400;">
 <div class="header">
  <div class="leading"></div>
  <div class="middle"></div>
@@ -711,9 +849,13 @@ Don't write code yet. Write docs/BUILD_PLAN.md. Lock the decisions: one containe
 </div> 
 <div class="footnotes"></div> 
 <div class="footer">
- <div class="leading"></div>
+ <div class="leading">
+  28
+ </div>
  <div class="middle"></div>
- <div class="trailing"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
 </div>
 </section>
 </div>
