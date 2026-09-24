@@ -10,6 +10,19 @@
 		margin-top: 10px;
 	}
 
+	.hero__byline a,
+	.hero__credit a {
+		color: inherit;
+		text-decoration: underline;
+	}
+
+	.hero__credit {
+		margin-top: 6px;
+		font-size: 12px;
+		font-style: italic;
+		opacity: 0.8;
+	}
+
 	.hero__subtitle {
 		margin-top: 20px;
 		font-size: 20px;

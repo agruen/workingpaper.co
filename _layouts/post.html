@@ -12,7 +12,8 @@ layout: default
 
 		<h1>{{ page.title }}</h1>
 		{% if page.subtitle %}<p class="hero__subtitle">{{ page.subtitle }}</p>{% endif %}
-		<p>{{ page.date | date_to_long_string }}</p>
+		<p class="hero__byline">{% if page.author %}By {% if page.author_url %}<a href="{{ page.author_url }}">{{ page.author }}</a>{% else %}{{ page.author }}{% endif %} &middot; {% endif %}{{ page.date | date_to_long_string }}</p>
+		{% if page.photo_credit %}<p class="hero__credit">{{ page.photo_credit }}</p>{% endif %}
 
 	</div>
 
