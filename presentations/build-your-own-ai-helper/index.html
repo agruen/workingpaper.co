@@ -1,0 +1,995 @@
+---
+title: Build your own AI helper
+date: 2026-10-23 00:00:00 Z
+description: A practical walkthrough for non-profit sector leaders on how they can build automation to support their organizations' impact.
+audience: USD NPI Nonprofit Academy
+layout: raw
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1" />
+<style>
+:root{
+--logo: /assets/wp logo white@2x.png;
+--logo-size: 8.0;
+--text-scale-intensity: 1.8;
+--darkaccent1color: #fff;
+--lightaccent1color: #fff;
+--accent2: #43aa8b;
+--accent3: #f9c74f;
+--accent4: #90be6d;
+--accent5: #f8961e;
+--accent6: #577590;
+--lighttitletextcolor: #fff;
+--darktitletextcolor: #fff;
+--lightbodytextcolor: #fff;
+--darkbodytextcolor: #fff;
+--lightbackgroundcolor: transparent;
+--darkbackgroundcolor: transparent;
+--bodyfont: inconsolata;
+--titlefont: inconsolata;
+--lightframecolor: #000000;
+--darkframecolor: #000000;
+} 
+
+</style>
+<link rel="stylesheet" href="engine/main.css">
+<link rel="stylesheet" href="theme/sanfrancisco.css">
+<link rel="stylesheet" href="engine/katex/katex.min.css">
+<link rel="stylesheet" href="engine/billboard.min.css">
+</head>
+<body class="responsive  ">
+<div class="reveal">
+<div class="slides">
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#00a8ff"style="--lightbackgroundcolor: #00a8ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="buildyourownaihelper">Build Your Own AI Helper</h1> 
+  <h3 id="ahands-onsessionfornonprofitteams">A hands-on session for nonprofit teams</h3>
+ </div> 
+ <figure class="">
+  <img src="media/Untitled@2x.png" class=" size-contain position-right-bottom" />
+  <figcaption>
+   <b>Andrew Gruen, PhD</b>
+   <br /> CEO, Working Paper
+  </figcaption>
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  1
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#0d86ff"style="--lightbackgroundcolor: #0d86ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="welcome">Welcome</h1> 
+  <p>Today you'll watch an AI helper get built, start to finish.</p> 
+  <p>No laptop or setup needed. Just watch. <br /><br /></p> 
+  <h5 id="alreadysetupiftherestimewelltryittogetherattheend.">Already set up? If there's time, we'll try it together at the end.</h5> 
+  <p>Want to try it later? tinyurl.com/npi-ai-helper</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  2
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#1b65ff"style="--lightbackgroundcolor: #1b65ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="yourethechef">You're the chef</h1> 
+  <p>The AI does the chopping.</p> 
+  <p>You decide what goes on the plate, and what never leaves the kitchen.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  3
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#2944ff"style="--lightbackgroundcolor: #2944ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="therearetwoaihelpersinthistalk">There are two AI helpers in this talk</h1> 
+  <ol> 
+   <li>The builder: The AI tool you talk to (hi Claude/Codex 👋)</li> 
+   <li>The thing it builds: a small tool that does one job for you (you're going to make one!) <br /><br /></li> 
+  </ol> 
+  <h5 id="theindustrycallsbothoftheseagents.thisisconfusing.ididntnamethem.welcometoai.">(The industry calls both of these "agents." This is confusing. I didn't name them. Welcome to AI.)</h5>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  4
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#372eff"style="--lightbackgroundcolor: #372eff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="theweeklyscramble">The weekly scramble</h1> 
+  <p>Every week, a volunteer coordinator opens the sign-up spreadsheet and builds next week's schedule by hand.</p> 
+  <p>Who's free Saturday? Who's done this before? Who got stuck with the phone bank last time?</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  5
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#441cff"style="--lightbackgroundcolor: #441cff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="isthisagoodjobforanaihelper">Is this a good job for an AI helper?</h1> 
+  <ol> 
+   <li>It happens again and again, like every week or month</li> 
+   <li>The information is digital and organized the same way every time (a spreadsheet, a form export or a website)</li> 
+   <li>The result looks the same every time</li> 
+   <li><p>A person was going to check it anyway</p> Ours? Obviously.</li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  6
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#510aff"style="--lightbackgroundcolor: #510aff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="whatwewanted">What we wanted</h1> 
+  <p>A calendar for next week.</p> 
+  <p>Every shift staffed, with an experienced person where it's needed.</p> 
+  <p>People get the shifts they prefer. Shifts are spread fairly.</p> 
+  <p>A person checks it. The tool never contacts anyone.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  7
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light grid-container wide"  data-background-color="#5e00ff"style="--lightbackgroundcolor: #5e00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h1 id="basicallywewantedthis:">Basically, we wanted this:</h1> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/Volunteer calendar.png" class=" size-contain position-center-center" />
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  8
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#6a00ff"style="--lightbackgroundcolor: #6a00ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="theingredient">The ingredient</h1> 
+  <p>A sign-up spreadsheet, like a Google Form export.</p> 
+  <p>30 volunteers. Five shifts a week.</p> 
+  <p>Every single name is made up.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  9
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light grid-container wide"  data-background-color="#7700ff"style="--lightbackgroundcolor: #7700ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid {@{HAS_MEDIA_CLASSES}@} slide-contents grid-items-1 media-grid"> 
+ <div class="element-group has-media has-media-last">
+  <h1 id="thesign-upsheet">The sign-up sheet</h1> 
+  <div class="single-image-wrapper">
+   <figure class="">
+    <img src="media/Volunteer signups.png" class=" size-contain position-center-center" />
+   </figure>
+  </div>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  10
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light section-container wide"  data-background-color="#8400ff"style="--lightbackgroundcolor: #8400ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-section slide-contents"> 
+ <div class="element-group"> 
+  <h3 class="kicker" id="youmightask">You might ask</h3>
+  <h1 id="doineedtoknowhowtocode">Do I need to know how to code?</h1> 
+  <p>No.</p> 
+  <p>That's the point.</p> 
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  11
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#9500ff"style="--lightbackgroundcolor: #9500ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="thisisacookingshow">This is a cooking show</h1> 
+  <p>Here's one we made earlier.</p> 
+  <p>The recipe cards are prompts: the instructions we typed to the AI. You see each card, then the dish.</p> 
+  <p>Then you cook.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  12
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#a700ff"style="--lightbackgroundcolor: #a700ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="recipecard1:theplan">Recipe card 1: the plan</h1> 
+  <pre><code class="text">ok so: every week our volunteer coordinator takes the sign-up spreadsheet and builds a shift calendar by hand. I want a small tool that drafts the calendar, and a person checks it before anyone is told.
+
+Don't write code yet. Write docs/BUILD_PLAN.md. The calendar should keep every shift staffed with the right number of people, including an experienced person where needed; give people their preferred shifts first; never schedule anyone outside their availability or over their limit; and spread shifts fairly. Lock the decisions: runs on my laptop, reads signups.xlsx, makes a calendar file I can import into Google Calendar plus a one-page view to check, never emails or texts anyone. Break it into phases I can build one at a time.
+</code></pre> 
+  <p>In plain English: make a plan first. Don't build yet. A person checks it. It never contacts anyone.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  13
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footnotes has-footer light v-split-container wide"  data-background-color="#b800ff"style="--lightbackgroundcolor: #b800ff;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="whatcameout">What came out</h1> 
+  <p>A 254-line plan, written before any code.</p> 
+  <p>Twelve "locked decisions," each with a reason.</p> 
+  <p>Nine steps, to build one at a time.<sup><a href="#fn1" id="fnr1" title="see footnote" class="footnote">1</a></sup></p>
+ </div> 
+ <figure class="">
+  <img src="media/Volunteer build plan.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"> 
+ <ol> 
+  <li id="fn1"> <p>https://github.com/smilne3/volunteer-scheduler/blob/main/docs/BUILD_PLAN.md <a href="#fnr1" title="return to article" class="reversefootnote">↩︎</a></p> </li> 
+ </ol> 
+</div> 
+<div class="footer">
+ <div class="leading">
+  14
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#c600f7"style="--lightbackgroundcolor: #c600f7;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="recipecard2:thebuild">Recipe card 2: the build</h1> 
+  <pre><code class="text">Build Phase 0 from docs/BUILD_PLAN.md. Nothing from later phases. Tests must pass. Commit with a message that says what you did, then stop and show me.
+</code></pre> 
+  <p>In plain English: build step one only. Test it. Save it. Then stop and show me.</p> 
+  <p>Then we said "next phase" eight more times. I took 3 meetings while Claude cooked.</p>
+ </div> 
+ <figure class="">
+  <img src="media/Next phase.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  15
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#d200ed"style="--lightbackgroundcolor: #d200ed;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="ninestepsoneafternoon">Nine steps, one afternoon</h1> 
+  <p>Each step saved as its own version, like <code>MyFile-v2.doc</code></p> 
+  <p>First save 1:53 pm. Last step 5:01 pm.</p> 
+  <p>Done before dinner.</p>
+ </div> 
+ <figure class="">
+  <img src="media/Volunteer save history.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  16
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#df00e3"style="--lightbackgroundcolor: #df00e3;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="recipecard3:checkitswork">Recipe card 3: check its work</h1> 
+  <pre><code class="text">Check this week's calendar against signups.xlsx like a skeptical volunteer coordinator. List anyone scheduled outside their availability or over their limit, anyone who didn't get a preferred shift they could have had, and any shift that's short-staffed or missing an experienced person. Don't fix anything yet.
+</code></pre> 
+  <p>Before anyone sees it, ask the AI to check its own work like a skeptic.</p> 
+  <p>No broken rules. Then it listed what a skeptical coordinator would still worry about.</p>
+ </div> 
+ <figure class="">
+  <img src="media/Volunteer check.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  17
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#e901d4"style="--lightbackgroundcolor: #e901d4;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="whatcameoutoftheoven">What came out of the oven</h1> 
+  <p>30 sign-ups read</p> 
+  <p>Every shift filled</p> 
+  <p>Everyone scheduled got a shift they wanted</p>
+ </div> 
+ <figure class="">
+  <img src="media/Volunteer draft review.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  18
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light title-container wide"  data-background-color="#f103c2"style="--lightbackgroundcolor: #f103c2;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-title slide-contents"> 
+ <div class="element-group">
+  <h2 id="theparttheyeditoutontv">The part they edit out on TV</h2> 
+  <p>This is how you check the AI's work.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  19
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#f806af"style="--lightbackgroundcolor: #f806af;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="burntbatch1:themissingpeople">Burnt batch 1: the missing people</h1> 
+  <p>The draft looked complete. Every shift full.</p> 
+  <p>It had quietly left out 11 volunteers, including five experienced ones.</p> 
+  <p>Their availability was typed in their own words, and the plan said a person has to confirm those first.</p> 
+  <p>The lesson: ask what it left out.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  20
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff0a9c"style="--lightbackgroundcolor: #ff0a9c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="burntbatch2:thesaturdayproblem">Burnt batch 2: the Saturday problem</h1> 
+  <p>Every shift had an experienced person. Most had only one.</p> 
+  <p>If that one person cancels, nobody on the shift has done it before.</p> 
+  <pre><code class="text">hmmm. I think Saturday PM sessions ... people are more likely to drop that day for personal reasons. Let's get another experienced person in case they drop.
+</code></pre> 
+  <p>The AI didn't know Saturdays fall apart. The coordinator did.</p> 
+  <p>The lesson: you know things the spreadsheet doesn't.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  21
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#ff1984"style="--lightbackgroundcolor: #ff1984;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="thebill">The bill</h1> 
+  <p>Built with Claude Pro, a plan we already had</p> 
+  <p>$0 to run: it lives on a laptop. No server, no subscription.</p> 
+  <p>The finished tool doesn't use AI at all, so it can't run up a bill.</p> 
+  <p>Your daily coffee run costs more.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  22
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff276c"style="--lightbackgroundcolor: #ff276c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="recipecard4:theinstructions">Recipe card 4: the instructions</h1> 
+  <pre><code class="text">Write docs/RUNBOOK.md for the volunteer coordinator who will run this every week. Assume they have never seen the code and never will. Start with the weekly review, then what to do when the sign-up form changes.
+</code></pre> 
+  <p>Written for the person who runs it next week. Or after you've moved on.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  23
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light v-split-container wide"  data-background-color="#ff3654"style="--lightbackgroundcolor: #ff3654;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-v-split slide-contents media-grid"> 
+ <div class="element-group">
+  <h1 id="wherethehumanstays">Where the human stays</h1> 
+  <ol> 
+   <li>Read "Needs your attention" first</li> 
+   <li>Confirm anyone whose availability was typed in their own words</li> 
+   <li>Swap anyone you want. The tool re-checks every rule.</li> 
+   <li>Approve. Only then does the calendar file exist.</li> 
+   <li>Import it, and tell volunteers yourself</li> 
+  </ol>
+ </div> 
+ <figure class="">
+  <img src="media/Volunteer approved review.png" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  24
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff4142"style="--lightbackgroundcolor: #ff4142;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="disclosetwice">Disclose twice</h1> 
+  <p>In the tool's save history, for whoever maintains it</p> 
+  <p>At the bottom of every schedule, for whoever reads it</p> 
+  <pre><code class="text">Add a line at the bottom of every schedule saying it was drafted with AI from the sign-up form and checked by staff.
+</code></pre>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  25
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff4b31"style="--lightbackgroundcolor: #ff4b31;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="thechecklist✅">The checklist ✅</h1> 
+  <ol> 
+   <li>Pick a task that repeats, uses information organized the same way every time, and has a result that looks the same each time. If not, write a checklist instead.</li> 
+   <li>Plan first. Lock the decisions. Write down what you're NOT building yet.</li> 
+   <li>One source. Add the second when the first is boring.</li> 
+   <li>Build with made-up data. Keep real personal information on your own computer.</li> 
+   <li>Ask the AI to check its own work, like a skeptic.</li> 
+   <li>Ask what it left out.</li> 
+   <li>Add what you know that the spreadsheet doesn't.</li> 
+   <li>Write the instructions for the next person.</li> 
+   <li>Decide where a person checks it, and make the tool stop there.</li> 
+   <li><p>Tell people AI helped. Twice.</p> 
+    <center>
+     <br />(Hint: This is the slide to take a photo of.)
+    </center></li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  26
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ff551f"style="--lightbackgroundcolor: #ff551f;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="goodfitsatanonprofit">Good fits at a nonprofit</h1> 
+  <ul> 
+   <li>A weekly list of new grant opportunities from funder websites</li> 
+   <li>This month's program numbers, dropped into the same board-report table</li> 
+   <li>A monthly check of your website for broken links</li> 
+   <li>News coverage of your issue, gathered and summarized</li> 
+  </ul> 
+  <h5 id="notagoodfit:one-timejudgmentcallsoranythingnoonewillcheck.">Not a good fit: one-time judgment calls, or anything no one will check.</h5>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  27
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#ff6114"style="--lightbackgroundcolor: #ff6114;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="whatcantheaisee">What can the AI see?</h1> 
+  <p>🟢 Public: your website, funder pages, published reports. Go ahead.</p> 
+  <p>🟡 Internal: budgets, drafts, totals with no names. Check your organization's AI policy first.</p> 
+  <p>🔴 Personal: donor, client or other personal information. Keep it out.</p> 
+  <h5 id="ruleofthumb:anythingtheaireadsleavesyourbuilding.">Rule of thumb: anything the AI reads leaves your building.</h5>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  28
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#ff6d0c"style="--lightbackgroundcolor: #ff6d0c;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="whatsonyourlist">What's on your list?</h1> 
+  <p>Shout out a task you do every week or month.</p> 
+  <p>We'll check it against the four questions.</p> 
+  <p>Then we pick one and build it together, live.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  29
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#ff7a05"style="--lightbackgroundcolor: #ff7a05;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="youridealive">Your idea, live</h1> 
+  <p>The room's task, built from scratch.</p> 
+  <p>Same recipe: plan first, build one step, check its work.</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  30
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#ff8800"style="--lightbackgroundcolor: #ff8800;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="nowyoucooktodayorathome">Now you cook (today or at home)</h1> 
+  <p>A classic car auction listing.</p> 
+  <p>It says it has 142 photos. Only seven show up on the page.</p> 
+  <p>Your helper's first job is to notice.<br /><br /></p> 
+  <h5 id="notimetodayitsyourhomework.prompts:tinyurl.comnpi-prompts">No time today? It's your homework. Prompts: tinyurl.com/npi-prompts</h5>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  31
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light grid-container wide"  data-background-color="#ff9c00"style="--lightbackgroundcolor: #ff9c00;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-grid has-media-first has-media-middle has-media-last slide-contents grid-items-3 has-only-media media-grid"> 
+ <figure class="">
+  <img src="media/Build-along_ download every photo from an auction listing.jpg" class=" size-contain position-center-center" />
+ </figure>
+ <figure class="">
+  <img src="media/Build-along_ download every photo from an auction listing2.jpg" class=" size-contain position-center-center" />
+ </figure>
+ <figure class="">
+  <img src="media/Build-along_ download every photo from an auction listing3.jpg" class=" size-contain position-center-center" />
+ </figure> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  32
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light default-container wide"  data-background-color="#ffb000"style="--lightbackgroundcolor: #ffb000;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-default slide-contents"> 
+ <div class="element-group">
+  <h1 id="yourturnonmonday">Your turn on Monday</h1> 
+  <ol> 
+   <li>Pick one task you do every week or month.</li> 
+   <li>Ask: Does it repeat? Is the information organized the same way each time? Does the result look the same each time? Will a person check it?</li> 
+   <li>Check its color: green (public), yellow (internal) or red (personal). Red stays out.</li> 
+   <li>Then start with: <em>"Don't build anything yet. Help me plan this."</em></li> 
+  </ol>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  33
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+<section class="variable-size-headings has-graph-background has-footer light cover-container wide"  data-background-color="#ffc400"style="--lightbackgroundcolor: #ffc400;">
+<div class="header">
+ <div class="leading"></div>
+ <div class="middle"></div>
+ <div class="trailing"></div>
+</div> 
+<div class="layout-cover slide-contents"> 
+ <div class="element-group">
+  <h1 id="questions">Questions?</h1> 
+  <h1 id="thankyou">Thank you!</h1> 
+  <h2 id="myinboxisyours📨">My Inbox is Yours 📨</h2> 
+  <p>ag@workingpaper.co</p> 
+  <p>workingpaper.co/presentations/build-your-own-agent</p> 
+  <p>See the plan and the code: tinyurl.com/npi-volunteer-scheduler</p>
+ </div> 
+</div> 
+<div class="footnotes"></div> 
+<div class="footer">
+ <div class="leading">
+  34
+ </div>
+ <div class="middle"></div>
+ <div class="trailing has-logo">
+  <img class="logo" src="media/wp logo white@2x.png" />
+ </div>
+</div>
+</section>
+</div>
+</div>
+<script src="engine/index.js"></script>
+<script src="engine/d3v4.min.js"></script>
+<script src="engine/billboard.min.js"></script>
+<script src="engine/infographics.js"></script>
+<script src="engine/highlight.min.js"></script>
+<script src="engine/katex/katex.min.js"></script>
+<script src="engine/published.js"></script>
+<script>
+Reveal.configure({
+progress:true,
+progress:true,
+dependencies: [
+  {
+    src: "engine/highlight.js",
+    sync: true,
+    callback: function () {
+      hljs.initHighlightingOnLoad();
+    },
+  },
+],
+});
+</script>
+</body>
+</html>
